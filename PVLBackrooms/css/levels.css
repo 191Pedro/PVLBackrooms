@@ -1,0 +1,132 @@
+:root{
+    --cor-texto: #ebebeb;
+    --cor-fundo: #3c3c3c;
+    --cor-fundo-dois: #2c2c2c;
+    --cor-fundo-tres: #1d1d1d;
+    --cor-destaque: #4bb766;
+    --cor-hover: #00000034;
+}
+
+.input-group{
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-fundo);
+    padding: 8px 16px 8px 8px;
+    border-radius: 24px;
+    gap: 8px;
+}
+
+.input-field{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-family: 'Poppins';
+    color: var(--cor-texto)
+}
+
+.input-field:focus{
+    outline: none;
+}
+
+.input-icon{
+    background-color: var(--cor-destaque);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 12px;
+    list-style: none;
+    border-radius: 24px;
+    padding: 14px;
+    gap: 12px;
+}
+
+.item{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* display: flex;
+    justify-content: space-between; */
+    height: 100px;
+    margin: 12px;
+    border-radius: 24px;
+    padding: 24px;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+.item-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-wrap: wrap;
+}
+
+.item-image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.item-image img{
+    width: 100%;
+    max-width: 180px;
+}
+
+#no_results{
+    display: none;
+    text-align: center;
+}
+
+@media(max-width: 1050px){
+    .items{
+        grid-template-columns: 100%;
+    }
+    
+    .item{
+        grid-template-columns: auto 180px;
+    }
+
+    .item-title{
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: left;
+        text-wrap: nowrap;
+    }
+}
+
+@media(max-width: 600px){
+    .item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 130px;
+    }
+
+    .item-title{
+        justify-content: center;
+    }
+
+    .item-image{
+        justify-content: center;
+    }
+}
+
+@media(min-width: 1400px){
+    .items{
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+@media(min-width: 2500px){
+    .items{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pvl's Backrooms</title>
     <link href="../css/hub.css" rel="stylesheet" type="text/css">
+    <link href="../css/levels.css" rel="stylesheet" type="text/css">
 </head>
 <body class="">
     <aside id="sidebar" class="sidebar close" style="grid-area: box-1">
@@ -133,14 +134,17 @@
                             </span>
                             <div class="themes-flex">
                                 <div class="theme" id="theme-turtle" onclick=setThemeFunction(1)>
+                                    <span>Tartaruga</span>
                                     <img class="img-dark-mode" src="../imgs/themes/themeTurtleDark.png" alt="">
                                     <img class="img-light-mode" src="../imgs/themes/themeTurtleLight.png" alt="">
                                 </div>
                                 <div class="theme" id="theme-roses" onclick=setThemeFunction(2)>
+                                    <span>Rosas</span>
                                     <img class="img-dark-mode" src="../imgs/themes/themeRosesDark.png" alt="">
                                     <img class="img-light-mode" src="../imgs/themes/themeRosesLight.png" alt="">
                                 </div>
                                 <div class="theme" id="theme-violet-neon" onclick=setThemeFunction(3)>
+                                    <span>Violeta Neon</span>
                                     <img class="img-dark-mode" src="../imgs/themes/themeVioletNeonDark.png" alt="">
                                     <img class="img-light-mode" src="../imgs/themes/themeVioletNeonLight.png" alt="">
                                 </div>
@@ -224,13 +228,133 @@
         </ul>
     </nav>
     <main id="main" class="main" style="grid-area: box-3">
+        <h2>Níveis</h2>
         <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nisl ac urna tincidunt consequat. Ut ullamcorper ultrices gravida. Sed nunc lacus, cursus in consequat nec, varius quis libero. Maecenas gravida mauris sit amet urna iaculis, sed imperdiet purus vestibulum. Nam vel euismod ipsum, id dignissim enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus non elementum elit. Praesent sit amet libero eget turpis posuere tempus. Ut suscipit, tortor elementum rhoncus tempus, dolor magna luctus tellus, ut viverra est nibh nec nisi. Phasellus id ipsum neque. Vivamus velit ante, tempor bibendum metus eu, ornare vulputate odio. Sed ut est lectus. Donec vitae nisl sed dolor auctor lobortis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+        </div>
+        <div class="container">
+            <div class="input-group">
+                <div class="input-icon">
+                    <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </div>
+                <input 
+                    id="search" 
+                    type="text" 
+                    class="input-field" 
+                    placeholder="Pesquisar"
+                >
+            </div>
+            <ul class="items">
+                <a class="item" id="level-0" href="">
+                    <div class="item-title">
+                        <h3>Nível 0</h3>
+                        <p>Backrooms</p>
+                    </div>
+                    <div class="item-image">
+                        <img src="../imgs/levels/level0.png" alt="">
+                    </div>
+                </a>
+                <a class="item" id="level-11" href="">
+                    <div class="item-title">
+                        <h3>Nível 11</h3>
+                        <p>Cidade Sem Fim</p>
+                    </div>
+                    <div class="item-image">
+                        <img src="../imgs/levels/level11.png" alt="">
+                    </div>
+                </a>
+                <a class="item" id="level-37" href="">
+                    <div class="item-title">
+                        <h3>Nível 37</h3>
+                        <p>Salas de Piscinas</p>
+                    </div>
+                    <div class="item-image">
+                        <img src="../imgs/levels/level37.png" alt="">
+                    </div>
+                </a>
+                <a class="item" id="level-46" href="">
+                    <div class="item-title">
+                        <h3>Nível 46</h3>
+                        <p>Os Campos Violetas</p>
+                    </div>
+                    <div class="item-image">
+                        <img src="../imgs/levels/level46.png" alt="">
+                    </div>
+                </a>
+                <a class="item" id="level-86" href="">
+                    <div class="item-title">
+                        <h3>Nível 86</h3>
+                        <p>Edifício Rivergate</p>
+                    </div>
+                    <div class="item-image">
+                        <img src="../imgs/levels/level86.png" alt="">
+                    </div>
+                </a>
+                <a class="item" id="level-87" href="">
+                    <div class="item-title">
+                        <h3>Nível 87</h3>
+                        <p>O Oceano Infinito</p>
+                    </div>
+                    <div class="item-image">
+                        <img src="../imgs/levels/level87.png" alt="">
+                    </div>
+                </a>
+                <a class="item" id="level-90" href="">
+                    <div class="item-title">
+                        <h3>Nível 90</h3>
+                        <p>Biblioteca Cygnus</p>
+                    </div>
+                    <div class="item-image">
+                        <img src="../imgs/levels/level90.png" alt="">
+                    </div>
+                </a>
+                <a class="item" id="level-87" href="">
+                    <div class="item-title">
+                        <h3>Nível 87</h3>
+                        <p>Oceano Infinito</p>
+                    </div>
+                    <div class="item-image">
+                        <img src="../imgs/levels/level87.png" alt="">
+                    </div>
+                </a>
+                <a class="item" id="level-0" href="">
+                    <div class="item-title">
+                        <h3>Nível 0</h3>
+                        <p>Backrooms</p>
+                    </div>
+                    <div class="item-image">
+                        <img src="../imgs/levels/level0.png" alt="">
+                    </div>
+                </a>
+                <li id="no_results">
+                    <p>Nenhum resultado encontrado</p>
+                </li>
+            </ul>
         </div>
     </main>
     <footer id="footer" class="footer" style="grid-area: box-4">
-
+        <!-- <p>footer</p> -->
     </footer>
     <script src="../js/hub.js" type="text/javascript" defer></script>
+    <script src="../js/levels.js" type="text/javascript" defer></script>
 </body>
 </html>
+
+<!-- <div class="item-icons">
+    <div class="item-resources color-rank-horrible">
+        <svg class="icon-leaf" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        <span>4%</span>
+    </div>
+    <div class="item-habitable color-rank-good">
+        <svg class="icon-habitable" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 10.4a2.12 2.12 0 1 0 3.02 2.98L12 7l6.4 6.4a2.12 2.12 0 1 0 2.979-3.021L13.7 2.7a2.4 2.4 0 0 0-3.404.004Z"/><path d="M20 14v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M14 22v-6a2 2 0 0 0-4 0v6"/></svg>
+        <span>5%</span>
+    </div>
+    <div class="item-entities-count color-rank-awesome">
+        <svg class="icon-entities" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.236 22a3 3 0 0 0-2.2-5"/><path d="M16 20a3 3 0 0 1 3-3h1a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4V4"/><path d="M18 13h.01"/><path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10"/></svg>
+        <span>0</span>
+    </div>
+    <div class="item-danger color-rank-bad">
+        <svg class="icon-danger" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        <span>34%</span>
+    </div>
+</div> -->
