@@ -142,11 +142,11 @@ body{
   height: 60px;
   width: 100%;
   display: flex;
-  position: fixed;
   background-color: var(--cor-fundo-dois);
   justify-content: space-between;
   border-bottom: 2px solid var(--cor-destaque);
-  z-index: 1;
+  /* position: fixed;
+  z-index: 1; */
 }
 .navbar > ul{
   display: flex;
@@ -330,7 +330,8 @@ body{
   border-right: 2px solid var(--cor-destaque);
 
   position: sticky;
-  top: 60px;
+  /* top: 60px; */
+  top: 0;
   align-self: start;
   transition: 0.3s ease-in-out;
   overflow-x: hidden;
@@ -540,7 +541,7 @@ a{
 .main{
   position: relative;
   padding: 20px;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   display: flex;
   flex-direction: column;
   gap: 20px;
