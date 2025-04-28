@@ -41,3 +41,10 @@ function formatString(value) {
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '');
 }
+
+document.addEventListener('keydown', function(event) {
+    if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'f') {
+      event.preventDefault();
+      searchInput.focus();
+    }
+});

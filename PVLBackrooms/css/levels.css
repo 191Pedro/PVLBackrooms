@@ -1,41 +1,65 @@
+@import url(../css/levels.css);
+
 :root{
     --cor-texto: #ebebeb;
     --cor-fundo: #3c3c3c;
     --cor-fundo-dois: #2c2c2c;
-    --cor-fundo-tres: #1d1d1d;
     --cor-destaque: #4bb766;
     --cor-hover: #00000034;
 }
 
+.search-bar{
+    display: flex;
+    font-size: 16px;
+}
+
 .input-group{
+    flex-grow: 1;
     display: flex;
     align-items: center;
     background-color: var(--cor-fundo);
-    padding: 8px 16px 8px 8px;
-    border-radius: 24px;
+    padding: 8px;
+    border-radius: 12px;
     gap: 8px;
+    border: 2px solid transparent;
+    position: relative;
 }
 
 .input-field{
     width: 100%;
-    border: none;
+    padding: 2px 0;
     background-color: transparent;
     font-family: 'Poppins';
-    color: var(--cor-texto)
+    color: var(--cor-texto);
+    border: 2px solid transparent;
+}
+
+.input-field:hover::placeholder{
+    color: var(--cor-texto);
 }
 
 .input-field:focus{
     outline: none;
+    border-bottom: 2px solid var(--cor-destaque);
 }
 
-.input-icon{
-    background-color: var(--cor-destaque);
-    border-radius: 100%;
+.filters{
+    background: inherit;
+    font: inherit;
+    color: inherit;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
-    min-width: 32px;
-    min-height: 32px;
+    margin: 0 16px;
+    padding: 0 20px;
+    gap: 10px;
+    background-color: var(--cor-fundo);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.filters:hover{
+    color: var(--cor-destaque);
 }
 
 .items{
@@ -44,14 +68,13 @@
     justify-content: center;
     margin: 12px;
     list-style: none;
-    border-radius: 24px;
     padding: 14px;
     gap: 12px;
 }
 
 .item{
     flex: 1 1 200px;
-    max-width: 400px;
+    max-width: 200px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -61,7 +84,12 @@
     padding: 24px;
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
-    border: 2px solid var(--cor-hover);
+    border: 2px solid transparent;
+}
+
+.item:hover{
+    background-color: var(--cor-fundo-dois);
+    border: 2px solid var(--cor-destaque);
 }
 
 .item-title{
