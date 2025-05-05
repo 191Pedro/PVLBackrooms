@@ -24,11 +24,12 @@ searchInput.addEventListener('input', (event) => {
 
         if (hasResults) {
             noResults.style.display = 'none';
-        } else {
+        }
+        else {
             noResults.style.display = 'block';
         }
-
-    } else {
+    }
+    else {
         items.forEach(item => item.style.display = 'flex');
         noResults.style.display = 'none';
     }

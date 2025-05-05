@@ -18,6 +18,26 @@ const disableSidebarMode = () =>{
 
   localStorage.setItem('sidebar-mode', null);
 }
+document.addEventListener('keydown', function(event) {
+  if ((event.shiftKey) && event.key.toLowerCase() === 's') {
+    if (sidebar.classList.contains('close')){
+      sidebar.classList.toggle('close');
+      toggleButton.classList.toggle('rotate');
+      
+      closeAllSubMenus();
+    
+      localStorage.setItem('sidebar-mode', 'active');
+    }
+    else {
+      sidebar.classList.toggle('close');
+      toggleButton.classList.toggle('rotate');
+  
+      closeAllSubMenus();
+  
+      localStorage.setItem('sidebar-mode', null);
+    }
+  }
+});
 
 if(sidebarMode === "active") enableSidebarMode();
 
@@ -185,53 +205,3 @@ function setThemeFunction(nameTheme){
     themeVioletNeon();
   }
 }
-
-
-// function setThemeTurtle(){
-//   console.log('tema tartaruga')
-//   setTheme = localStorage.getItem('setTheme')
-//   localStorage.setItem('setTheme', 'themeTurtle')
-//   if(setTheme == 'themeTurtle'){
-//     document.body.classList.remove('themeRoses')
-//     document.body.classList.add('themeTurtle')
-//   }
-// }
-// function setThemeRoses(){
-//   console.log('tema rosas')
-//   setTheme = localStorage.getItem('setTheme')
-//   localStorage.setItem('setTheme', 'themeRoses')
-//   if(setTheme == 'themeRoses'){
-//     document.body.classList.remove(('themeTurtle'))
-//     document.body.classList.add('themeRoses')
-//   }
-// }
-
-// if(setTheme == 'themeTurtle'){
-//   setThemeTurtle()
-// }
-// else if(setTheme == 'themeRoses'){
-//   setThemeRoses()
-// }
-
-// const setThemeTurtle = () => {
-//   document.body.classList.remove('themeRoses')
-//   document.body.classList.add('themeTurtle')
-// }
-
-// const setThemeRoses = () => {
-//   document.body.classList.remove('themeTurtle')
-//   document.body.classList.add('themeRoses')
-// }
-
-// themeOptTurtle.addEventListener('click', () =>{
-//   themeSet = localStorage.getItem('themeSet')
-//   if(themeSet !== "turtle"){
-//     setThemeTurtle();
-//   }
-//   else if(themeSet !== "roses"){
-//     setThemeRoses()
-//   }
-// })
-// themeOptRoses.addEventListener('click', () =>{
-//   themeSet = localStorage.getItem('themeSet')
-// })
