@@ -32,6 +32,7 @@
     font-family: 'Poppins';
     color: var(--cor-texto);
     border: 2px solid transparent;
+    outline: none;
 }
 
 .input-field:hover::placeholder{
@@ -39,7 +40,6 @@
 }
 
 .input-field:focus{
-    outline: none;
     border-bottom: 2px solid var(--cor-destaque);
 }
 

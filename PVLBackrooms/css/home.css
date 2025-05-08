@@ -73,6 +73,7 @@
 html{
   font-family: Poppins;
   line-height: 1.5rem;
+  overflow-x: hidden;
 }
 body{
   min-height: 100vh;
@@ -233,8 +234,9 @@ a{
 }
 
 .navbar .sub-menu-header.closed{
-  top: -100%;
-  transform: translateY(-100%);
+  opacity: 0;
+  right: 0;
+  transform: translateX(100%);
 }
 
 .sub-menu-header > div{
@@ -268,7 +270,7 @@ a{
     justify-content: flex-start;
     position: relative;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 12px;
     span{
       padding-left: 15px;
     }
@@ -297,12 +299,12 @@ a{
 .themes-flex::-webkit-scrollbar-thumb{
   height: 7px;
   background-color: var(--cor-destaque);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 .themes-flex::-webkit-scrollbar-track{
   height: 7px;
   background-color: var(--cor-hover);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 .themes-flex .theme{
   display: flex;
@@ -310,7 +312,7 @@ a{
   align-items: center;
   justify-content: center;
   padding: 2px;
-  border-radius: 10%;
+  border-radius: 12px;
   cursor: pointer;
 }
 .theme > img{
@@ -319,6 +321,27 @@ a{
 }
 .theme:hover > img{
   border: 2px solid var(--cor-destaque);
+}
+
+.sub-menu-header .color-value{
+  display: flex;
+  gap: 8px;
+  background-color: var(--cor-hover);
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.sub-menu-header input{
+  background-color: transparent;
+  font-family: inherit;
+  color: inherit;
+  padding: 0px 4px;
+  outline: none;
+  border-bottom: 2px solid transparent;
+}
+.sub-menu-header input:focus{
+  border-bottom: 2px solid var(--cor-destaque);
 }
 
 /* Sidebar */
@@ -334,7 +357,7 @@ a{
   position: sticky;
   top: 0;
   align-self: start;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s;
   overflow-x: hidden;
   text-wrap: nowrap;
 }
@@ -342,38 +365,65 @@ a{
   padding: 5px;
   width: 60px;
 }
+
 .sidebar::-webkit-scrollbar, ul li .sub-menu.show div::-webkit-scrollbar{
   display: none;
 }
+
 .sidebar ul{
-  list-style: none; 
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
 }
+
 .sidebar > ul > li:first-child{
   display: flex;
   justify-content: flex-end;
   margin-bottom: 16px;
   .logo-sidebar{
+    flex-grow: 1;
     font-weight: 600;
   }
 }
+
+.sidebar > ul > li:first-child > button > svg:first-child{
+  display: block;
+}
+.sidebar > ul > li:first-child > button > svg:last-child{
+  display: none;
+}
+.sidebar.close > ul > li:first-child > button > svg:first-child{
+  display: none;
+}
+.sidebar.close > ul > li:first-child > button > svg:last-child{
+  display: block;
+}
+
 .sidebar ul li.active a{
   color: var(--cor-destaque);
-  transition-delay: 0.3s;
+  background-color: var(--cor-hover);
   svg{
     stroke: var(--cor-destaque);
-    transition-delay: 0.3s;
   }
 }
+
 .sidebar a, .sidebar .dropdown-btn, .sidebar .logo-sidebar{
   position: relative;
-  border-radius: 0.5em;
-  padding: 0.85em;
+  border-radius: 12px;
+  padding: 12px;
   text-align: none;
   color: var(--cor-texto);
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 20px;
 }
+
+.sidebar li:hover > a{
+  background-color: var(--cor-hover);
+}
+
 .dropdown-btn{
   width: 100%;
   text-align: left;
@@ -382,31 +432,25 @@ a{
   font: inherit;
   cursor: pointer;
 }
+
 .sidebar svg{
   flex-shrink: 0;
   stroke: var(--cor-texto);
 }
+
 .sidebar a span, .sidebar .dropdown-btn span{
   flex-grow: 1;
 }
-.sidebar a:hover .line{
-  width: 100%;
-}
-.sidebar ul li.active:hover a{
-  color: var(--cor-texto);
-  transition-delay: 0s;
-  svg{
-    stroke: var(--cor-texto);
-    transition-delay: 0s;
-  }
-}
+
 .sidebar .dropdown-btn:hover .line{
   height: 100%;
 }
+
 .sidebar-icon-meg{
   scale: 1.3;
   stroke-width: 0px;
 }
+
 .sidebar .sub-menu{
   display: grid;
   grid-template-rows: 0fr;
@@ -416,23 +460,27 @@ a{
     overflow: hidden;
   }
 }
+
 .sidebar .sub-menu.show{
   grid-template-rows: 1fr;
 }
+
 .dropdown-btn svg{
   transition: 0.3s ease;
 }
+
 .sidebar .sub-menu a{
   padding-left: 2em;
 }
+
 .toggle-btn{
-  margin: 0 auto;
-  padding: 1em;
+  padding: 12px;
   border: none;
-  border-radius: 0.5em;
+  border-radius: 12px;
   background: none;
   cursor: pointer;
 }
+
 .toggle-btn:hover{
   background-color: var(--cor-hover);
 }
@@ -587,7 +635,6 @@ a{
 /* Conteúdo da Home */
 
 .home-links{
-  margin: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -602,6 +649,7 @@ a{
 .home-links > a{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 8px 12px;
   border-radius: 12px;
