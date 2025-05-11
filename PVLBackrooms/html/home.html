@@ -45,35 +45,98 @@
                 </button>
             </li>
             <li>
-                <button id="palette-btn" class="palette-btn">
-                    <svg class="navbar-icon-palette" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                <button id="customize-btn" class="customize-btn">
+                    <svg class="navbar-icon-customize" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 10 3 3"/><path d="M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z"/><path d="M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031"/></svg>
                 </button>
-                <ul class="sub-menu-header palette-menu closed" id="palette-menu">
-                    <div>
-                        <li> 
+                <ul class="sub-menu-header customize-menu closed" id="customize-menu">
+                    <li> 
+                        <span>
+                            <svg class="navbar-icon-customize" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 10 3 3"/><path d="M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z"/><path d="M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031"/></svg>
+                            <span>Personalização</span>
+                        </span>
+                        <ul>
                             <span>
                                 <svg class="navbar-sub-menu-palette" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
-                                <span>Temas</span>
+                                <span>Paleta</span>
                             </span>
-                            <div class="themes-flex">
-                                <div class="theme" id="theme-turtle" onclick=setThemeFunction(1)>
-                                    <span>Tartaruga</span>
-                                    <img class="img-dark-mode" src="../imgs/themes/themeTurtleDark.png" alt="">
-                                    <img class="img-light-mode" src="../imgs/themes/themeTurtleLight.png" alt="">
-                                </div>
-                                <div class="theme" id="theme-roses" onclick=setThemeFunction(2)>
-                                    <span>Rosas</span>
-                                    <img class="img-dark-mode" src="../imgs/themes/themeRosesDark.png" alt="">
-                                    <img class="img-light-mode" src="../imgs/themes/themeRosesLight.png" alt="">
-                                </div>
-                                <div class="theme" id="theme-violet-neon" onclick=setThemeFunction(3)>
-                                    <span>Violeta Neon</span>
-                                    <img class="img-dark-mode" src="../imgs/themes/themeVioletNeonDark.png" alt="">
-                                    <img class="img-light-mode" src="../imgs/themes/themeVioletNeonLight.png" alt="">
-                                </div>
-                            </div>
-                        </li>
-                    </div>
+                            <li class="themeOptions">
+                                <button onclick="changeColor('gray')" id="gray" class="themes">
+                                    <p>#727272</p>
+                                </button>
+                                <button onclick="changeColor('burgundy')" id="burgundy" class="themes">
+                                    <p>#C40000</p>
+                                </button>
+                                <button onclick="changeColor('red')" id="red" class="themes">
+                                    <p>#FF0000</p>
+                                </button>
+                                <button onclick="changeColor('orange')" id="orange" class="themes">
+                                    <p>#FFBB00</p>
+                                </button>
+                                <button onclick="changeColor('gold')" id="gold" class="themes">
+                                    <p>#EECA00</p>
+                                </button>
+                                <button onclick="changeColor('yellow')" id="yellow" class="themes">
+                                    <p>#EEFF00</p>
+                                </button>
+                                <button onclick="changeColor('lightGreen')" id="lightGreen" class="themes">
+                                    <p>#3CFF6D</p>
+                                </button>
+                                <button onclick="changeColor('green')" id="green" class="themes">
+                                    <p>#00D134</p>
+                                </button>
+                                <button onclick="changeColor('darkGreen')" id="darkGreen" class="themes">
+                                    <p>#0E7C00</p>
+                                </button>
+                                <button onclick="changeColor('aqua')" id="aqua" class="themes">
+                                    <p>#6CFFCE</p>
+                                </button>
+                                <button onclick="changeColor('lightBlue')" id="lightBlue" class="themes">
+                                    <p>#5BD0FF</p>
+                                </button>
+                                <button onclick="changeColor('blue')" id="blue" class="themes">
+                                    <p>#0090f0</p>
+                                </button>
+                                <button onclick="changeColor('darkBlue')" id="darkBlue" class="themes">
+                                    <p>#001EC9</p>
+                                </button>
+                                <button onclick="changeColor('purple')" id="purple" class="themes">
+                                    <p>#8800FF</p>
+                                </button>
+                                <button onclick="changeColor('magenta')" id="magenta" class="themes">
+                                    <p>#ED27FF</p>
+                                </button>
+                                <button onclick="changeColor('pink')" id="pink" class="themes">
+                                    <p>#FF0080</p>
+                                </button>
+                                <button onclick="changeColor('salmon')" id="salmon" class="themes">
+                                    <p>#FF6363</p>
+                                </button>
+                            </li>
+                            <span>
+                                <svg class="navbar-sub-menu-text" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 9V7h10v2"/><path d="M12 7v10"/><path d="M10 17h4"/></svg>
+                                <span>Fonte</span>
+                            </span>
+                            <li class="fontSizeOptions">
+                                <button onclick="changeFontSize('fontSize14px')" id="fontSize14px" class="fontSize">
+                                    <p>14px</p>
+                                </button>
+                                <button onclick="changeFontSize('fontSize16px')" id="fontSize16px" class="fontSize">
+                                    <p>16px</p>
+                                </button>
+                                <button onclick="changeFontSize('fontSize18px')" id="fontSize18px" class="fontSize">
+                                    <p>18px</p>
+                                </button>
+                            </li>
+                            <li class="fontFamilyOptions">
+                                <button onclick="changeFontFamily('fontFamilyPoppins')" id="fontFamilyPoppins" class="fontSize">
+                                    <p>Poppins</p>
+                                </button>
+                                <button onclick="changeFontFamily('fontFamilyMontserrat')" id="fontFamilyMontserrat" class="fontSize">
+                                    <p>Montserrat</p>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li>
@@ -81,26 +144,24 @@
                     <svg class="navbar-icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"/><path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"/><circle cx="12" cy="12" r="10"/></svg>
                 </button>
                 <ul class="sub-menu-header language-menu closed" id="language-menu">
-                    <div>
-                        <li>
-                            <span>
-                                <svg class="navbar-sub-menu-language" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"/><path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"/><circle cx="12" cy="12" r="10"/></svg>
-                                <span>Idiomas</span>
-                            </span>
-                            <div>
-                                <div class="idioma-ativo">
+                    <li>
+                        <span>
+                            <svg class="navbar-sub-menu-language" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"/><path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"/><circle cx="12" cy="12" r="10"/></svg>
+                            <span>Idiomas</span>
+                        </span>
+                        <ul>
+                            <li class="languageOptions">
+                                <button onclick="changeLanguage('brazil-portuguese')" id="brazil-portuguese">
                                     <img src="../imgs/countries/Brazil-flag.png" alt="">
-                                    <span>pt-br</span>
-                                    <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                                </div>
-                                <div>
+                                    <span>Português</span>
+                                </button>
+                                <button onclick="changeLanguage('united-states')">
                                     <img src="../imgs/countries/EUA-flag.png" alt="">
-                                    <span>en-us</span>
-                                    <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                                </div>
-                            </div>
-                        </li>
-                    </div>
+                                    <span>Inglês</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li>
@@ -108,13 +169,13 @@
                     <svg class="navbar-icon-info" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
                 </button>
                 <ul class="sub-menu-header info-menu closed" id="info-menu">
-                    <div>
-                        <li>
-                            <span>
-                                <svg class="navbar-icon-social-media" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M15.8 9.2a2.5 2.5 0 0 0-3.5 0l-.3.4-.35-.3a2.42 2.42 0 1 0-3.2 3.6l3.6 3.5 3.6-3.5c1.2-1.2 1.1-2.7.2-3.7"/></svg>
-                                <span>Minhas redes sociais</span>
-                            </span>
-                            <div>
+                    <li>
+                        <span>
+                            <svg class="navbar-icon-social-media" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M15.8 9.2a2.5 2.5 0 0 0-3.5 0l-.3.4-.35-.3a2.42 2.42 0 1 0-3.2 3.6l3.6 3.5 3.6-3.5c1.2-1.2 1.1-2.7.2-3.7"/></svg>
+                            <span>Minhas redes sociais</span>
+                        </span>
+                        <ul>
+                            <li class="links">
                                 <a href="">
                                     <svg class="navbar-icon-insta" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
@@ -141,9 +202,9 @@
                                     <svg class="icon-sidebar-moreinfo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 8h7"/><path d="M8 12h6"/><path d="M11 16h5"/></svg>
                                     <span>Mais informações</span>
                                 </a>
-                            </div>
-                        </li>
-                    </div>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>

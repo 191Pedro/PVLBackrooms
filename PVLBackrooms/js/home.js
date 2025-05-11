@@ -77,8 +77,8 @@ const languageButton = document.getElementById('language-btn');
 const languageMenu = document.getElementById('language-menu');
 const infoButton = document.getElementById('info-btn');
 const infoMenu = document.getElementById('info-menu');
-const paletteButton = document.getElementById('palette-btn');
-const paletteMenu = document.getElementById('palette-menu');
+const customizeButton = document.getElementById('customize-btn');
+const customizeMenu = document.getElementById('customize-menu');
 const mainDiv = document.getElementById('main');
 
 languageButton.addEventListener('click', () =>{
@@ -89,9 +89,9 @@ languageButton.addEventListener('click', () =>{
     infoMenu.classList.toggle('closed');
     infoButton.classList.toggle('closed');
   }
-  if(!paletteMenu.classList.contains('closed')){
-    paletteMenu.classList.toggle('closed');
-    paletteButton.classList.toggle('closed');
+  if(!customizeMenu.classList.contains('closed')){
+    customizeMenu.classList.toggle('closed');
+    customizeButton.classList.toggle('closed');
   }
 })
 
@@ -103,15 +103,15 @@ infoButton.addEventListener('click', () =>{
     languageMenu.classList.toggle('closed');
     languageButton.classList.toggle('closed');
   }
-  if(!paletteMenu.classList.contains('closed')){
-    paletteMenu.classList.toggle('closed');
-    paletteButton.classList.toggle('closed');
+  if(!customizeMenu.classList.contains('closed')){
+    customizeMenu.classList.toggle('closed');
+    customizeButton.classList.toggle('closed');
   }
 })
 
-paletteButton.addEventListener('click', () =>{
-  paletteButton.classList.toggle('closed');
-  paletteMenu.classList.toggle('closed');
+customizeButton.addEventListener('click', () =>{
+  customizeButton.classList.toggle('closed');
+  customizeMenu.classList.toggle('closed');
 
   if(!languageMenu.classList.contains('closed')){
     languageMenu.classList.toggle('closed');
@@ -132,9 +132,9 @@ mainDiv.addEventListener('click', () =>{
     infoMenu.classList.toggle('closed');
     infoButton.classList.toggle('closed');
   }
-  if(!paletteMenu.classList.contains('closed')){
-    paletteMenu.classList.toggle('closed');
-    paletteButton.classList.toggle('closed');
+  if(!customizeMenu.classList.contains('closed')){
+    customizeMenu.classList.toggle('closed');
+    customizeButton.classList.toggle('closed');
   }
 })
 
@@ -163,45 +163,29 @@ themeSwitch.addEventListener("click", () => {
   }
 })
 
-const themeOptTurtle = document.getElementById('theme-turtle');
-const themeOptRoses = document.getElementById('theme-roses');
 let setTheme = localStorage.getItem('setTheme');
 
-const themeTurtle = () => {
-  document.body.classList.remove('themeRoses', 'themeVioletNeon');
-  document.body.classList.add('themeTurtle');
-  localStorage.setItem('setTheme', 'themeTurtle');
-}
-const themeRoses = () => {
-  document.body.classList.remove('themeTurtle', 'themeVioletNeon');
-  document.body.classList.add('themeRoses');
-  localStorage.setItem('setTheme', 'themeRoses');
-}
-const themeVioletNeon = () => {
-  document.body.classList.remove('themeTurtle', 'themeRoses');
-  document.body.classList.add('themeVioletNeon');
-  localStorage.setItem('setTheme', 'themeVioletNeon');
+function changeColor(id){
+  document.body.style.setProperty('--cor-destaque', document.getElementById(id).innerText);
+  localStorage.setItem('setTheme', document.getElementById(id).innerText);
 }
 
-if(setTheme === 'themeTurtle'){
-  themeTurtle();
-}
-else if(setTheme === 'themeRoses'){
-  themeRoses();
-}
-else if(setTheme === 'themeVioletNeon'){
-  themeVioletNeon();
+document.body.style.setProperty('--cor-destaque', setTheme);
+
+let setFontSize = localStorage.getItem('setFontSize');
+
+function changeFontSize(id){
+  mainDiv.style.fontSize = document.getElementById(id).innerText;
+  localStorage.setItem('setFontSize', document.getElementById(id).innerText);
 }
 
-function setThemeFunction(nameTheme){
-  setTheme = localStorage.getItem('setTheme');
-  if (nameTheme == 1){
-    themeTurtle();
-  }
-  else if (nameTheme == 2){
-    themeRoses();
-  }
-  else if (nameTheme == 3){
-    themeVioletNeon();
-  }
+mainDiv.style.fontSize = localStorage.getItem('setFontSize');
+
+let setFontFamily = localStorage.getItem('setFontFamily');
+
+function changeFontFamily(id){
+  document.body.style.fontFamily = document.getElementById(id).innerText;
+  localStorage.setItem('setFontFamily', document.getElementById(id).innerText);
 }
+
+document.body.style.fontFamily = localStorage.getItem('setFontFamily');

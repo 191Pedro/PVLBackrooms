@@ -1,12 +1,21 @@
 @import url(../css/levels.css);
 
 :root{
+    /* Tema Escuro Padrão */
     --cor-texto: #ebebeb;
-    --cor-fundo: #3c3c3c;
-    --cor-fundo-dois: #2c2c2c;
-    --cor-destaque: #4bb766;
+    --cor-fundo: #1d1d28;
+    --cor-fundo-dois: #2f313a;
+    --cor-destaque: #8800ff;
     --cor-hover: #00000034;
-}
+    }
+  .lightMode{
+    /* Tema Claro Padrão */
+    --cor-texto: #1d1d1d;
+    --cor-fundo: #f7fdff;
+    --cor-fundo-dois: #eaeeff;
+    --cor-destaque: #aa4aff;
+    --cor-hover: #ffffff73;
+  }
 
 .search-bar{
     display: flex;
@@ -29,7 +38,7 @@
     width: 100%;
     padding: 2px 0;
     background-color: transparent;
-    font-family: 'Poppins';
+    font-family: inherit;
     color: var(--cor-texto);
     border: 2px solid transparent;
     outline: none;
