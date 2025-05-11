@@ -26,13 +26,9 @@
 html{
   font-family: Poppins;
   line-height: 1.5rem;
-  width: 100vw;
-  overflow-x: hidden;
 }
 body{
-  min-height: 100vh;
   min-height: 100dvh;
-  width: 100wh;
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   display: grid;
@@ -188,9 +184,7 @@ a{
   overflow-y: auto;
 }
 .sub-menu-header.closed{
-  opacity: 0;
-  right: 0;
-  transform: translateX(100%);
+  display: none;
 }
 .sub-menu-header::-webkit-scrollbar{
   display: none;
@@ -453,7 +447,7 @@ a{
   }
 }
 
-.sidebar a, .sidebar .dropdown-btn, .sidebar .logo-sidebar{
+.sidebar a, .sidebar .logo-sidebar{
   position: relative;
   border-radius: 12px;
   padding: 12px;
@@ -468,26 +462,13 @@ a{
   background-color: var(--cor-hover);
 }
 
-.dropdown-btn{
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-}
-
 .sidebar svg{
   flex-shrink: 0;
   stroke: var(--cor-texto);
 }
 
-.sidebar a span, .sidebar .dropdown-btn span{
+.sidebar a span{
   flex-grow: 1;
-}
-
-.sidebar .dropdown-btn:hover .line{
-  height: 100%;
 }
 
 .sidebar-icon-meg{
@@ -507,10 +488,6 @@ a{
 
 .sidebar .sub-menu.show{
   grid-template-rows: 1fr;
-}
-
-.dropdown-btn svg{
-  transition: 0.3s ease;
 }
 
 .sidebar .sub-menu a{
@@ -592,7 +569,6 @@ a{
     left: 0;
   }
   .sidebar{
-    position: sticky;
     height: 60px;
     width: 100%;
     border-right: none;
@@ -610,13 +586,13 @@ a{
       grid-auto-columns: 60px;
       grid-auto-flow: column;
       align-items: center;
-      overflow-x: scroll;
+      justify-content: inherit;
     }
 
     ul li{
       height: 100%;
     }
-    ul a, ul .dropdown-btn{
+    ul a{
       width: 60px;
       height: 60px;
       padding: 0;
@@ -624,7 +600,7 @@ a{
       justify-content: center;
     }
 
-    ul li span, ul li:first-child, .dropdown-btn svg:last-of-type{
+    ul li span, ul li:first-child{
       display: none;
     }
 
