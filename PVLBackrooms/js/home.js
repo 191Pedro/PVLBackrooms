@@ -167,9 +167,11 @@ let setTheme = localStorage.getItem('setTheme');
 
 function changeColor(id){
   document.body.style.setProperty('--cor-destaque', document.getElementById(id).innerText);
+  // document.body.style.backgroundColor = document.getElementById(id).innerText + '0E';
   localStorage.setItem('setTheme', document.getElementById(id).innerText);
 }
 
+// document.body.style.backgroundColor = setTheme + '0E';
 document.body.style.setProperty('--cor-destaque', setTheme);
 
 let setFontSize = localStorage.getItem('setFontSize');

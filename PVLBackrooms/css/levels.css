@@ -7,15 +7,7 @@
     --cor-fundo-dois: #2f313a;
     --cor-destaque: #8800ff;
     --cor-hover: #00000034;
-    }
-  .lightMode{
-    /* Tema Claro Padrão */
-    --cor-texto: #1d1d1d;
-    --cor-fundo: #f7fdff;
-    --cor-fundo-dois: #eaeeff;
-    --cor-destaque: #aa4aff;
-    --cor-hover: #ffffff73;
-  }
+}
 
 .search-bar{
     display: flex;
@@ -118,7 +110,12 @@
     border-radius: 8px;
 }
 
-#no_results{
-    display: none;
-    text-align: center;
+.no-results{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.no-results-img{
+    height: 150px;
+    filter: grayscale(1);
 }

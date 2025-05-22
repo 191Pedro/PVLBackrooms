@@ -26,7 +26,7 @@ searchInput.addEventListener('input', (event) => {
             noResults.style.display = 'none';
         }
         else {
-            noResults.style.display = 'block';
+            noResults.style.display = 'flex';
         }
     }
     else {
