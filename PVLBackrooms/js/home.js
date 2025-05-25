@@ -73,41 +73,13 @@ function closeAllSubMenus(){
   })
 }
 
+const customizeButton = document.getElementById('customize-btn');
+const customizeMenu = document.getElementById('customize-menu');
 const languageButton = document.getElementById('language-btn');
 const languageMenu = document.getElementById('language-menu');
 const infoButton = document.getElementById('info-btn');
 const infoMenu = document.getElementById('info-menu');
-const customizeButton = document.getElementById('customize-btn');
-const customizeMenu = document.getElementById('customize-menu');
 const mainDiv = document.getElementById('main');
-
-languageButton.addEventListener('click', () =>{
-  languageButton.classList.toggle('closed');
-  languageMenu.classList.toggle('closed');
-
-  if(!infoMenu.classList.contains('closed')){
-    infoMenu.classList.toggle('closed');
-    infoButton.classList.toggle('closed');
-  }
-  if(!customizeMenu.classList.contains('closed')){
-    customizeMenu.classList.toggle('closed');
-    customizeButton.classList.toggle('closed');
-  }
-})
-
-infoButton.addEventListener('click', () =>{
-  infoButton.classList.toggle('closed');
-  infoMenu.classList.toggle('closed');
-
-  if(!languageMenu.classList.contains('closed')){
-    languageMenu.classList.toggle('closed');
-    languageButton.classList.toggle('closed');
-  }
-  if(!customizeMenu.classList.contains('closed')){
-    customizeMenu.classList.toggle('closed');
-    customizeButton.classList.toggle('closed');
-  }
-})
 
 customizeButton.addEventListener('click', () =>{
   customizeButton.classList.toggle('closed');
@@ -122,7 +94,32 @@ customizeButton.addEventListener('click', () =>{
     infoButton.classList.toggle('closed');
   }
 })
+languageButton.addEventListener('click', () =>{
+  languageButton.classList.toggle('closed');
+  languageMenu.classList.toggle('closed');
 
+  if(!infoMenu.classList.contains('closed')){
+    infoMenu.classList.toggle('closed');
+    infoButton.classList.toggle('closed');
+  }
+  if(!customizeMenu.classList.contains('closed')){
+    customizeMenu.classList.toggle('closed');
+    customizeButton.classList.toggle('closed');
+  }
+})
+infoButton.addEventListener('click', () =>{
+  infoButton.classList.toggle('closed');
+  infoMenu.classList.toggle('closed');
+
+  if(!languageMenu.classList.contains('closed')){
+    languageMenu.classList.toggle('closed');
+    languageButton.classList.toggle('closed');
+  }
+  if(!customizeMenu.classList.contains('closed')){
+    customizeMenu.classList.toggle('closed');
+    customizeButton.classList.toggle('closed');
+  }
+})
 mainDiv.addEventListener('click', () =>{
   if(!languageMenu.classList.contains('closed')){
     languageMenu.classList.toggle('closed');
@@ -167,11 +164,11 @@ let setTheme = localStorage.getItem('setTheme');
 
 function changeColor(id){
   document.body.style.setProperty('--cor-destaque', document.getElementById(id).innerText);
-  // document.body.style.backgroundColor = document.getElementById(id).innerText + '0E';
+  document.body.style.setProperty('--cor-fundo-tres', document.getElementById(id).innerText + '09');
   localStorage.setItem('setTheme', document.getElementById(id).innerText);
 }
 
-// document.body.style.backgroundColor = setTheme + '0E';
+document.body.style.setProperty('--cor-fundo-tres', setTheme + '09');
 document.body.style.setProperty('--cor-destaque', setTheme);
 
 let setFontSize = localStorage.getItem('setFontSize');
@@ -182,12 +179,3 @@ function changeFontSize(id){
 }
 
 mainDiv.style.fontSize = localStorage.getItem('setFontSize');
-
-let setFontFamily = localStorage.getItem('setFontFamily');
-
-function changeFontFamily(id){
-  document.body.style.fontFamily = document.getElementById(id).innerText;
-  localStorage.setItem('setFontFamily', document.getElementById(id).innerText);
-}
-
-document.body.style.fontFamily = localStorage.getItem('setFontFamily');

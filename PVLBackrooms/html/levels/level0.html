@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PVLBackrooms</title>
-    <link href="../css/home.css" rel="stylesheet" type="text/css">
+    <link href="../../css/home.css" rel="stylesheet" type="text/css">
+    <link href="../../css/levels.css" rel="stylesheet" type="text/css">
 </head>
 <body class="">
     <nav id="navbar" class="navbar" style="grid-area: box-1">
@@ -118,14 +119,6 @@
                                     <p>18px</p>
                                 </button>
                             </li>
-                            <li class="fontFamilyOptions">
-                                <button onclick="changeFontFamily('fontFamilyPoppins')" id="fontFamilyPoppins" class="fontSize">
-                                    <p>Poppins</p>
-                                </button>
-                                <button onclick="changeFontFamily('fontFamilyMontserrat')" id="fontFamilyMontserrat" class="fontSize">
-                                    <p>Montserrat</p>
-                                </button>
-                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -143,11 +136,11 @@
                         <ul>
                             <li class="languageOptions">
                                 <button onclick="changeLanguage('brazil-portuguese')" id="brazil-portuguese">
-                                    <img src="../imgs/countries/Brazil-flag.png" alt="">
+                                    <img src="../../imgs/countries/Brazil-flag.png" alt="">
                                     <span>Português</span>
                                 </button>
                                 <button onclick="changeLanguage('united-states')">
-                                    <img src="../imgs/countries/EUA-flag.png" alt="">
+                                    <img src="../../imgs/countries/EUA-flag.png" alt="">
                                     <span>Inglês</span>
                                 </button>
                             </li>
@@ -209,15 +202,14 @@
                     <svg class="sidebar-icon-toggle-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="m14 9 3 3-3 3"/></svg>
                 </button>
             </li>
-            <li class="active" title="Início">
-            <!-- <target="_blank"> -->
-                <a href="PVLBackrooms/html/home.html">
+            <li title="Início">
+                <a href="../home.html">
                     <svg class="sidebar-icon-home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 10.4a2.12 2.12 0 1 0 3.02 2.98L12 7l6.4 6.4a2.12 2.12 0 1 0 2.979-3.021L13.7 2.7a2.4 2.4 0 0 0-3.404.004Z"/><path d="M20 14v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M14 22v-6a2 2 0 0 0-4 0v6"/></svg>
                     <span>Início</span>
                 </a>
             </li>
-            <li title="Níveis">
-                <a href="PVLBackrooms/html/levels.html">
+            <li class="active" title="Níveis">
+                <a href="../levels.html">
                     <svg class="sidebar-icon-levels" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M1 12V2C1 1.44772 1.44772 1 2 1H10M1 12V15C1 15.5523 1.44772 16 2 16H20C20.5523 16 21 15.5523 21 15V14M1 12L10 9M10 9V1M10 9L14 10.8182M21 14V2C21 1.44772 20.5523 1 20 1H10M21 14L18 12.6364M14 10.8182V5.943C14 5.2448 14.6974 4.76151 15.3511 5.00667L17.3511 5.75667C17.7414 5.90304 18 6.27616 18 6.693V12.6364M14 10.8182L18 12.6364"/>
                     </svg>
@@ -225,13 +217,13 @@
                 </a>
             </li>
             <li title="Entidades">
-                <a href="PVLBackrooms/html/entities.html">
+                <a href="../entities.html">
                     <svg class="sidebar-icon-entities" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.236 22a3 3 0 0 0-2.2-5"/><path d="M16 20a3 3 0 0 1 3-3h1a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4V4"/><path d="M18 13h.01"/><path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10"/></svg>
                     <span>Entidades</span>
                 </a>
             </li>
             <li title="MEG">
-                <a href="PVLBackrooms/html/meg.html">
+                <a href="../meg.html">
                     <svg class="sidebar-icon-meg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <polygon points="23.92 7 21.35 10.77 15.49 12.9 15.49 14.97 12 17 8.51 14.97 8.51 12.9 2.65 10.77 .08 7 9.33 12.32 9.33 14.53 12 16.07 14.67 14.53 14.67 12.32 23.92 7"/>
                         <polygon points="11.67 9.33 10.91 8.88 9.79 9.52 9.79 14.26 12 15.55 14.21 14.26 14.21 12.43 13.43 12.86 13.43 13.8 12 14.65 10.56 13.8 10.56 10 11.67 9.33"/>
@@ -246,25 +238,25 @@
                 </a>
             </li>
             <li title="Grupos">
-                <a href="PVLBackrooms/html/groups.html">
+                <a href="../groups.html">
                     <svg class="sidebar-icon-groups" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="4" cy="4" r="2"/><path d="m14 5 3-3 3 3"/><path d="m14 10 3-3 3 3"/><path d="M17 14V2"/><path d="M17 14H7l-5 8h20Z"/><path d="M8 14v8"/><path d="m9 14 5 8"/></svg>
                     <span>Grupos</span>
                 </a>
             </li>
             <li title="Viajantes">
-                <a href="PVLBackrooms/html/travelers.html">
+                <a href="../travelers.html">
                     <svg class="sidebar-icon-travelers" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
                     <span>Viajantes</span>
                 </a>
             </li>
             <li title="Histórias">
-                <a href="PVLBackrooms/html/histories.html">
+                <a href="../histories.html">
                     <svg class="sidebar-icon-histories" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M16 12h2"/><path d="M16 8h2"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M6 12h2"/><path d="M6 8h2"/></svg>
                     <span>Histórias</span>
                 </a>
             </li>
             <li title="Linha do Tempo">
-                <a href="PVLBackrooms/html/timeline.html">
+                <a href="../timeline.html">
                     <svg class="sidebar-icon-timeline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg>
                     <span>Linha do Tempo</span>
                 </a>
@@ -273,80 +265,152 @@
     </aside>
     <main id="main" class="main" style="grid-area: box-3">
         <section class="container">
-            <h1>PVLBackrooms</h1>
-            <section class="text">
-                <p>As PVLBackrooms são um universo paralelo sectionido em níveis conectados ao nosso mundo que são as PVLFrontrooms. Este é um documentário a respeito de todos os mistérios fascinantes deste mundo. O que pode lhe aguardar?</p>
-                <p>Este documentário trata sobre os níveis, reúne informações detalhadas sobre organizações, conta relatos de viajantes, preserva histórias gerais e ainda possui um guia de sobrevivência caso você encontre-se neste mundo caótico no futuro.</p>
-            </section>
-            <section class="text">
-                <h2>Como funciona?<span></span></h2>
-                <p>PVLBackrooms possui diversos lugares que vão desde simples e monótonos à ambientes caóticos e perigosos, espaços liminares e desconfortáveis, lugares estranhamente quietos e seguros e áreas até parecidas com a realidade.</p>
-                <p>Esses lugares são dividos em níveis, como se fossem de prédios, e você pode transitar entre eles através de passagens, uma mais surreal que a outra. Essas passagens são diferentes para cada nível e em cada um deles.</p>
-            </section>
-            <section class="text">
-                <h3>Passagens (Entradas e saídas)</h3>
-                <p>As passagens entre níveis variam bastante. Podem ser um toque num objeto, uma ação específica, um evento do nível ou parte específica, uma conexão direta como uma estrada entre níveis e até mesmo um <a>no-clip</a>. A maioria das passagens te teleportam instataneamente após a conclusão dela para o nível em quesito.</p>
-                <p>A locomoção por níveis não é linear, podendo atravessar diversos números de níveis em apenas uma passagem e os níveis podem possuir diversas maneiras de sair e entrar deles.</p>
-                <section class="home-links">
-                    <a href="PVLBackrooms/levels.html">
-                        <span>Conferir</span>
-                        <svg class="home-icon-levels" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M1 12V2C1 1.44772 1.44772 1 2 1H10M1 12V15C1 15.5523 1.44772 16 2 16H20C20.5523 16 21 15.5523 21 15V14M1 12L10 9M10 9V1M10 9L14 10.8182M21 14V2C21 1.44772 20.5523 1 20 1H10M21 14L18 12.6364M14 10.8182V5.943C14 5.2448 14.6974 4.76151 15.3511 5.00667L17.3511 5.75667C17.7414 5.90304 18 6.27616 18 6.693V12.6364M14 10.8182L18 12.6364"/>
-                        </svg>
-                        <span>Níveis</span>
-                    </a>
+            <section class="level-title">
+                <section class="level-name">
+                    <h1>Nível 0</h1>
+                    <h1>The Backrooms</h1>
+                    <section class="level-img">
+                        <img src="../../imgs/levels/level0.png">
+                    </section>
+                </section>
+                <section class="level-preview">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td colspan="2" style="border-radius: 12px;">
+                                    <span>Condições prévias do nível</span>
+                                    <svg class="info-level-preview-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <svg class="entity-level-preview-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.236 22a3 3 0 0 0-2.2-5"/><path d="M16 20a3 3 0 0 1 3-3h1a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4V4"/><path d="M18 13h.01"/><path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10"/></svg>
+                                    <span>Entidades</span>
+                                </td>
+                                <td>
+                                    <span>Nenhuma</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <svg class="resource-level-preview-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                                    <span>Recursos</span>
+                                </td>
+                                <td>
+                                    <span>Escassos</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <svg class="caution-level-preview-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+                                    <span>Ameaça</span>
+                                </td>
+                                <td>
+                                    <span>Ligeiramente seguro</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <svg class="habitability-level-preview-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 16 6 6"/><circle cx="16" cy="9" r="2.9"/><circle cx="6" cy="5" r="3"/></svg>
+                                    <span>Habitabilidade</span>
+                                </td>
+                                <td>
+                                    <span>Não adequada</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <svg class="stability-level-preview-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2"/></svg>
+                                    <span>Estabilidade</span>
+                                </td>
+                                <td>
+                                    <span>Ligeiramente estável</span>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td>
+                                    <svg class="communication-level-preview-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a7.31 7.31 0 0 0 10 10Z"/><path d="m9 15 3-3"/><path d="M17 13a6 6 0 0 0-6-6"/><path d="M21 13A10 10 0 0 0 11 3"/></svg>
+                                    <span>Comunicação</span>
+                                </td>
+                                <td>
+                                    <span>Impossível</span>
+                                </td>
+                            </tr> -->
+                            <tr>
+                                <td>
+                                    <svg class="access-level-preview-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2.5"/><path d="m10.2 6.3-3.9 3.9"/><circle cx="4.5" cy="12" r="2.5"/><path d="M7 12h10"/><circle cx="19.5" cy="12" r="2.5"/><path d="m13.8 17.7 3.9-3.9"/><circle cx="12" cy="19.5" r="2.5"/></svg>
+                                    <span>Acesso</span>
+                                </td>
+                                <td>
+                                    <span>Moderado</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
             </section>
             <section class="text">
+                <h2><span></span>Descrição<span></span></h2>
+                <p>O Nível 0 é provavelmente o primeiro nível que um sortudo que adentrar as PVLBackrooms entrará. Um nível de paredes amarelas, carpete amarelado e por vezes molhado, luzes falhando e salas intermináveis, algumas impossíveis para a física convecional.</p>
             </section>
-            <p>Começar por:</p>
-            <section class="home-links">
-                <a href="PVLBackrooms/home.html">
-                    <svg class="home-icon-home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 10.4a2.12 2.12 0 1 0 3.02 2.98L12 7l6.4 6.4a2.12 2.12 0 1 0 2.979-3.021L13.7 2.7a2.4 2.4 0 0 0-3.404.004Z"/><path d="M20 14v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M14 22v-6a2 2 0 0 0-4 0v6"/></svg>
-                    <span>Início</span>
-                </a>
-                <a href="PVLBackrooms/levels.html">
-                    <svg class="home-icon-levels" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M1 12V2C1 1.44772 1.44772 1 2 1H10M1 12V15C1 15.5523 1.44772 16 2 16H20C20.5523 16 21 15.5523 21 15V14M1 12L10 9M10 9V1M10 9L14 10.8182M21 14V2C21 1.44772 20.5523 1 20 1H10M21 14L18 12.6364M14 10.8182V5.943C14 5.2448 14.6974 4.76151 15.3511 5.00667L17.3511 5.75667C17.7414 5.90304 18 6.27616 18 6.693V12.6364M14 10.8182L18 12.6364"/>
-                    </svg>
-                    <span>Níveis</span>
-                </a>
-                <a href="PVLBackrooms/entities.html">
-                    <svg class="home-icon-entities" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.236 22a3 3 0 0 0-2.2-5"/><path d="M16 20a3 3 0 0 1 3-3h1a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4V4"/><path d="M18 13h.01"/><path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10"/></svg>
-                    <span>Entidades</span>
-                </a>
-                <a href="PVLBackrooms/meg.html">
-                    <svg class="home-icon-meg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <polygon points="23.92 7 21.35 10.77 15.49 12.9 15.49 14.97 12 17 8.51 14.97 8.51 12.9 2.65 10.77 .08 7 9.33 12.32 9.33 14.53 12 16.07 14.67 14.53 14.67 12.32 23.92 7"/>
-                        <polygon points="11.67 9.33 10.91 8.88 9.79 9.52 9.79 14.26 12 15.55 14.21 14.26 14.21 12.43 13.43 12.86 13.43 13.8 12 14.65 10.56 13.8 10.56 10 11.67 9.33"/>
-                        <polygon points="10.94 11.79 10.93 12.67 12.04 13.32 16.15 10.95 16.16 8.39 13.94 7.12 12.35 8.04 13.12 8.5 13.93 8.03 15.38 8.84 15.37 10.51 12.07 12.41 10.94 11.79"/>
-                        <polygon points="13.43 11.22 14.2 10.78 14.21 9.49 10.1 7.12 7.88 8.39 7.89 10.95 9.48 11.86 9.5 10.97 8.68 10.5 8.66 8.84 10.12 8.02 13.41 9.92 13.43 11.22"/>
-                        <polygon points="3.54 12.04 4.89 14.04 8.07 13.96 8.07 13.37 3.54 12.04"/>
-                        <polygon points="5.44 14.83 6.2 15.94 8.07 15.11 8.07 14.38 5.44 14.83"/>
-                        <polygon points="20.46 12.04 19.11 14.04 15.93 13.96 15.93 13.37 20.46 12.04"/>
-                        <polygon points="18.55 14.85 17.79 15.95 15.92 15.12 15.92 14.4 18.55 14.85"/>
-                    </svg>
-                    <span>MEG</span>
-                </a>
-                <a href="PVLBackrooms/groups.html">
-                    <svg class="home-icon-groups" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="4" cy="4" r="2"/><path d="m14 5 3-3 3 3"/><path d="m14 10 3-3 3 3"/><path d="M17 14V2"/><path d="M17 14H7l-5 8h20Z"/><path d="M8 14v8"/><path d="m9 14 5 8"/></svg>
-                    <span>Grupos</span>
-                </a>
-                <a href="PVLBackrooms/travelers.html">
-                    <svg class="home-icon-travelers" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
-                    <span>Viajantes</span>
-                </a>
-                <a href="PVLBackrooms/histories.html">
-                    <svg class="home-icon-histories" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M16 12h2"/><path d="M16 8h2"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M6 12h2"/><path d="M6 8h2"/></svg>
-                    <span>Histórias</span>
-                </a>
-                <a href="PVLBackrooms/timeline.html">
-                    <svg class="home-icon-timeline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg>
-                    <span>Linha do Tempo</span>
-                </a>
+            <section class="text">
+                <h2><span></span>Detalhes<span></span></h2>
+                <p>O nível possui uma estética estranha e improvável. O papel de parede presente nas salas do nível tem um padrão de setas para cima e às vezes pontilhado. Também é possível raramente encontrar tomadas pelas paredes, mas que não funcionam. Outro fenômeno raro é a oscilação de energia das lâmpadas de LED de uma sala, sendo essa oscilação bem passageira. É possível quebrar uma lâmpada, mas não é recomendado fazer isso, já que a luz é importante para se guiar no nível.</p>
+                <p>O carpete do nível é de cor bege, quase amarelo, e felpudo. De vez em quando, o carpete pode encontrar-se molhado. Em investigações da MEG no ano 23 d.M., foi constatado que o líquido encontrado no carpete possui traços de fosfolipídeo dipalmitoilfosfatidilcolina, que também é encontrado no surfactante pulmonar do pulmão do ser humano. <a class="theory" href="#theory">Teoria</a></p>
+            </section>
+            <section class="text">
+                <h2><span></span>Estrutura<span></span></h2>
+                <p>As salas do nível possuem tamanhos, formas e disposição de paredes e pilastras de forma incomum, parecendo até mesmo aleatório. Em algumas salas deste nível é possível encontrar buracos intermináveis e perfeitos no chão, não podendo ver o fim destes. Não se sabe se são infinitos ou se levam a algo, sendo a única investigação para isso feita no ano 23 d.M., em que a MEG registrou mais de 50 metros de profundidade com equipamentos de escalada e leitura de terreno. Acredita-se ser infinito, então evite cair A TODO CUSTO.</p>
+                <p>O tamanho do nível é provavelmente infinito, além de que uma pessoa, ao entrar nele, aparece em algum lugar em que outra pessoa já passou, sendo que a primeira pessoa ao entrar nesse nível foi a única a aparecer em um lugar aleatório e, assim, determinar a partir de onde o nível seria explorado por outras pessoas. Isso foi observado por viajantes e logo relatado a MEG, comprovado na investigação de 9 d.M., quando a organização fez testes em áreas controladas com agentes viajando entre níveis de fácil acesso e o Nível 0.</p>
+            </section>
+            <section class="text">
+                <h2><span></span>Condições do nível<span></span></h2>
+                <section class="text-in-text">
+                    <h3>Entidades</h3>
+                    <p>O nível não possui entidades, apesar da estranha sensação de ter algo te observando a todo momento. Apesar disso, nunca foi avistada uma entidade aqui, deduzindo-se que nenhuma pode entrar nem sair.</p>
+                    <h3>Recursos</h3>
+                    <p>Os recursos do nível são escassos, só podendo encontrar ou obter com vendedores, grupos ou outros viajantes no nível. Mantimentos podem entrar e sair do nível, por isso, recomenda-se levar comida e água caso vá ao Nível 0 por vontade própria ou se for necessário.</p>
+                    <h3>Ameaça</h3>
+                    <p>O nível apresenta baixa ameaça o suficiente para ser quase seguro, sendo as únicas ameaças as salas traiçoeiras e outros viajantes ou grupos que podem caçar a outros atrás de recursos, além de que não existem entidades aqui.</p>
+                    <h3>Habitabilidade</h3>
+                    <p>É recomendado não usar o nível como moradia, já que não se é adequado para sustentar uma pessoa por um longo tempo. Ainda assim, o nível é muito bom para a estadia por pouco tempo, tendo em vista que não existem entidades no nível.</p>
+                    <h3>Estabilidade</h3>
+                    <p>O nível é ligeiramente estável mesmo com uma estrutura estranha. Não existem relatos de grandes mudanças na estrutura das salas ou da composição do nível, apenas luzes piscando, leves interferências de rádio e uma contínua e estranha diminuição do nivel de oxigênio e um aumento de CO<sub>2</sub>. <a class="theory" href="#theory">Teoria</a></p>
+                </section>
+            </section>
+            <section class="text">
+                <h2><span></span>Grupos<span></span></h2>
+                <p>Além da MEG, a principal organização das PVLBackrooms, existem 4 grupos aqui.</p>
+                <section class="text-in-text">
+                    <h3>Papel da MEG</h3>
+                    <p>A presença ininterrupta da MEG nesse nível serve o propósito de tornar o ambiente o mais seguro possível para as novas pessoas que estiverem passando pelo nível. Ela também oferece recursos para sobrevivência, o suficiente para te ajudar a ir para outro nível mais acolhedor, além de explicarem a como sair do nível e oferecendo conhecimento breve do funcionamento das PVLBackrooms.</p>
+                    <h3>Lorem</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, omnis voluptates optio unde delectus dignissimos consectetur iusto amet! Accusantium ea consequuntur non dolor vitae culpa totam modi magnam. Possimus, aliquid.</p>
+                </section>
+            </section>
+            <section class="text">
+                <h2><span></span>Entradas e Saídas<span></span></h2>
+                <p>Existem 22 Entradas e 9 Saídas do Nível 0</p>
+                <section class="text-in-text">
+                    <h3>Entradas</h3>
+                    <p><b>PVLFrontrooms</b> - Fazer um no-clip acidental nas PVLFrontrooms tem chances baixas de te levar ao Nível 0.</p>
+                    <p><b>The Hub</b> - Escolher a porta do Nível 0 no The Hub te leva a este nível.</p>
+                    <p><b>Nível 1</b> - Preencher sua visão completamente com uma parede, que possui cores e padrões iguais as das paredes do Nível 0, te leva instataneamente ao Nível 0.</p>
+                    <p><b>Nível 97</b> - Escolher o Nível 0 como destino após sobreviver aos eventos do Nível 97 te leva ao Nível 0.</p>
+                </section>
+                <section class="text-in-text">
+                    <h3>Sáidas</h3>
+                    <p><b>Nível 3</b> - Preencher sua visão completamente com uma parede, que possui cores e padrões iguais as das paredes do Nível 0, te leva instataneamente ao Nível 0.</p>
+                    <p><b>Nível 4</b> - Preencher sua visão completamente com uma parede, que possui cores e padrões iguais as das paredes do Nível 0, te leva instataneamente ao Nível 0.</p>
+                </section>
             </section>
         </section>
     </main>
-    <script src="PVLBackrooms/js/home.js" type="text/javascript" defer></script>
+    <footer id="footer" class="footer" style="grid-area: box-4">
+        <!-- <p>footer</p> -->
+    </footer>
+    <script src="../../js/home.js" type="text/javascript" defer></script>
 </body>
 </html>
