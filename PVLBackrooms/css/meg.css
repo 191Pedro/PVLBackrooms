@@ -1,0 +1,14 @@
+@import url(../css/levels.css);
+
+:root{
+  /* Tema Escuro Padrão */
+    --cor-texto: #ebebeb;
+    --cor-fundo: #1d1d28;
+    --cor-fundo-dois: #2f313a;
+    --cor-fundo-tres: #1d1d28;
+    --cor-fundo-quatro: #272733;
+    --cor-borda: #4d4d5c;
+    --cor-destaque: #8800ff;
+    --cor-hover: #00000034;
+}
+
