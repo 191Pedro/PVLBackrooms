@@ -90,7 +90,7 @@ function filtersOptionsConfirm(){
         item.style.display = "block";
         
         const matchOperation = operationFilter === "all" || item.dataset.operation == operationFilter;
-        const matchSector = sectorFilter === "all" || item.dataset.sector == sectorFilter;
+        const matchSector = sectorFilter === "all" || item.dataset.sector.includes(sectorFilter);
         const matchLevel = levelFilter === "all" || item.dataset.level == levelFilter;
 
         if (matchOperation && matchSector && matchLevel) {
@@ -103,14 +103,10 @@ function filtersOptionsConfirm(){
 }
 
 function filtersOptionsCancel(){
-    const operationFilter = optionOperation.value;
-    const sectorFilter = optionSector.value;
-    const levelFilter = optionLevel.value;
-
     optionOperation.value = "all";
     optionSector.value = "all";
     optionLevel.value = "all";
-    
+
     const item = document.querySelectorAll('.item');
 
     item.forEach(item =>{
