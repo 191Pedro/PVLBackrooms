@@ -1,0 +1,113 @@
+@import url(../css/home.css);
+
+:root{
+    /* Tema Escuro Padrão */
+    --cor-texto: #ebebeb;
+    --cor-fundo: #1d1d28;
+    --cor-fundo-dois: #2f313a;
+    --cor-fundo-tres: #1d1d28;
+    --cor-fundo-quatro: #272733;
+    --cor-borda: #4d4d5c;
+    --cor-destaque: #8800ff;
+    --cor-hover: #00000034;
+}
+
+.meg-back{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    gap: 0 12px;
+}
+.meg-page-name{
+    text-align: center;
+    margin: 15px 0;
+}
+.meg-title{
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+}
+.meg-img{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.meg-icon-title{
+    width: 150px;
+    height: 150px;
+}
+.meg-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.meg-title-links{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 12px;
+}
+
+.text ul{
+    padding: 5px 5px 0px 30px;
+    width: 70%;
+    border-radius: 12px;
+}
+.text ul li{
+    padding: 10px 0px;
+}
+
+.age-options select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    display: block;
+    padding: 8px 40px 8px 12px;
+    margin: 8px 0 8px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: inherit;
+    font-family: inherit;
+    background-color: var(--cor-fundo-quatro);
+    border: 2px solid var(--cor-borda);
+    border-radius: 12px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    outline: none;
+}
+.age-options select:hover{
+    background-color: var(--cor-fundo-dois);
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    border-left: 2px solid var(--cor-borda);
+    margin: 16px 0;
+    padding: 16px 0;
+    gap: 24px;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--cor-borda);
+}
+.item .date{
+    font-weight: 600;
+    margin-left: 24px;
+}
+.item .description, .item .event{
+    padding-left: 24px;
+}
+
+.line-test{
+    height: 2px;
+    flex-grow: 1;
+    background-color: var(--cor-borda);
+}

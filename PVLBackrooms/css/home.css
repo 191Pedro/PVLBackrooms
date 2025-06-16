@@ -31,6 +31,7 @@
 html{
   font-family: Poppins;
   line-height: 1.5rem;
+  scroll-behavior: smooth;
 }
 body{
   min-height: 100dvh;
@@ -71,16 +72,6 @@ body{
 .lightMode .img-light-mode{
   display: block;
 }
-.line{
-  position: absolute;
-  height: 100%;
-  width: 0%;
-  background-color: var(--cor-destaque);
-  top: 0;
-  left: 0;
-  transition: 0.3s ease-in-out;
-  z-index: -1;
-}
 
 .navbar-icon-moon{
   display: block;
@@ -116,8 +107,27 @@ a{
   display: flex;
   list-style: none;
   height: 100%;
-  width: 200px;
   justify-content: space-evenly;
+  position: relative;
+}
+.navbar > ul:first-of-type{
+  margin-left: 12px;
+}
+.navbar > ul > a > svg{
+  transition: 0.3s;
+  width: 140px;
+}
+.navbar > ul > a:hover > svg{
+  scale: 1.1;
+  .st0{
+    fill: var(--cor-destaque);
+  }
+  
+  .st1{
+    fill: none;
+    stroke: var(--cor-destaque);
+    stroke-miterlimit: 10;
+  }
 }
 .navbar > ul > li > button{
   cursor: pointer;
@@ -137,21 +147,6 @@ a{
   fill: none;
   stroke: var(--cor-texto);
   stroke-miterlimit: 10;
-}
-.navbar > ul > a > svg{
-  transition: 0.3s;
-}
-.navbar > ul > a:hover > svg{
-  scale: 1.1;
-  .st0{
-    fill: var(--cor-destaque);
-  }
-  
-  .st1{
-    fill: none;
-    stroke: var(--cor-destaque);
-    stroke-miterlimit: 10;
-  }
 }
 .navbar > ul > li{
   height: 100%;
@@ -581,11 +576,7 @@ a{
   flex-grow: 1;
   margin-left: 20px;
 }
-.container h3{
-  line-height: normal;
-  margin-top: 16px;
-}
-.container p{
+.container .text p{
   line-height: normal;
   margin-top: 8px;
 }
@@ -593,6 +584,10 @@ a{
   margin: 32px auto;
 }
 .container .text-in-text{
+  margin-top: 16px;
+}
+.container .text-in-text h3{
+  line-height: normal;
   margin-top: 16px;
 }
 
@@ -692,6 +687,7 @@ a{
     padding: 0px;
   }
   .main{
+    padding: 20px 0px;
     h2{
       display: flex;
       align-items: center;
