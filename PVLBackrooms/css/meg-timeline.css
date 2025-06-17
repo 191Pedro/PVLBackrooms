@@ -105,9 +105,3 @@
 .item .description, .item .event{
     padding-left: 24px;
 }
-
-.line-test{
-    height: 2px;
-    flex-grow: 1;
-    background-color: var(--cor-borda);
-}

@@ -348,17 +348,71 @@
                     </table>
                 </section>
             </section>
-            <section class="text-in-text index-section" id="index-section">
-                <h2><span></span>Índice<span></span></h2>
-                <ul>
-                    <a href="#description">Descrição</a>
-                    <a href="#details">Detalhes</a>
-                    <a href="#structure">Estrutura</a>
-                    <a href="#level-conditions">Condições do Nível</a>
-                    <a href="#groups">Grupos</a>
-                    <a href="#entrances-and-exits">Entradas e Saídas</a>
-                    <a href="#theories">Teorias</a>
-                </ul>
+            <section class="text index-section" id="index-section">
+                <ol id="index-section-title">
+                    <h2>Índice</h2>
+                    <svg class="expand-index" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    <span></span>
+                </ol>
+                <ol>
+                    <li>
+                        <a href="#description">Descrição</a>
+                    </li>
+                    <li>
+                        <a href="#details">Detalhes</a>
+                    </li>
+                    <li>
+                        <a href="#structure">Estrutura</a>
+                        <ul>
+                            <li><a href="#anomaly">Anomalias</a></li>
+                            <li><a href="#phenomenon">Fenômenos</a></li>
+                            <li><a href="#communication">Comunicação</a></li>
+                            <li><a href="#navegation">Navegação</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#level-conditions">Condições do Nível</a>
+                        <ul>
+                            <li><a href="#entities">Entidades</a></li>
+                            <li><a href="#resources">Recursos</a></li>
+                            <li><a href="#danger">Ameaça</a></li>
+                            <li><a href="#habitability">Habitabilidade</a></li>
+                            <li><a href="#stability">Estabilidade</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#subdivisions">Subníveis ou Áreas Internas</a>
+                        <ul>
+                            <li><a href="#sublevel1">Subnível: Estação Zenith</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#groups">Grupos Presentes</a>
+                        <ul>
+                            <li><a href="#group-meg">Papel da MEG</a></li>
+                            <li><a href="#group-btf">Back-to-Life</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#entrances-and-exits">Entradas e Saídas</a>
+                        <ul>
+                            <li><a href="#entrances">Entradas</a></li>
+                            <li><a href="#exits">Saídas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#operations">Registros de Operações</a>
+                    </li>
+                    <li>
+                        <a href="#timeline">Linha do Tempo</a>
+                    </li>
+                    <li>
+                        <a href="#theories">Teorias e Conclusões da MEG</a>
+                        <ul>
+                            <li><a href="#theory1">Nível 0 Vivo</a></li>
+                        </ul>
+                    </li>
+                </ol>
             </section>
             <section class="text" id="description">
                 <h2><span></span>Descrição<span></span></h2>
@@ -377,15 +431,15 @@
             <section class="text" id="level-conditions">
                 <h2><span></span>Condições do nível<span></span></h2>
                 <section class="text-in-text">
-                    <h3>Entidades</h3>
+                    <h3 id="entities">Entidades</h3>
                     <p>O nível não possui entidades, mesmo todo mundo nele tendo a estranha sensação de ter algo lhe observando a todo momento. Apesar disso, nunca foi avistada uma entidade aqui, deduzindo-se que nenhuma pode entrar nem sair.</p>
-                    <h3>Recursos</h3>
+                    <h3 id="resources">Recursos</h3>
                     <p>Os recursos do nível são escassos, só podendo encontrar ou obter com vendedores, grupos ou outros viajantes no nível. Mantimentos podem entrar e sair do nível, por isso, recomenda-se levar comida e água caso vá ao Nível 0 por vontade própria ou se for necessário.</p>
-                    <h3>Ameaça</h3>
+                    <h3 id="danger">Ameaça</h3>
                     <p>O nível apresenta baixa ameaça o suficiente para ser quase seguro, sendo as únicas ameaças as salas traiçoeiras e outros viajantes ou grupos que podem caçar a outros atrás de recursos, além de que não existem entidades aqui.</p>
-                    <h3>Habitabilidade</h3>
+                    <h3 id="habitability">Habitabilidade</h3>
                     <p>É recomendado não usar o nível como moradia, já que não se é adequado para sustentar uma pessoa por um longo tempo. Ainda assim, o nível é muito bom para a estadia por pouco tempo, tendo em vista que não existem entidades no nível.</p>
-                    <h3>Estabilidade</h3>
+                    <h3 id="stability">Estabilidade</h3>
                     <p>O nível é ligeiramente estável mesmo com uma estrutura estranha. Não existem relatos de grandes mudanças na estrutura das salas ou da composição do nível, apenas luzes piscando, leves interferências de rádio e uma contínua e estranha diminuição do nivel de oxigênio e um aumento de CO<sub>2</sub>. <a href="#theories" class="link">Teoria</a></p>
                 </section>
             </section>
@@ -393,9 +447,9 @@
                 <h2><span></span>Grupos<span></span></h2>
                 <p>Além da MEG, a principal organização das PVLBackrooms, existem 4 grupos aqui.</p>
                 <section class="text-in-text">
-                    <h3>Papel da MEG</h3>
+                    <h3 id="group-meg">Papel da MEG</h3>
                     <p>A presença ininterrupta da MEG nesse nível serve o propósito de tornar o ambiente o mais seguro possível para as novas pessoas que estiverem passando pelo nível. Ela também oferece recursos para sobrevivência, o suficiente para te ajudar a ir para outro nível mais acolhedor, além de explicarem a como sair do nível e oferecendo conhecimento breve do funcionamento das PVLBackrooms.</p>
-                    <h3>Lorem</h3>
+                    <h3 id="group-btf">Back-to-Life</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, omnis voluptates optio unde delectus dignissimos consectetur iusto amet! Accusantium ea consequuntur non dolor vitae culpa totam modi magnam. Possimus, aliquid.</p>
                 </section>
             </section>
@@ -403,14 +457,14 @@
                 <h2><span></span>Entradas e Saídas<span></span></h2>
                 <p>Existem 22 Entradas e 9 Saídas do Nível 0</p>
                 <section class="text-in-text">
-                    <h3>Entradas</h3>
+                    <h3 id="entrances">Entradas</h3>
                     <p><b>PVLFrontrooms</b> - Fazer um no-clip acidental nas PVLFrontrooms tem chances baixas de te levar ao Nível 0.</p>
                     <p><b>The Hub</b> - Escolher a porta do Nível 0 no The Hub te leva a este nível.</p>
                     <p><b>Nível 1</b> - Preencher sua visão completamente com uma parede, que possui cores e padrões iguais as das paredes do Nível 0, te leva instataneamente ao Nível 0.</p>
                     <p><b>Nível 97</b> - Escolher o Nível 0 como destino após sobreviver aos eventos do Nível 97 te leva ao Nível 0.</p>
                 </section>
                 <section class="text-in-text">
-                    <h3>Sáidas</h3>
+                    <h3 id="exits">Sáidas</h3>
                     <p><b>Nível 3</b> - Preencher sua visão completamente com uma parede, que possui cores e padrões iguais as das paredes do Nível 0, te leva instataneamente ao Nível 0.</p>
                     <p><b>Nível 4</b> - Preencher sua visão completamente com uma parede, que possui cores e padrões iguais as das paredes do Nível 0, te leva instataneamente ao Nível 0.</p>
                 </section>
@@ -418,11 +472,11 @@
             <section class="text" id="theories">
                 <h2><span></span>Teorias<span></span></h2>
                 <section class="text-in-text">
-                    <h3>Teoria 1 - O Nível 0 é um ser vivo.</h3>
+                    <h3 id="theory1">Teoria 1 - O Nível 0 é um ser vivo.</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis possimus soluta quaerat optio consectetur, alias inventore illum amet voluptatum aperiam beatae similique cum autem ad, error vitae voluptas iusto! Ratione?</p>
                 </section>
                 <section class="text-in-text">
-                    <h3>Teoria 2 - O Nível 0 é um ser vivo.</h3>
+                    <h3 id="theory2">Teoria 2 - O Nível 0 é um ser vivo.</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis possimus soluta quaerat optio consectetur, alias inventore illum amet voluptatum aperiam beatae similique cum autem ad, error vitae voluptas iusto! Ratione?</p>
                 </section>
             </section>
