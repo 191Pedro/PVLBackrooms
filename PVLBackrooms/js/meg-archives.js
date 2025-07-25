@@ -35,14 +35,14 @@ searchInput.addEventListener('input', (event) => {
 
     if (value !== '') {
         clearSearch.style.display = 'block';
+
+        showAllAction();
         
         items.forEach(item => {
             if (formatString(item.textContent).indexOf(value) !== -1) {
                 item.style.display = 'block';
 
                 hasResults = true;
-
-                showAllAction();
             }
             else {
                 item.style.display = 'none';
@@ -109,18 +109,14 @@ function filtersOptionsConfirm() {
     showAllAction();
     const item = document.querySelectorAll('.item');
 
-    const operationFilter = optionOperation.value;
-    const sectorFilter = optionSector.value;
-    const levelFilter = optionLevel.value;
-
     item.forEach(item =>{
         item.style.display = "block";
         
-        const matchOperation = operationFilter === "all" || item.dataset.operation == operationFilter;
-        const matchSector = sectorFilter === "all" || item.dataset.sector.includes(sectorFilter);
-        const matchLevel = levelFilter === "all" || item.dataset.level == levelFilter;
+        const matchOperation = optionOperation.value === "all" || item.dataset.operation == optionOperation.value;
+        const matchSector = optionSector.value === "all" || item.dataset.sector.includes(optionSector.value);
+        const matchLevel = optionLevel.value === "all" || item.dataset.level == optionLevel.value;
 
-        if (matchOperation && matchSector && matchLevel) {
+        if (matchOperation  && matchSector && matchLevel) {
             item.style.display = "block";
         }
         else {
@@ -130,13 +126,15 @@ function filtersOptionsConfirm() {
 }
 
 function filtersOptionsCancel() {
+    showAllAction();
+    
     optionOperation.value = "all";
     optionSector.value = "all";
     optionLevel.value = "all";
 
     const item = document.querySelectorAll('.item');
 
-    item.forEach(item =>{
+    item.forEach(item => {
         item.style.display = "block";
     });
 }

@@ -13,11 +13,7 @@ function homeDisplay() {
             if (i >= 8) {
                 return;
             }
-            item.style.display = 'block';
-
-            // if (item.classList.contains('sublevel')) {
-            //     item.style.display = 'none';
-            // }
+            item.style.display = 'flex';
             i++;
         });
     }
@@ -27,7 +23,7 @@ function showAllAction() {
     showAll.style.display = 'none';
     homeDisplayTerm = false;
     items.forEach(item =>{ 
-        item.style.display = 'block';
+        item.style.display = 'flex';
     })
 }
 
@@ -38,15 +34,15 @@ searchInput.addEventListener('input', (event) => {
     let hasResults = false;
 
     if (value !== '') {
-        clearSearch.style.display = 'block';
+        clearSearch.style.display = 'flex';
+        
+        showAllAction();
         
         items.forEach(item => {
             if (formatString(item.textContent).indexOf(value) !== -1) {
-                item.style.display = 'block';
+                item.style.display = 'flex';
 
                 hasResults = true;
-
-                showAllAction();
             }
             else {
                 item.style.display = 'none';
@@ -72,14 +68,12 @@ searchInput.addEventListener('input', (event) => {
         items.forEach(item => {
 
             if (formatString(item.textContent)) {
-                item.style.display = 'block';
+                item.style.display = 'flex';
 
                 hasResults = true;
+                noResults.style.display = 'none';
             }
         })
-        if (hasResults) {
-            noResults.style.display = 'none';
-        }
     })
 });
 
@@ -110,19 +104,17 @@ filtersBtn.addEventListener('click', () =>{
 
 function filtersOptionsConfirm() {
     showAllAction();
+
     const item = document.querySelectorAll('.item');
 
-    const levelFilter = optionLevel.value;
-    const sublevelFilter = optionSublevel.value;
-
     item.forEach(item => {
-        item.style.display = "block";
+        item.style.display = "flex";
         
-        const matchLevel = levelFilter === "all" || item.dataset.level == levelFilter;
-        const matchSublevel = sublevelFilter === "all" || item.dataset.sublevel == sublevelFilter;
+        const matchLevel = optionLevel.value === "all" || item.dataset.level == optionLevel.value;
+        const matchSublevel = optionSublevel.value === "all" || item.dataset.sublevel == optionSublevel.value;
 
         if (matchLevel && matchSublevel) {
-            item.style.display = "block";
+            item.style.display = "flex";
         }
         else {
             item.style.display = "none";
@@ -131,12 +123,29 @@ function filtersOptionsConfirm() {
 };
 
 function filtersOptionsCancel() {
+    showAllAction();
+
     optionLevel.value = "all";
     optionSublevel.value = "all";
 
     const item = document.querySelectorAll('.item');
 
     item.forEach(item => {
-        item.style.display = "block";
+        item.style.display = "flex";
     });
 };
+
+function extraContent(button) {
+    button.parentElement.classList.toggle('opened');   
+}
+
+window.onload = () => {
+    const itemImg = document.querySelectorAll('.item img');
+
+    itemImg.forEach(img => {
+        img.src = '../imgs/levels/' + img.id + '.png';
+        img.onload = () => {
+            img.closest('.item').classList.remove('loading');
+        }
+    })
+}

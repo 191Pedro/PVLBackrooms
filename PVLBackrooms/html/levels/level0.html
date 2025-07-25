@@ -11,7 +11,7 @@
     <nav id="navbar" class="navbar" style="grid-area: box-1">
         <ul>
             <a href="">
-                <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="200" height="50" version="1.1" viewBox="0 0 500 150">
+                <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="180" height="50" version="1.1" viewBox="0 0 500 150">
                     <g>
                         <path class="st0" d="M17,57.6l19.39.03c3.22,0,6.21.48,8.97,1.41,2.75.94,4.99,2.47,6.68,4.6,1.7,2.13,2.55,5.01,2.55,8.62,0,2.38-.41,4.52-1.25,6.37-.84,1.87-1.95,3.4-3.34,4.59s-2.88,1.97-4.51,2.37c1.42.18,2.81.61,4.17,1.3,1.36.69,2.59,1.62,3.69,2.81s1.97,2.68,2.61,4.45c.64,1.77.97,3.87.97,6.27,0,3.36-.7,6.3-2.11,8.85-1.4,2.55-3.46,4.54-6.16,5.97-2.69,1.42-6,2.15-9.91,2.14l-21.7-.03-.06-59.75h.01ZM29.82,81.56h5.18c1.51,0,2.78-.27,3.79-.85s1.79-1.38,2.31-2.42.8-2.24.8-3.6c0-2.44-.65-4.1-1.97-4.97-1.32-.86-3.11-1.3-5.4-1.3h-4.7s.01,13.12.01,13.12h0ZM29.84,106.55h5.81c1.82.01,3.31-.28,4.47-.86,1.15-.59,2.01-1.42,2.54-2.54.55-1.1.81-2.42.81-3.95,0-2.42-.71-4.19-2.12-5.32-1.41-1.13-3.39-1.7-5.93-1.7h-5.61s.01,14.39.01,14.39h.01Z"/>
                         <path class="st0" d="M82.15,57.69l12.71.02,22.35,59.79-13.65-.02-4.12-12-21.75-.03-4.15,11.99-13.7-.02,22.28-59.72h.03ZM81.96,93.59l13.23.02-6.57-19.61h-.13s-6.53,19.59-6.53,19.59h.01Z"/>
@@ -40,13 +40,13 @@
         </ul>
         <ul>
             <li>
-                <button id="theme-switch" class="theme-switch" title="Alternar temas ()">
+                <button id="theme-switch" class="theme-switch" title="Tema escuro / Tema claro">
                     <svg class="navbar-icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                     <svg class="navbar-icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
                 </button>
             </li>
             <li>
-                <button id="customize-btn" class="customize-btn">
+                <button id="customize-btn" class="customize-btn" title="Personalização">
                     <svg class="navbar-icon-customize" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 10 3 3"/><path d="M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z"/><path d="M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031"/></svg>
                 </button>
                 <ul class="sub-menu-header customize-menu closed" id="customize-menu">
@@ -61,46 +61,46 @@
                                 <span>Paleta</span>
                             </span>
                             <li class="themeOptions">
-                                <button onclick="changeColor('gray')" id="gray" class="themes">
+                                <button onclick="changeColor('gray')" id="gray" class="themes" value="#727272">
                                     <p>#727272</p>
                                 </button>
-                                <button onclick="changeColor('burgundy')" id="burgundy" class="themes">
+                                <button onclick="changeColor('burgundy')" id="burgundy" class="themes" value="#C40000">
                                     <p>#C40000</p>
                                 </button>
-                                <button onclick="changeColor('red')" id="red" class="themes">
+                                <button onclick="changeColor('red')" id="red" class="themes" value="#FF0000">
                                     <p>#FF0000</p>
                                 </button>
-                                <button onclick="changeColor('orange')" id="orange" class="themes">
+                                <button onclick="changeColor('orange')" id="orange" class="themes" value="#FF9100">
                                     <p>#FF9100</p>
                                 </button>
-                                <button onclick="changeColor('gold')" id="gold" class="themes">
+                                <button onclick="changeColor('gold')" id="gold" class="themes" value="#EECA00">
                                     <p>#EECA00</p>
                                 </button>
-                                <button onclick="changeColor('lightGreen')" id="lightGreen" class="themes">
+                                <button onclick="changeColor('lightGreen')" id="lightGreen" class="themes" value="#00FF40">
                                     <p>#00FF40</p>
                                 </button>
-                                <button onclick="changeColor('darkGreen')" id="darkGreen" class="themes">
+                                <button onclick="changeColor('darkGreen')" id="darkGreen" class="themes" value="#118F00">
                                     <p>#118F00</p>
                                 </button>
-                                <button onclick="changeColor('aqua')" id="aqua" class="themes">
+                                <button onclick="changeColor('aqua')" id="aqua" class="themes" value="#00FFAA">
                                     <p>#00FFAA</p>
                                 </button>
-                                <button onclick="changeColor('lightBlue')" id="lightBlue" class="themes">
+                                <button onclick="changeColor('lightBlue')" id="lightBlue" class="themes" value="#5BD0FF">
                                     <p>#5BD0FF</p>
                                 </button>
-                                <button onclick="changeColor('darkBlue')" id="darkBlue" class="themes">
+                                <button onclick="changeColor('darkBlue')" id="darkBlue" class="themes" value="#0044FF">
                                     <p>#0044FF</p>
                                 </button>
-                                <button onclick="changeColor('purple')" id="purple" class="themes">
+                                <button onclick="changeColor('purple')" id="purple" class="themes" value="#8800FF">
                                     <p>#8800FF</p>
                                 </button>
-                                <button onclick="changeColor('magenta')" id="magenta" class="themes">
+                                <button onclick="changeColor('magenta')" id="magenta" class="themes" value="#ED27FF">
                                     <p>#ED27FF</p>
                                 </button>
-                                <button onclick="changeColor('pink')" id="pink" class="themes">
+                                <button onclick="changeColor('pink')" id="pink" class="themes" value="#FF0080">
                                     <p>#FF0080</p>
                                 </button>
-                                <button onclick="changeColor('salmon')" id="salmon" class="themes">
+                                <button onclick="changeColor('salmon')" id="salmon" class="themes" value="#FF7167">
                                     <p>#FF7167</p>
                                 </button>
                             </li>
@@ -109,14 +109,17 @@
                                 <span>Fonte</span>
                             </span>
                             <li class="fontSizeOptions">
-                                <button onclick="changeFontSize('fontSize14px')" id="fontSize14px" class="fontSize">
-                                    <p>14px</p>
+                                <button onclick="changeFontSize('fontSize14px')" id="fontSize14px" class="fontSize" value="14px">
+                                    <p>Pequeno</p>
                                 </button>
-                                <button onclick="changeFontSize('fontSize16px')" id="fontSize16px" class="fontSize">
-                                    <p>16px</p>
+                                <button onclick="changeFontSize('fontSize16px')" id="fontSize16px" class="fontSize" value="16px">
+                                    <p>Médio</p>
                                 </button>
-                                <button onclick="changeFontSize('fontSize18px')" id="fontSize18px" class="fontSize">
-                                    <p>18px</p>
+                                <button onclick="changeFontSize('fontSize18px')" id="fontSize18px" class="fontSize" value="18px">
+                                    <p>Grande</p>
+                                </button>
+                                <button onclick="changeFontSize('fontSize20px')" id="fontSize20px" class="fontSize" value="20px">
+                                    <p>Gigante</p>
                                 </button>
                             </li>
                         </ul>
@@ -124,7 +127,7 @@
                 </ul>
             </li>
             <li>
-                <button id="language-btn" class="language-btn">
+                <button id="language-btn" class="language-btn" title="Idiomas">
                     <svg class="navbar-icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"/><path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"/><circle cx="12" cy="12" r="10"/></svg>
                 </button>
                 <ul class="sub-menu-header language-menu closed" id="language-menu">
@@ -136,11 +139,11 @@
                         <ul>
                             <li class="languageOptions">
                                 <button onclick="changeLanguage('brazil-portuguese')" id="brazil-portuguese">
-                                    <img src="../../imgs/countries/Brazil-flag.png" alt="">
+                                    <img src="../imgs/countries/Brazil-flag.png" alt="">
                                     <span>Português</span>
                                 </button>
                                 <button onclick="changeLanguage('united-states')">
-                                    <img src="../../imgs/countries/EUA-flag.png" alt="">
+                                    <img src="../imgs/countries/EUA-flag.png" alt="">
                                     <span>Inglês</span>
                                 </button>
                             </li>
@@ -149,7 +152,7 @@
                 </ul>
             </li>
             <li>
-                <button id="info-btn" class="info-btn">
+                <button id="info-btn" class="info-btn" title="Mais informações">
                     <svg class="navbar-icon-info" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
                 </button>
                 <ul class="sub-menu-header info-menu closed" id="info-menu">
@@ -203,60 +206,53 @@
                 </button>
             </li>
             <li title="Início">
-                <a href="../home.html">
+                <a href="home.html">
                     <svg class="sidebar-icon-home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 10.4a2.12 2.12 0 1 0 3.02 2.98L12 7l6.4 6.4a2.12 2.12 0 1 0 2.979-3.021L13.7 2.7a2.4 2.4 0 0 0-3.404.004Z"/><path d="M20 14v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M14 22v-6a2 2 0 0 0-4 0v6"/></svg>
                     <span>Início</span>
                 </a>
             </li>
             <li class="active" title="Níveis">
-                <a href="../levels.html">
-                    <svg class="sidebar-icon-levels" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M1 12V2C1 1.44772 1.44772 1 2 1H10M1 12V15C1 15.5523 1.44772 16 2 16H20C20.5523 16 21 15.5523 21 15V14M1 12L10 9M10 9V1M10 9L14 10.8182M21 14V2C21 1.44772 20.5523 1 20 1H10M21 14L18 12.6364M14 10.8182V5.943C14 5.2448 14.6974 4.76151 15.3511 5.00667L17.3511 5.75667C17.7414 5.90304 18 6.27616 18 6.693V12.6364M14 10.8182L18 12.6364"/>
-                    </svg>
+                <a href="levels.html">
+                    <svg class="sidebar-icon-levels" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12V2C1 1.44772 1.44772 1 2 1H10M1 12V15C1 15.5523 1.44772 16 2 16H20C20.5523 16 21 15.5523 21 15V14M1 12L10 9M10 9V1M10 9L14 10.8182M21 14V2C21 1.44772 20.5523 1 20 1H10M21 14L18 12.6364M14 10.8182V5.943C14 5.2448 14.6974 4.76151 15.3511 5.00667L17.3511 5.75667C17.7414 5.90304 18 6.27616 18 6.693V12.6364M14 10.8182L18 12.6364"/></svg>
                     <span>Níveis</span>
                 </a>
             </li>
             <li title="Entidades">
-                <a href="../entities.html">
-                    <svg class="sidebar-icon-entities" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.236 22a3 3 0 0 0-2.2-5"/><path d="M16 20a3 3 0 0 1 3-3h1a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4V4"/><path d="M18 13h.01"/><path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10"/></svg>
+                <a href="entities.html">
+                    <svg class="sidebar-icon-entities" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-origami-icon lucide-origami"><path d="M12 12V4a1 1 0 0 1 1-1h6.297a1 1 0 0 1 .651 1.759l-4.696 4.025"/><path d="m12 21-7.414-7.414A2 2 0 0 1 4 12.172V6.415a1.002 1.002 0 0 1 1.707-.707L20 20.009"/><path d="m12.214 3.381 8.414 14.966a1 1 0 0 1-.167 1.199l-1.168 1.163a1 1 0 0 1-.706.291H6.351a1 1 0 0 1-.625-.219L3.25 18.8a1 1 0 0 1 .631-1.781l4.165.027"/></svg>
                     <span>Entidades</span>
                 </a>
             </li>
+            <li title="Fenômenos">
+                <a href="phenomena.html">
+                    <svg class="sidebar-icon-phenomena" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dices-icon lucide-dices"><rect width="12" height="12" x="2" y="10" rx="2" ry="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01"/><path d="M10 14h.01"/><path d="M15 6h.01"/><path d="M18 9h.01"/></svg>
+                    <span>Fenômenos</span>
+                </a>
+            </li>
             <li title="MEG">
-                <a href="../meg.html">
-                    <svg class="sidebar-icon-meg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <polygon points="23.92 7 21.35 10.77 15.49 12.9 15.49 14.97 12 17 8.51 14.97 8.51 12.9 2.65 10.77 .08 7 9.33 12.32 9.33 14.53 12 16.07 14.67 14.53 14.67 12.32 23.92 7"/>
-                        <polygon points="11.67 9.33 10.91 8.88 9.79 9.52 9.79 14.26 12 15.55 14.21 14.26 14.21 12.43 13.43 12.86 13.43 13.8 12 14.65 10.56 13.8 10.56 10 11.67 9.33"/>
-                        <polygon points="10.94 11.79 10.93 12.67 12.04 13.32 16.15 10.95 16.16 8.39 13.94 7.12 12.35 8.04 13.12 8.5 13.93 8.03 15.38 8.84 15.37 10.51 12.07 12.41 10.94 11.79"/>
-                        <polygon points="13.43 11.22 14.2 10.78 14.21 9.49 10.1 7.12 7.88 8.39 7.89 10.95 9.48 11.86 9.5 10.97 8.68 10.5 8.66 8.84 10.12 8.02 13.41 9.92 13.43 11.22"/>
-                        <polygon points="3.54 12.04 4.89 14.04 8.07 13.96 8.07 13.37 3.54 12.04"/>
-                        <polygon points="5.44 14.83 6.2 15.94 8.07 15.11 8.07 14.38 5.44 14.83"/>
-                        <polygon points="20.46 12.04 19.11 14.04 15.93 13.96 15.93 13.37 20.46 12.04"/>
-                        <polygon points="18.55 14.85 17.79 15.95 15.92 15.12 15.92 14.4 18.55 14.85"/>
+                <a href="meg.html">
+                    <svg class="sidebar-icon-meg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="2.66 17.39 2.66 6.61 12 1.21 21.34 6.61 21.34 17.39 12 22.79 2.66 17.39"/>
+                        <polygon points="6.23 8.67 12 12 12 18.66 12 12 17.77 8.67 12 12 6.23 8.67"/>
+                        <polygon points="6.23 15.33 6.23 8.67 12 5.34 17.77 8.67 17.77 15.33 12 18.66 6.23 15.33"/>
                     </svg>
                     <span>MEG</span>
                 </a>
             </li>
             <li title="Grupos">
-                <a href="../groups.html">
+                <a href="groups.html">
                     <svg class="sidebar-icon-groups" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="4" cy="4" r="2"/><path d="m14 5 3-3 3 3"/><path d="m14 10 3-3 3 3"/><path d="M17 14V2"/><path d="M17 14H7l-5 8h20Z"/><path d="M8 14v8"/><path d="m9 14 5 8"/></svg>
                     <span>Grupos</span>
                 </a>
             </li>
-            <li title="Viajantes">
-                <a href="../travelers.html">
-                    <svg class="sidebar-icon-travelers" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
-                    <span>Viajantes</span>
-                </a>
-            </li>
             <li title="Histórias">
-                <a href="../histories.html">
+                <a href="histories.html">
                     <svg class="sidebar-icon-histories" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M16 12h2"/><path d="M16 8h2"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M6 12h2"/><path d="M6 8h2"/></svg>
                     <span>Histórias</span>
                 </a>
             </li>
             <li title="Linha do Tempo">
-                <a href="../timeline.html">
+                <a href="timeline.html">
                     <svg class="sidebar-icon-timeline" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg>
                     <span>Linha do Tempo</span>
                 </a>
@@ -296,7 +292,7 @@
                                     <span>Entidades</span>
                                 </td>
                                 <td>
-                                    <span>Nenhuma</span>
+                                    <span>Nulo</span>
                                 </td>
                             </tr>
                             <tr>
@@ -310,7 +306,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <svg class="caution-level-preview-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+                                    <svg class="caution-level-preview-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert-icon lucide-shield-alert"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
                                     <span>Ameaça</span>
                                 </td>
                                 <td>
@@ -319,7 +315,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <svg class="habitability-level-preview-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 16 6 6"/><circle cx="16" cy="9" r="2.9"/><circle cx="6" cy="5" r="3"/></svg>
+                                    <svg class="habitability-level-preview-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake-icon lucide-heart-handshake"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
                                     <span>Habitabilidade</span>
                                 </td>
                                 <td>
@@ -363,25 +359,31 @@
                     </li>
                     <li>
                         <a href="#structure">Estrutura</a>
-                        <ul>
-                            <li><a href="#anomaly">Anomalias</a></li>
-                            <li><a href="#phenomenon">Fenômenos</a></li>
-                            <li><a href="#communication">Comunicação</a></li>
-                            <li><a href="#navegation">Navegação</a></li>
-                        </ul>
                     </li>
                     <li>
-                        <a href="#level-conditions">Condições do Nível</a>
+                        <a href="#anomalies">Anomalias</a>
+                    </li>
+                    <li>
+                        <a href="#conditions">Condições</a>
                         <ul>
                             <li><a href="#entities">Entidades</a></li>
                             <li><a href="#resources">Recursos</a></li>
                             <li><a href="#danger">Ameaça</a></li>
                             <li><a href="#habitability">Habitabilidade</a></li>
                             <li><a href="#stability">Estabilidade</a></li>
+                            <li><a href="#access">Acesso</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#subdivisions">Subníveis ou Áreas Internas</a>
+                        <a href="#subareas">Áreas Internas</a>
+                        <ul>
+                            <li><a href="#skyrooms">Salas Voadoras</a></li>
+                            <li><a href="#space-station">Estação Espacial</a></li>
+                            <li><a href="#void">Vazio</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#sublevels">Subníveis</a>
                         <ul>
                             <li><a href="#sublevel1">Subnível: Estação Zenith</a></li>
                         </ul>
@@ -389,8 +391,8 @@
                     <li>
                         <a href="#groups">Grupos Presentes</a>
                         <ul>
-                            <li><a href="#group-meg">Papel da MEG</a></li>
-                            <li><a href="#group-btf">Back-to-Life</a></li>
+                            <li><a href="#group-meg">MEG</a></li>
+                            <li><a href="#group-o191">Order 191</a></li>
                         </ul>
                     </li>
                     <li>
@@ -416,58 +418,98 @@
             </section>
             <section class="text" id="description">
                 <h2><span></span>Descrição<span></span></h2>
-                <p>O Nível 0 é provavelmente o primeiro nível que um sortudo que adentrar as PVLBackrooms entrará. Um nível de paredes amarelas, carpete amarelado e por vezes molhado, luzes falhando e salas intermináveis, algumas impossíveis para a física convecional.</p>
+                <p>O Nível 0 é provavelmente o primeiro nível que um sortudo que adentrar as PVLBackrooms estará. Um nível de paredes amarelas, carpete amarelado e por vezes molhado, luzes falhando e salas intermináveis, algumas impossíveis para a física convencional.</p>
             </section>
             <section class="text" id="details">
                 <h2><span></span>Detalhes<span></span></h2>
-                <p>O nível possui uma estética estranha e improvável. O papel de parede presente nas salas do nível tem um padrão de setas para cima e às vezes pontilhado. Também é possível raramente encontrar tomadas pelas paredes, mas que não funcionam. Outro fenômeno raro é a oscilação de energia das lâmpadas de LED de uma sala, sendo essa oscilação bem passageira. É possível quebrar uma lâmpada, mas não é recomendado fazer isso, já que a luz é importante para se guiar no nível.</p>
+                <p>O nível possui uma estética estranha e improvável. O papel de parede presente nas salas do nível tem um padrão de setas para cima e às vezes pontilhado. Também é possível encontrar raramente tomadas pelas paredes, mas que não funcionam. Outro fenômeno raro é a oscilação de energia das lâmpadas de LED de uma sala, sendo essa oscilação bem passageira. É possível quebrar uma lâmpada, mas não é recomendado fazer isso, já que a luz é importante para se guiar no nível.</p>
                 <p>O carpete do nível é de cor bege, quase amarelo, e felpudo. De vez em quando, o carpete pode encontrar-se molhado. Em investigações da MEG no ano 23 d.M., foi constatado que o líquido encontrado no carpete possui traços de fosfolipídeo dipalmitoilfosfatidilcolina, que também é encontrado no surfactante pulmonar do pulmão do ser humano. <a href="#theories" class="link">Teoria</a></p>
             </section>
             <section class="text" id="structure">
                 <h2><span></span>Estrutura<span></span></h2>
-                <p>As salas do nível possuem tamanhos, formas e disposição de paredes e pilastras de forma incomum, parecendo até mesmo aleatório. Em algumas salas deste nível é possível encontrar buracos intermináveis e perfeitos no chão, não podendo ver o fim destes. Não se sabe se são infinitos ou se levam a algo, sendo a única investigação para isso feita no ano 23 d.M., em que a MEG registrou mais de 50 metros de profundidade com equipamentos de escalada e leitura de terreno. Acredita-se ser infinito, então evite cair A TODO CUSTO.</p>
-                <p>O tamanho do nível é provavelmente infinito, além de que uma pessoa, ao entrar nele, aparece em algum lugar em que outra pessoa já passou, sendo que a primeira pessoa ao entrar nesse nível foi a única a aparecer em um lugar aleatório e, assim, determinar a partir de onde o nível seria explorado por outras pessoas. Isso foi observado por viajantes e logo relatado a MEG, comprovado na investigação de 9 d.M., quando a organização fez testes em áreas controladas com agentes viajando entre níveis de fácil acesso e o Nível 0.</p>
+                <p>As salas do nível são todas planas e possuem tamanhos, formas e disposição de paredes e pilastras de forma incomum, parecendo até mesmo aleatório, formando um verdadeiro labirinto com extrema facilidade de se perder. Em algumas salas deste nível é possível encontrar buracos perfeitos no chão que não se podem ver o fim. Não se sabe se são infinitos ou se levam a algo, sendo a única investigação para isso feita no ano 12 d.M., em que a MEG registrou mais de 50 metros de profundidade com equipamentos de escalada e leitura de terreno. Acredita-se que possuam a mesma estrutura do buraco da área <a href="#skyrooms" class="link">Salas Voadoras</a> e que têm o mesmo destino, o <a href="#void" class="link">Vazio</a> do Nível 0.</p>
+                <p>O tamanho do nível é provavelmente infinito, já que até o momento, ninguém chegou perto de algo que parecesse o fim do nível. Ao entrar no nível, a pessoa aparecerá em um lugar que já foi explorado por alguém antes. A única pessoa que deve ter aparecido em alguma parte não explorada do nível foi a primeira a entrar nele, e isso determinou o ponto de início do nível para todos. Isso foi comprovado em experimentos da MEG em 6 d.M., quando agentes viajaram entre níveis de fácil acesso e o Nível 0 em áreas controladas.</p>
+                <p>As paredes do nível são inquebráveis e seu papel de parede e tampas de tomadas são impossíveis de serem arrancadas, porém, as lâmpadas de LED no teto são possíveis de serem quebradas e não se restauram, e isso deixa a sala anormalmente escura, de um jeito que mesmo luzes de salas próximas não a iluminam corretamente. Estranhamente, quando o fenômeno Lua de Sangue ocorre no nível, mesmo as lâmpadas quebradas emitem luz vermelha.</p>
             </section>
-            <section class="text" id="level-conditions">
+            <section class="text" id="anomalies">
+                <h2><span></span>Anomalias<span></span></h2>
+                <p>O nível possui anômalas interferências de equipamentos elétricos e analógicos. Bússolas, relógios, rádios, radares, câmeras, detectores de metal e qualquer equipamento de som e de navegação não funcionam corretamente em grande parte do nível. Estes equipamentos funcionam em áreas específicas e que não apresentam um padrão entre si. Estranhamente, comidas nessas mesmas áreas seguras de interferências não perecem, aparentando estarem paradas no tempo.</p>
+                <p>Outra anomalia se manifesta nos indivíduos presentes, onde todos relatam uma estranha sensação de estarem sendo observados por alguma criatura ou entidade, ou até mesmo outra pessoa. Mesmo assim, nenhuma entidade está presente no Nível 0, pelo menos nenhuma com presença física. Essa sensação pode estar relacionada ao fenômeno do Controle Direcionado, mas nada evidente.</p>
+                <p>As lâmpadas de LED piscarem rapidamente é outra anomalia do nível. As lâmpadas piscam aleatoriamente mas de forma estranha, não é uma simples falha elétrica, e sim como se alguém estivesse controlando o interruptor da lâmpada em questão, fazendo piscar propositalmente. É estranho porque interruptores de lâmpada nem sequer existem no nível. Geralmente duram cerca de 12 a 20 segundos, mas há raros relatos de horas terem se passado com pisques frequentes, porém, duvida-se da credibilidade.</p>
+            </section>
+            <section class="text" id="conditions">
                 <h2><span></span>Condições do nível<span></span></h2>
                 <section class="text-in-text">
                     <h3 id="entities">Entidades</h3>
-                    <p>O nível não possui entidades, mesmo todo mundo nele tendo a estranha sensação de ter algo lhe observando a todo momento. Apesar disso, nunca foi avistada uma entidade aqui, deduzindo-se que nenhuma pode entrar nem sair.</p>
+                    <p><b>Nulo:</b> O nível não possui entidades, mesmo todo mundo nele tendo a estranha sensação de ter algo lhe observando a todo momento. Apesar disso, nunca foi avistada uma entidade aqui. Deduz-se que nenhuma entidade pode entrar no Nível 0, sendo um nível totalmente livre delas.</p>
                     <h3 id="resources">Recursos</h3>
-                    <p>Os recursos do nível são escassos, só podendo encontrar ou obter com vendedores, grupos ou outros viajantes no nível. Mantimentos podem entrar e sair do nível, por isso, recomenda-se levar comida e água caso vá ao Nível 0 por vontade própria ou se for necessário.</p>
+                    <p><b>Escassos:</b> Os recursos do nível são escassos, só podendo encontrar ou obter com vendedores, grupos ou outros viajantes no nível. Mantimentos podem entrar e sair do nível, por isso, recomenda-se levar comida e água caso vá ao Nível 0 por vontade própria ou se for necessário. Comidas não estragam em áreas específicas onde não ocorrem interferência de equipamentos eletrônicos.</p>
                     <h3 id="danger">Ameaça</h3>
-                    <p>O nível apresenta baixa ameaça o suficiente para ser quase seguro, sendo as únicas ameaças as salas traiçoeiras e outros viajantes ou grupos que podem caçar a outros atrás de recursos, além de que não existem entidades aqui.</p>
+                    <p><b>Ligeiramente seguro:</b> O nível apresenta baixa ameaça o suficiente para ser ligeiramente seguro, sendo as únicas ameaças as salas traiçoeiras e outros viajantes ou grupos que podem caçar a outros atrás de recursos, além de que não existem entidades aqui.</p>
                     <h3 id="habitability">Habitabilidade</h3>
-                    <p>É recomendado não usar o nível como moradia, já que não se é adequado para sustentar uma pessoa por um longo tempo. Ainda assim, o nível é muito bom para a estadia por pouco tempo, tendo em vista que não existem entidades no nível.</p>
+                    <p><b>Não adequada:</b> É recomendado não usar o nível como moradia, já que não se é adequado para sustentar uma pessoa por um longo tempo. Ainda assim, o nível é muito bom para a estadia temporária, tendo em vista a leve segurança.</p>
                     <h3 id="stability">Estabilidade</h3>
-                    <p>O nível é ligeiramente estável mesmo com uma estrutura estranha. Não existem relatos de grandes mudanças na estrutura das salas ou da composição do nível, apenas luzes piscando, leves interferências de rádio e uma contínua e estranha diminuição do nivel de oxigênio e um aumento de CO<sub>2</sub>. <a href="#theories" class="link">Teoria</a></p>
+                    <p><b>Ligeiramente estável:</b> O nível é ligeiramente estável mesmo com uma estrutura estranha. Não existem relatos de grandes mudanças na estrutura das salas ou da composição do nível, apenas luzes piscando e uma contínua e estranha diminuição do nível de oxigênio e um aumento de CO<sub>2</sub>. <a href="#theories" class="link">Teoria</a></p>
+                    <h3 id="stability">Acesso</h3>
+                    <p><b>Ligeiramente estável:</b> .</p>
+                </section>
+            </section>
+            <section class="text" id="subareas">
+                <h2><span></span>Áreas Internas<span></span></h2>
+                <section class="text-in-text">
+                    <h3 id="skyrooms">Salas Voadoras</h3>
+                    <p>As Salas Voadoras são uma área relativamente grande, com cerca de 958m<sup>2</sup> de extensão, e consiste em um aglomerado de salas que não possuem chão, onde as paredes parecem flutuar. É um buraco comumente gerado no Nível 0, mas que cobre mais de meia centena de salas, uma aparição rara e surreal de um desses. Descem paredes das extremidades do buraco até uma profundidade de 500m, aproximadamente, depois, elas se perdem na penumbra do Vazio. O buraco corta o meio de salas em volta dessa área, se alinhando perfeitamente com salas vizinhas. Existe uma área parecida mas bem menor, de 45m<sup>2</sup>, que deixa uma sala completamente sem chão e suas salas vizinhas com o chão cortado, podendo ser o mesmo que ocorre nas Salas Voadoras mas em escala menor.</p>
+                    <p>A navegação por essas salas é impossível devido a falta de chão dessa área. Quase nenhuma sala dessa parte foi explorada, apenas as extremidades, o que impede de alguém aparecer no Nível 0 nessa área e cair no Vazio. Também não há nenhum mapa que descreva como é a parte mais adentro dessa área e não se tem conhecimento de se existe algo extraordinário no centro dessas salas.</p>
+                </section>
+                <section class="text-in-text">
+                    <h3 id="space-station">Estação Espacial</h3>
+                    <p>Olhando para o Vazio abaixo do Nível 0, é possível avistar uma espécie de estação espacial que parece orbitar o nível. Ela pode ser vista de tempos em tempos atravessando a parte de baixo do nível. Segundo algumas estimativas, ela está a 15km do Nível 0 a uma velocidade de 50m/s e possui 200m a 300m de comprimento. Isso é certamente estranho. Essa nave não conseguiria se manter em órbita mesmo com a gravidade do Nível 0 sendo a mesma da Terra das PVLFrontrooms, além do tamanho do Nível 0 ser provavelmente infinito. A órbita dessa estação também nunca muda, sempre seguindo um trajeto fixo.</p>
+                    <p>Aparentemente, essa nave é possível de ser acessada, mas de outra forma. Conclui-se que ela é o Subnível 0.1 Estação Zenith, com entradas e saídas próprias. O interior do Subnível lembra muito uma nave espacial em órbita, porém completamente abandonada. Acredita-se que se fosse possível acessar essa estação pulando de uma área aberta e chegando nela, seria um acesso ao Subnível 0.1, do contrário, isso é impossível por alguns fatores. É incerto o que ocorre quando alguém entra no Vazio do Nível 0, além disso, ninguém sobreviveria à queda. Não é certeza de que seja esse Subnível mesmo, talvez seja apenas uma representação dele dentro do Nível 0.</p>
+                </section>
+                <section class="text-in-text">
+                    <h3 id="void">Vazio</h3>
+                    <p>O Vazio é a área que circunda o Nível 0. É como o espaço sideral, mas completamente em trevas. Abriga uma estranha estrutura: uma estação espacial que aparenta orbitar o Nível. Ela é visível periodicamente na parte de baixo das salas, a única direção que é possível de ser enxergada do Vazio.</p>
+                    <p>A área do Vazio possivelmente possui dimensões infinitas, e deve ser onde todo o Nível 0 está localizado. Ele não possui nada além de um simples breu incorruptível. A única característica formidável do Vazio é o som que ele emite. Perto de buracos onde é possível vê-lo, se aproximando com cautela, um som estranhamente receptivo com propriedades relaxantes é possível de ser escutado. Essa sonoridade se assemelha a uma brisa suave em campos tranquilos com uma paisagem bela, segundo descrições. Lembra até mesmo uma música. Quem escuta a essa melancolia do Vazio costuma ficar relaxado depois de certo tempo, o que é um tanto quanto estranho, visto a estranha natureza desse ambiente.</p>
+                    <p>Muitos teorizam do que ocorre quando alguém entra no Vazio e se é possível sobreviver lá. O que ocorre quando se atravessa o Vazio é outra incógnita: Morte instantânea, acesso para A Central, saída do Nível 0 para algum outro ou a forma de voltar às PVLFrontrooms? De qualquer forma existe o fato de que alguns viajantes já caíram no Vazio e nunca mais foram vistos por mais ninguém. Por isso não é recomendado exploração nos arredores e muito menos de tentar algo relacionado ao Vazio.</p>
+                </section>
+            </section>
+            <section class="text" id="sublevels">
+                <h2><span></span>Subníveis<span></span></h2>
+                <section class="text-in-text">
+                    <h3>Subnível Estação Zenith</h3>
+                    <p>Estação Zenith é o Subnível 0.1, ou seja, pertence ao grupo do Nível 1. Ele é uma estação espacial que parece ter sido abandonada há anos. Essa estação possui tudo o que cerca de 1000 pessoas precisariam para sobreviver ao menos algumas décadas no espaço, com áreas de lazer, salas médicas, centrais de comando, áreas verdes com plantações e vida vegetal e até algumas salas com baixa gravidade. A estação é completamente selada e não possui visão exterior. Somente sabe-se que ela é realmente uma estação espacial por tudo que existe nela. Nada de tecnológico funciona nem possui uma sala onde é possível controlá-la, já que tudo está desligado por falta de energia, apenas lâmpadas de emergência funcionam e aparentam ter energia ilimitada.</p>
                 </section>
             </section>
             <section class="text" id="groups">
-                <h2><span></span>Grupos<span></span></h2>
-                <p>Além da MEG, a principal organização das PVLBackrooms, existem 4 grupos aqui.</p>
+                <h2><span></span>Grupos Presentes<span></span></h2>
+                <p>Existem 5 grupos que possuem ampla atuação no Nível 0:</p>
                 <section class="text-in-text">
-                    <h3 id="group-meg">Papel da MEG</h3>
+                    <h3 id="group-meg">MEG</h3>
                     <p>A presença ininterrupta da MEG nesse nível serve o propósito de tornar o ambiente o mais seguro possível para as novas pessoas que estiverem passando pelo nível. Ela também oferece recursos para sobrevivência, o suficiente para te ajudar a ir para outro nível mais acolhedor, além de explicarem a como sair do nível e oferecendo conhecimento breve do funcionamento das PVLBackrooms.</p>
-                    <h3 id="group-btf">Back-to-Life</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, omnis voluptates optio unde delectus dignissimos consectetur iusto amet! Accusantium ea consequuntur non dolor vitae culpa totam modi magnam. Possimus, aliquid.</p>
+                    <h3 id="group-o191">Order 191</h3>
+                    <p>O grupo Order 191 tem uma colônia no Nível 0 e possui uma certa influência nele. Ela usa o nível como centro comercial de suas negociações com outros grupos nas PVLBackrooms, por isso, parte de seu estoque está em bases nesse nível. A colônia também é um pouco agressiva e contraria a MEG, forte presença, pois não compartilha do mesmo objetivo de ajuda para novos viajantes. Mesmo com provocações, a MEG não ataca a Order 191, mas não medirá esforços se for necessário.</p>
+                    <p>O grupo não oferece ajuda alguma a qualquer pessoa no Nível 0, seu interesse é puramente comercial e evita interações com outros grupos sem essa finalidade.</p>
                 </section>
             </section>
             <section class="text" id="entrances-and-exits">
                 <h2><span></span>Entradas e Saídas<span></span></h2>
-                <p>Existem 22 Entradas e 9 Saídas do Nível 0</p>
+                <p>Existem 12 Entradas e 9 Saídas no Nível 0, além das Entradas e Saídas Universais:</p>
                 <section class="text-in-text">
                     <h3 id="entrances">Entradas</h3>
                     <p><b>PVLFrontrooms</b> - Fazer um no-clip acidental nas PVLFrontrooms tem chances baixas de te levar ao Nível 0.</p>
-                    <p><b>The Hub</b> - Escolher a porta do Nível 0 no The Hub te leva a este nível.</p>
-                    <p><b>Nível 1</b> - Preencher sua visão completamente com uma parede, que possui cores e padrões iguais as das paredes do Nível 0, te leva instataneamente ao Nível 0.</p>
-                    <p><b>Nível 97</b> - Escolher o Nível 0 como destino após sobreviver aos eventos do Nível 97 te leva ao Nível 0.</p>
+                    <p><b>Nível 1</b> - Preencher sua visão completamente com uma sala que possui cores, formas e estética igual às do Nível 0 te teleporta instataneamente ao Nível 0.</p>
                 </section>
                 <section class="text-in-text">
                     <h3 id="exits">Sáidas</h3>
-                    <p><b>Nível 3</b> - Preencher sua visão completamente com uma parede, que possui cores e padrões iguais as das paredes do Nível 0, te leva instataneamente ao Nível 0.</p>
-                    <p><b>Nível 4</b> - Preencher sua visão completamente com uma parede, que possui cores e padrões iguais as das paredes do Nível 0, te leva instataneamente ao Nível 0.</p>
+                    <p><b>Nível 3</b> - Durante o período em que uma lâmpada estiver a emitir um sinal SOS em código morse, tocar no carpete diretamente abaixo da lâmpada te leva ao Nível 3.</p>
+                    <p><b>Nível 4</b> - Fazer um no-clip em uma sala com a lâmpada quebrada te leva ao Nìvel 4.</p>
                 </section>
+            </section>
+            <section class="text" id="operations">
+                <h2><span></span>Registro de Operações<span></span></h2>
+            </section>
+            <section class="text" id="timeline">
+                <h2><span></span>Linha do Tempo<span></span></h2>
             </section>
             <section class="text" id="theories">
                 <h2><span></span>Teorias<span></span></h2>

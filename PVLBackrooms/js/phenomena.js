@@ -10,10 +10,10 @@ function homeDisplay() {
     if (homeDisplayTerm = true) {
         let i = 0
         items.forEach(item => {
-            if (i >= 8){
+            if (i >= 8) {
                 return;
             }
-            item.style.display = 'block';
+            item.style.display = 'flex';
             i++;
         });
     }
@@ -23,7 +23,7 @@ function showAllAction() {
     showAll.style.display = 'none';
     homeDisplayTerm = false;
     items.forEach(item =>{ 
-        item.style.display = 'block';
+        item.style.display = 'flex';
     })
 }
 
@@ -34,13 +34,13 @@ searchInput.addEventListener('input', (event) => {
     let hasResults = false;
 
     if (value !== '') {
-        clearSearch.style.display = 'block';
-
+        clearSearch.style.display = 'flex';
+        
         showAllAction();
         
         items.forEach(item => {
             if (formatString(item.textContent).indexOf(value) !== -1) {
-                item.style.display = 'block';
+                item.style.display = 'flex';
 
                 hasResults = true;
             }
@@ -68,14 +68,12 @@ searchInput.addEventListener('input', (event) => {
         items.forEach(item => {
 
             if (formatString(item.textContent)) {
-                item.style.display = 'block';
+                item.style.display = 'flex';
 
                 hasResults = true;
+                noResults.style.display = 'none';
             }
         })
-        if (hasResults) {
-            noResults.style.display = 'none';
-        }
     })
 });
 
@@ -96,11 +94,10 @@ document.addEventListener('keydown', function(event) {
 
 const filtersBtn = document.getElementById('filters-btn');
 const filtersMenu = document.getElementById('filters-menu');
-const optionItem = document.getElementById("filter-per-item");
-const optionType = document.getElementById("filter-per-type");
-const optionTrade = document.getElementById("filter-per-trade");
+const optionLevel = document.getElementById("filter-per-level");
+const optionSublevel = document.getElementById("filter-per-sublevel");
 
-filtersBtn.addEventListener('click', () => {
+filtersBtn.addEventListener('click', () =>{
     filtersBtn.classList.toggle('opened');
     filtersMenu.classList.toggle('opened');
 })
@@ -109,39 +106,45 @@ function filtersOptionsConfirm() {
     showAllAction();
     const item = document.querySelectorAll('.item');
 
-    item.forEach(item =>{
-        item.style.display = "block";
+    item.forEach(item => {
+        item.style.display = "flex";
         
-        const matchItem = optionItem.value === "all" || item.dataset.item == optionItem.value;
-        const matchType = optionType.value === "all" || item.dataset.type.includes(optionType.value);
-        const matchTrade = optionTrade.value === "all" || item.dataset.trade == optionTrade.value;
+        const matchLevel = optionLevel.value === "all" || item.dataset.level == optionLevel.value;
+        const matchSublevel = optionSublevel.value === "all" || item.dataset.sublevel == optionSublevel.value;
 
-        if (matchItem && matchType && matchTrade) {
-            item.style.display = "block";
+        if (matchLevel && matchSublevel) {
+            item.style.display = "flex";
         }
         else {
             item.style.display = "none";
         }
     });
-}
+};
 
 function filtersOptionsCancel() {
     showAllAction();
-    
-    optionItem.value = "all";
-    optionType.value = "all";
-    optionTrade.value = "all";
+
+    optionLevel.value = "all";
+    optionSublevel.value = "all";
 
     const item = document.querySelectorAll('.item');
 
-    item.forEach(item =>{
-        item.style.display = "block";
+    item.forEach(item => {
+        item.style.display = "flex";
     });
+};
+
+function extraContent(button) {
+    button.parentElement.classList.toggle('opened');   
 }
 
-let indexSection = document.getElementById('index-section');
-let indexSectionTitle = document.getElementById('index-section-title');
+window.onload = () => {
+    const itemImg = document.querySelectorAll('.item img');
 
-indexSectionTitle.addEventListener('click', () => {
-    indexSection.classList.toggle('opened');
-});
+    itemImg.forEach(img => {
+        img.src = '../imgs/levels/' + img.id + '.png';
+        img.onload = () => {
+            img.closest('.item').classList.remove('loading');
+        }
+    })
+}

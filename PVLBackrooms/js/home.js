@@ -163,9 +163,9 @@ themeSwitch.addEventListener("click", () => {
 let setTheme = localStorage.getItem('setTheme');
 
 function changeColor(id){
-  document.body.style.setProperty('--cor-destaque', document.getElementById(id).innerText);
-  document.body.style.setProperty('--cor-fundo-tres', document.getElementById(id).innerText + '09');
-  localStorage.setItem('setTheme', document.getElementById(id).innerText);
+  document.body.style.setProperty('--cor-destaque', document.getElementById(id).value);
+  document.body.style.setProperty('--cor-fundo-tres', document.getElementById(id).value + '09');
+  localStorage.setItem('setTheme', document.getElementById(id).value);
 }
 
 document.body.style.setProperty('--cor-fundo-tres', setTheme + '09');
@@ -174,15 +174,6 @@ document.body.style.setProperty('--cor-destaque', setTheme);
 let setFontSize = localStorage.getItem('setFontSize');
 
 function changeFontSize(id){
-  mainDiv.style.fontSize = document.getElementById(id).innerText;
-  localStorage.setItem('setFontSize', document.getElementById(id).innerText);
+  mainDiv.style.fontSize = document.getElementById(id).value;
+  localStorage.setItem('setFontSize', document.getElementById(id).value);
 }
-
-mainDiv.style.fontSize = localStorage.getItem('setFontSize');
-
-let indexSection = document.getElementById('index-section');
-let indexSectionTitle = document.getElementById('index-section-title');
-
-indexSectionTitle.addEventListener('click', () => {
-    indexSection.classList.toggle('opened');
-});

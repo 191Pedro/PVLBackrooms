@@ -49,11 +49,3 @@
     flex-wrap: wrap;
     gap: 0 12px;
 }
-
-.text-in-text > ul{
-    padding: 5px 20px 0px 30px;
-    border-radius: 12px;
-}
-.text-in-text > ul > li{
-    padding: 10px 0px;
-}

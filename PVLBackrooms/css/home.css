@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(stylesheet.css);
 
 :root{
   /* Tema Escuro Padrão */
@@ -18,9 +18,9 @@
   --cor-fundo: #ffffff;
   --cor-fundo-dois: #fdfcfa;
   --cor-fundo-tres: #ffffff;
-  --cor-fundo-quatro: #f5f5f5;
-  --cor-borda: #a2a2b3;
-  --cor-hover: #e7e6e691;
+  --cor-fundo-quatro: #ebebeb;
+  --cor-borda: #cacaca;
+  --cor-hover: #e7e6e6a2;
 }
 
 *{
@@ -29,7 +29,8 @@
   margin: 0;
 }
 html{
-  font-family: Poppins;
+  font-family: 'Poppins';
+  /* font-family: 'Spotify Mix'; */
   line-height: 1.5rem;
   scroll-behavior: smooth;
 }
@@ -48,7 +49,26 @@ body{
   background-color: var(--cor-destaque);
   color: var(--cor-fundo-dois);
 }
-
+.meg-logo-mini{
+  .st0{
+    stroke-miterlimit: 10;
+  }
+  
+  .st0, .st1{
+    fill: none;
+    stroke: var(--cor-texto);
+    stroke-width: 4px;
+  }
+  
+  .st2{
+    fill: var(--cor-texto);
+  }
+  
+  .st1{
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
 
 .idioma-ativo .icon-check{
   display: block;
@@ -330,8 +350,9 @@ a{
 
 .fontSizeOptions{
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
-  height: 50px;
+  height: 90px;
   margin-bottom: 10px;
 }
 .fontSizeOptions > button{
@@ -340,6 +361,8 @@ a{
   font-family: inherit;
   font-size: inherit;
   flex-grow: 1;
+  height: 50%;
+  width: 120px;
   cursor: pointer;
   background-color: var(--cor-hover);
   border-radius: 12px;
@@ -353,6 +376,9 @@ a{
 }
 .fontSizeOptions > button:nth-child(3){
   font-size: 18px;
+}
+.fontSizeOptions > button:nth-child(4){
+  font-size: 20px;
 }
 .fontSizeOptions > button:hover{
   border: 2px solid var(--cor-destaque);
@@ -465,16 +491,12 @@ a{
 
 .sidebar svg{
   flex-shrink: 0;
+  fill: none;
   stroke: var(--cor-texto);
 }
 
 .sidebar a span{
   flex-grow: 1;
-}
-
-.sidebar-icon-meg{
-  scale: 1.3;
-  stroke-width: 0px;
 }
 
 .sidebar .sub-menu{
@@ -556,9 +578,14 @@ a{
   border-radius: 24px;
   max-width: 84rem;
 }
+.container > h1{
+  font-size: 36px;
+  line-height: normal;
+  text-align: center;
+}
 .container h1{
   font-size: 36px;
-  line-height: normal
+  line-height: normal;
 }
 .container h2{
   line-height: normal;
@@ -590,43 +617,57 @@ a{
   line-height: normal;
   margin-top: 16px;
 }
+.container .text > ul{
+  padding: 5px 20px 0px 30px;
+}
+.container .text > ul > li{
+  padding: 10px 0px;
+}
+.container .text-in-text > ul{
+  padding: 5px 20px 0px 30px;
+}
+.container .text-in-text > ul > li{
+  padding: 10px 0px;
+}
 
-.index-section > ol:first-of-type{
+.index-section > ol:first-of-type, .index-section > ul:first-of-type{
   display: flex;
   align-items: center;
   border-radius: 12px;
   gap: 12px;
-  padding: 4px 0px 4px 8px;
+  padding: 4px 8px 4px 8px;
   cursor: pointer;
 }
-.index-section > ol:first-of-type > span:last-of-type{
+.index-section > ol:first-of-type > span:last-of-type, .index-section > ul:first-of-type > span:last-of-type{
   height: 2px;
   background-color: var(--cor-borda);
   border-radius: 12px;
   flex-grow: 1;
   margin-right: 20px;
 }
-.index-section > ol:first-of-type:hover{
+.index-section > ol:first-of-type:hover, .index-section > ul:first-of-type:hover{
   background-color: var(--cor-hover);
 }
-.index-section.opened > ol:first-of-type > svg{
+.index-section.opened > ol:first-of-type > svg, .index-section.opened > ul:first-of-type > svg{
   transform: rotate(180deg);
 }
-.index-section > ol:last-of-type{
+.index-section > ol:last-of-type, .index-section > ul:last-of-type{
   display: none;
   gap: 4px;
   flex-direction: column;
   padding: 4px 8px 20px 30px;
   margin-right: 20px;
-  border-bottom: 2px solid var(--cor-borda);
+  /* border-bottom: 2px solid var(--cor-borda); */
+}
+.index-section > ol:last-of-type{
   font-weight: 600;
 }
-.index-section > ol:last-of-type > li > ul{
+.index-section > ol:last-of-type > li > ul, .index-section > ul:last-of-type > li > ul{
   list-style: disc;
   font-weight: normal;
   padding-left: 30px;
 }
-.index-section.opened > ol:last-of-type{
+.index-section.opened > ol:last-of-type, .index-section.opened > ul:last-of-type{
   display: flex;
 }
 .index-section > ol:last-of-type a:hover{
@@ -650,16 +691,45 @@ a{
     left: 0;
   }
   .sidebar{
+    height: 400px;
+    padding: 8px;
+    width: 100%;
+    border-right: none;
+    border-top: 2px solid var(--cor-destaque);
+    top: unset;
+    bottom: 0;
+    z-index: 2;
+
+    ul li:first-child{
+      flex-flow: row-reverse;
+    }
+    .toggle-btn:hover{
+      background-color: unset;
+    }
+    li:hover > a{
+      background-color: none;
+    }
+    ul li:first-child button{
+      padding: 0;
+    }
+    ul li:first-child button svg{
+      transform: rotate(-90deg);
+      padding: 12px;
+      border-radius: 12px;
+      background-color: var(--cor-hover);
+    }
+    ul li:first-child .logo-sidebar{
+      text-align: center;
+    }
+  }
+  .sidebar.close{
     height: 60px;
     width: 100%;
     border-right: none;
     border-top: 2px solid var(--cor-destaque);
     padding: 0;
-    top: unset;
-    bottom: 0;
     overflow-y: hidden;
     overflow-x: scroll;
-    z-index: 2;
 
     ul{
       padding: 0;
@@ -681,7 +751,25 @@ a{
       justify-content: center;
     }
 
-    ul li span, ul li:first-child{
+    ul li span{
+      display: none;
+    }
+    ul li:first-child{
+      margin: 0;
+    }
+    ul li:first-child button{
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      border-radius: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    ul li:first-child button svg{
+      transform: rotate(-90deg);
+    }
+    ul li:first-child span{
       display: none;
     }
 
@@ -724,10 +812,6 @@ a{
       }
     }
   }
-  .sidebar.close{
-    width: 100%;
-    padding: 0px;
-  }
   .main{
     padding: 20px 0px;
   }
@@ -738,8 +822,8 @@ a{
   .main h2 span{
     display: none;
   }
-  .main .index-section ol:first-of-type{
-    justify-content: center;
+  .main .index-section ol:first-of-type, .main .index-section ul:first-of-type{
+    background-color: var(--cor-hover);
   }
   .main .index-section span{
     display: none;

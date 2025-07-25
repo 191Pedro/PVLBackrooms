@@ -96,9 +96,10 @@ document.addEventListener('keydown', function(event) {
 
 const filtersBtn = document.getElementById('filters-btn');
 const filtersMenu = document.getElementById('filters-menu');
-const optionItem = document.getElementById("filter-per-item");
+const optionBase = document.getElementById("filter-per-base");
 const optionType = document.getElementById("filter-per-type");
-const optionTrade = document.getElementById("filter-per-trade");
+const optionLevel = document.getElementById("filter-per-level");
+const optionStatus = document.getElementById("filter-per-status");
 
 filtersBtn.addEventListener('click', () => {
     filtersBtn.classList.toggle('opened');
@@ -112,11 +113,12 @@ function filtersOptionsConfirm() {
     item.forEach(item =>{
         item.style.display = "block";
         
-        const matchItem = optionItem.value === "all" || item.dataset.item == optionItem.value;
-        const matchType = optionType.value === "all" || item.dataset.type.includes(optionType.value);
-        const matchTrade = optionTrade.value === "all" || item.dataset.trade == optionTrade.value;
+        const matchBase = optionBase.value === "all" || item.dataset.base == optionBase.value;
+        const matchType = optionType.value === "all" || item.dataset.type == optionType.value;
+        const matchLevel = optionLevel.value === "all" || item.dataset.level == optionLevel.value;
+        const matchStatus = optionStatus.value === "all" || item.dataset.status == optionStatus.value;
 
-        if (matchItem && matchType && matchTrade) {
+        if (matchBase && matchType && matchLevel && matchStatus) {
             item.style.display = "block";
         }
         else {
@@ -128,9 +130,10 @@ function filtersOptionsConfirm() {
 function filtersOptionsCancel() {
     showAllAction();
     
-    optionItem.value = "all";
+    optionBase.value = "all";
     optionType.value = "all";
-    optionTrade.value = "all";
+    optionLevel.value = "all";
+    optionStatus.value = "all";
 
     const item = document.querySelectorAll('.item');
 
