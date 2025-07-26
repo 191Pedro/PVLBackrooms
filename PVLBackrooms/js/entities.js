@@ -10,7 +10,7 @@ function homeDisplay() {
     if (homeDisplayTerm = true) {
         let i = 0
         items.forEach(item => {
-            if (i >= 6) {
+            if (i >= 8) {
                 return;
             }
             item.style.display = 'flex';
@@ -94,9 +94,10 @@ document.addEventListener('keydown', function(event) {
 
 const filtersBtn = document.getElementById('filters-btn');
 const filtersMenu = document.getElementById('filters-menu');
-const optionPhenomenon = document.getElementById("filter-per-phenomenon");
-const optionType = document.getElementById("filter-per-type");
-const optionRisk = document.getElementById("filter-per-risk");
+const optionEntity = document.getElementById("filter-per-entity");
+const optionNature = document.getElementById("filter-per-nature");
+const optionIntellect = document.getElementById("filter-per-intellect");
+const optionSize = document.getElementById("filter-per-size");
 
 filtersBtn.addEventListener('click', () =>{
     filtersBtn.classList.toggle('opened');
@@ -110,11 +111,12 @@ function filtersOptionsConfirm() {
     item.forEach(item => {
         item.style.display = "flex";
         
-        const matchPhenomenon = optionPhenomenon.value === "all" || item.dataset.phenomenon == optionPhenomenon.value;
-        const matchType = optionType.value === "any" || item.dataset.type == optionType.value;
-        const matchRisk = optionRisk.value === "any" || item.dataset.risk == optionRisk.value;
+        const matchEntity = optionEntity.value === "all" || item.dataset.entity == optionEntity.value;
+        const matchNature = optionNature.value === "any" || item.dataset.nature == optionNature.value;
+        const matchIntellect = optionIntellect.value === "any" || item.dataset.intellect.includes(optionIntellect.value);
+        const matchSize = optionSize.value === "any" || item.dataset.size == optionSize.value;
 
-        if (matchPhenomenon && matchType && matchRisk) {
+        if (matchEntity && matchNature && matchIntellect && matchSize) {
             item.style.display = "flex";
         }
         else {
@@ -126,9 +128,10 @@ function filtersOptionsConfirm() {
 function filtersOptionsCancel() {
     showAllAction();
 
-    optionPhenomenon.value = "all";
-    optionType.value = "any";
-    optionRisk.value = "any";
+    optionEntity.value = "all";
+    optionNature.value = "any";
+    optionIntellect.value = "any";
+    optionSize.value = "any";
 
     const item = document.querySelectorAll('.item');
 

@@ -261,7 +261,7 @@
     </aside>
     <main id="main" class="main" style="grid-area: box-3">
         <section class="container">
-            <h1>Níveis das PVLBackrooms</h1>
+            <h1>Fenômenos das PVLBackrooms</h1>
             <section class="text">
                 <p>Fenômenos são eventos anômalos, imprevisíveis e, em muitos casos, incontroláveis, que ocorrem de forma dispersa pelas PVLBackrooms. Eles podem afetar profundamente o ambiente ao redor, distorcendo o tempo, o espaço e até mesmo a percepção e estabilidade mental dos viajantes.</p>
                 <p>Apesar de sua aleatoriedade, muitos Fenômenos compartilham padrões mínimos que permitem tentativas de contenção ou proteção, ainda que parcial. Alguns são curtos e pontuais, enquanto outros se manifestam de maneira contínua, integrando-se ao cotidiano de determinados níveis.</p>
@@ -348,19 +348,19 @@
                                         <option value="phenomenon11_15">11-15</option>
                                         <option value="phenomenon16_20">16-20</option>
                                         <option value="phenomenon21_25">21-25</option>
+                                        <option value="phenomenon26_30">26-30</option>
                                     </select>
                                 </li>
                             </ul>
                             <ul class="filters-options">
                                 <span>Tipo</span>
-                                <li class="filters-options-per-risk">
-                                    <select id="filter-per-risk">
+                                <li class="filters-options-per-type">
+                                    <select id="filter-per-type">
                                         <option value="any">Qualquer</option>
-                                        <option value="risk-null">Nulo</option>
-                                        <option value="risk-low">Baixo</option>
-                                        <option value="risk-average">Médio</option>
-                                        <option value="risk-high">Alto</option>
-                                        <option value="risk-highest">Altíssimo</option>
+                                        <option value="spatial">Espacial</option>
+                                        <option value="temporal">Temporal</option>
+                                        <option value="mental">Mental</option>
+                                        <option value="unique">Único</option>
                                     </select>
                                 </li>
                             </ul>
@@ -384,30 +384,56 @@
                 </section>
             </section>
             <section class="items">
-                <a class="item" data-level="level0_10" data-sublevel="no" id="level0" href="levels/level0.html">
+                <a class="item" data-phenomenon="phenomenon1_5" data-type="mental" data-risk="risk-low" href="">
                     <h2>Fenômeno 1</h2>
                     <p><b>Controle Direcionado</b></p>
                     <p>Fenômeno Tipo Mental</p>
                     <p>Risco Baixo</p>
                 </a>
-                <a class="item" data-level="level0_10" data-sublevel="no" id="level0" href="levels/level0.html">
+                <a class="item" data-phenomenon="phenomenon1_5" data-type="unique" data-risk="risk-average" href="">
                     <h2>Fenômeno 2</h2>
                     <p><b>Lua de Sangue</b></p>
                     <p>Fenômeno Tipo Único</p>
                     <p>Risco Médio</p>
                 </a>
-                <a class="item" data-level="level0_10" data-sublevel="no" id="level0" href="levels/level0.html">
+                <a class="item" data-phenomenon="phenomenon1_5" data-type="spatial" data-risk="risk-high" href="">
                     <h2>Fenômeno 3</h2>
                     <p><b>A Música de Deus e a Dança do Diabo</b></p>
                     <p>Fenômeno Tipo Espacial</p>
-                    <p>Risco Baixo</p>
+                    <p>Risco Alto</p>
                 </a>
-                <a class="item" data-level="level0_10" data-sublevel="no" id="level0" href="levels/level0.html">
+                <a class="item" data-phenomenon="phenomenon6_10" data-type="mental" data-risk="risk-high" href="">
                     <h2>Fenômeno 6</h2>
                     <p><b>Você tá rindo, né? Desfaça essa maldição!</b></p>
-                    <p>Fenômeno Tipo</p>
-                    <p>Risco</p>
+                    <p>Fenômeno Tipo Mental</p>
+                    <p>Risco Alto</p>
                 </a>
+                <a class="item" data-phenomenon="phenomenon6_10" data-type="unique" data-risk="risk-highest" href="">
+                    <h2>Fenômeno 6.0001</h2>
+                    <p><b>PVLBackrooms Suporte Técnico</b></p>
+                    <p>Fenômeno Tipo Único</p>
+                    <p>Risco Altíssmo</p>
+                </a>
+                <a class="item" data-phenomenon="phenomenon11_15" data-type="spatial" data-risk="risk-average" href="">
+                    <h2>Fenômeno 11</h2>
+                    <p><b>Zona de Dobra</b></p>
+                    <p>Fenômeno Tipo Espacial</p>
+                    <p>Risco Médio</p>
+                </a>
+                <a class="item" data-phenomenon="phenomenon16_20" data-type="unique" data-risk="risk-highest" href="">
+                    <h2>Fenômeno 20</h2>
+                    <p><b>Cartas</b></p>
+                    <p>Fenômeno Tipo Único</p>
+                    <p>Risco Altíssimo</p>
+                </a>
+                <li class="no-results items-special" id="no-results">
+                    <svg class="no-results-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M4.05 13c-1.7 1.8-2.5 3.5-1.8 4.5 1.1 1.9 6.4 1 11.8-2s8.9-7.1 7.7-9c-.6-1-2.4-1.2-4.7-.7"/></svg>
+                    <span>Nenhum resultado encontrado</span>
+                </li>
+                <li class="show-all items-special" id="show-all" onclick="showAllAction()">
+                    <svg class="show-all-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    <span>Exibir tudo</span>
+                </li>
             </section>
         </section>
     </main>

@@ -177,3 +177,5 @@ function changeFontSize(id){
   mainDiv.style.fontSize = document.getElementById(id).value;
   localStorage.setItem('setFontSize', document.getElementById(id).value);
 }
+
+mainDiv.style.fontSize = localStorage.getItem('setFontSize')
