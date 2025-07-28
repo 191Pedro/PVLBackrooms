@@ -343,13 +343,13 @@
 }
 
 @media(max-width: 900px){
-    .search-bar{
+    .search .groups{
         flex-direction: column;
     }
     .filters-section{
         display: block;
     }
-    #filters-btn{
+    .filters, .show-details{
         width: 100%;
     }
     .filters-menu{
