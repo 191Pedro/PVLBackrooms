@@ -310,153 +310,162 @@
                 <p>Central de Arquivos da Major Exploration Group (MEG), a principal organização responsável por estudar, explorar e proteger os habitantes das PVLBackrooms. Aqui está reunida toda a documentação oficial produzida, revisada e mantida pelos Setores da MEG, com base em dados obtidos ao longo de anos de operações. Aqui você encontrará informações detalhadas sobre níveis explorados, entidades identificadas, bases, postos avançados e rotas seguras, protocolos operacionais, manuais de sobrevivência e normas da organização.</p>
                 <p>O obejtivo da MEG é garantir acesso livre, seguro e confiável ao conhecimento, permitindo que sobreviventes, exploradores e novos membros compreendam o ambiente hostil e mutável das PVLBackrooms. Ela credita que a informação é a primeira forma de defesa. Todas as entradas tiveram contribuição dos setores Alpha, Delta, Kappa e Ômega, com base em missões de campo, observações diretas e colaborações com outras facções confiáveis.</p>
             </section>
-            <section class="search-bar">
+            <section class="search">
                 <h2><span></span>Operações<span></span></h2>
-                <section class="input-group">
-                    <span class="input-icons">
-                        <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                    </span>
-                    <input 
-                        id="search" 
-                        type="text" 
-                        class="input-field" 
-                        placeholder="Pesquisar (Ctrl + F)"
-                    >
-                    <span class="input-icons">
-                        <svg class="icon-clear" id="icon-clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                    </span>
-                </section>
-                <section class="filters-section">
-                    <button class="filters" id="filters-btn">
-                        <span>Filtros</span>
-                        <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
-                    </button>
-                    <section class="filters-menu" id="filters-menu">
-                        <p>Filtros</p>
-                        <ul class="filters-options">
-                            <span>Numeração da operação</span>
-                            <li class="filters-options-per-operation">
-                                <select id="filter-per-operation">
-                                    <option value="all">Todos</option>
-                                    <option value="operation0_50">0-50</option>
-                                    <option value="operation51_100">51-100</option>
-                                    <option value="operation101_150">101-150</option>
-                                    <option value="operation151_200">151-200</option>
-                                    <option value="operation201_250">201-250</option>
-                                    <option value="operation251_300">251-300</option>
-                                    <option value="operation301_350">301-350</option>
-                                    <option value="operation351_400">351-400</option>
-                                    <option value="operation401_450">401-450</option>
-                                    <option value="operation451_500">451-500</option>
-                                </select>
-                            </li>
-                        </ul>
-                        <ul class="filters-options">
-                            <span>Setor</span>
-                            <li class="filters-options-per-sector">
-                                <select id="filter-per-sector">
-                                    <option value="all">Todos</option>
-                                    <option value="Alpha">Alpha</option>
-                                    <option value="Delta">Delta</option>
-                                    <option value="Kappa">Kappa</option>
-                                    <option value="Omega">Ômega</option>
-                                </select>
-                            </li>
-                        </ul>
-                        <ul class="filters-options">
-                            <span>Nível</span>
-                            <li class="filters-options-per-level">
-                                <select id="filter-per-level">
-                                    <option value="all">Todos</option>
-                                    <option value="level0_10">0-10</option>
-                                    <option value="level11_20">11-20</option>
-                                    <option value="level21_30">21-30</option>
-                                    <option value="level31_40">31-40</option>
-                                    <option value="level41_50">41-50</option>
-                                    <option value="level51_60">51-60</option>
-                                    <option value="level61_70">61-70</option>
-                                    <option value="level71_80">71-80</option>
-                                    <option value="level81_90">81-90</option>
-                                    <option value="level91_100">91-100</option>
-                                </select>
-                            </li>
-                        </ul>
-                        <span class="filters-action-buttons" id="confirm-filters" onclick="filtersOptionsConfirm()">Filtrar</span>
-                        <span class="filters-action-buttons" id="cancel-filters" onclick="filtersOptionsCancel()">Limpar filtros</span>
+                <section class="groups">
+                    <section class="input-group">
+                        <span class="input-icons">
+                            <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        </span>
+                        <input 
+                            id="search" 
+                            type="text" 
+                            class="input-field" 
+                            placeholder="Pesquisar (Ctrl + F)"
+                        >
+                        <span class="input-icons">
+                            <svg class="icon-clear" id="icon-clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                        </span>
+                    </section>
+                    <section>
+                        <button class="show-details" id="show-details" onclick="DetailsToggle()">
+                            <span>Detalhes</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg>
+                        </button>
+                    </section>
+                    <section class="filters-section">
+                        <button class="filters" id="filters-btn">
+                            <span>Filtros</span>
+                            <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
+                        </button>
+                        <section class="filters-menu" id="filters-menu">
+                            <svg id="filters-menu-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                            <ul class="filters-options">
+                                <span>Numeração da operação</span>
+                                <li class="filters-options-per-operation">
+                                    <select id="filter-per-operation">
+                                        <option value="all">Todos</option>
+                                        <option value="operation0_50">0-50</option>
+                                        <option value="operation51_100">51-100</option>
+                                        <option value="operation101_150">101-150</option>
+                                        <option value="operation151_200">151-200</option>
+                                        <option value="operation201_250">201-250</option>
+                                        <option value="operation251_300">251-300</option>
+                                        <option value="operation301_350">301-350</option>
+                                        <option value="operation351_400">351-400</option>
+                                        <option value="operation401_450">401-450</option>
+                                        <option value="operation451_500">451-500</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul class="filters-options">
+                                <span>Setor</span>
+                                <li class="filters-options-per-sector">
+                                    <select id="filter-per-sector">
+                                        <option value="all">Todos</option>
+                                        <option value="Alpha">Alpha</option>
+                                        <option value="Delta">Delta</option>
+                                        <option value="Kappa">Kappa</option>
+                                        <option value="Omega">Ômega</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul class="filters-options">
+                                <span>Nível</span>
+                                <li class="filters-options-per-level">
+                                    <select id="filter-per-level">
+                                        <option value="all">Todos</option>
+                                        <option value="level0_10">0-10</option>
+                                        <option value="level11_20">11-20</option>
+                                        <option value="level21_30">21-30</option>
+                                        <option value="level31_40">31-40</option>
+                                        <option value="level41_50">41-50</option>
+                                        <option value="level51_60">51-60</option>
+                                        <option value="level61_70">61-70</option>
+                                        <option value="level71_80">71-80</option>
+                                        <option value="level81_90">81-90</option>
+                                        <option value="level91_100">91-100</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <span class="filters-action-buttons" id="confirm-filters" onclick="filtersOptionsConfirm()">Filtrar</span>
+                            <span class="filters-action-buttons" id="cancel-filters" onclick="filtersOptionsCancel()">Limpar filtros</span>
+                        </section>
                     </section>
                 </section>
             </section>
             <section class="items">
                 <a class="item" id="O50 N50 SO" data-operation="operation0_50" data-sector="Omega" data-level="level41_50" href="levels/level0.html">
                     <h2>Operação 12</h2>
-                    <p>Setor Ômega</p>
-                    <p>Nível 46 - Confecção de ferramentas e coleta de recursos</p>
+                    <b>Setor Ômega</b>
+                    <p>Nível 46</p>
                     <p>Data 07-02-02</p>
                 </a>
                 <a class="item" id="050 N20 SA SD" data-operation="operation0_50" data-sector="Alpha Delta" data-level="level11_20" href="levels/level0.html">
                     <h2>Operação 18</h2>
-                    <p>Setores Alpha e Delta</p>
-                    <p>Nível 11 - Escolta e coleta de dados</p>
+                    <b>Setores Alpha e Delta</b>
+                    <p>Nível 11</p>
                     <p>Data 21-04-02</p>
                 </a>
                 <a class="item" id="O50 N10 SD SK" data-operation="operation0_50" data-sector="Delta Kappa" data-level="level0_10" href="levels/level0.html">
                     <h2>Operação 29</h2>
-                    <p>Setores Delta e Kappa</p>
-                    <p>Nível 1 - Escolta e negociação</p>
+                    <b>Setores Delta e Kappa</b>
+                    <p>Nível 1</p>
                     <p>Data 10-02-03</p>
                 </a>
                 <a class="item" id="O50 N10 SA" data-operation="operation0_50" data-sector="Alpha" data-level="level0_10" href="levels/level0.html">
                     <h2>Operação 32</h2>
-                    <p>Setor Alpha</p>
-                    <p>Nível 0 - Coleta de dados e comprovação</p>
+                    <b>Setor Alpha</b>
+                    <p>Nível 0</p>
                     <p>Data 13-06-03</p>
                 </a>
                 <a class="item" id="050 N90 SA" data-operation="operation0_50" data-sector="Alpha" data-level="level81_90" href="levels/level0.html">
                     <h2>Operação 35</h2>
-                    <p>Setor Alpha</p>
-                    <p>Nível 90 - Coleta de dados e revisão</p>
+                    <b>Setor Alpha</b>
+                    <p>Nível 90</p>
                     <p>Data 17-07-03</p>
                 </a>
                 <a class="item" id="O100 N90 SK" data-operation="operation51-100" data-sector="Kappa" data-level="level81_90" href="levels/level0.html">
                     <h2>Operação 82</h2>
-                    <p>Setor Kappa</p>
-                    <p>Nível 86 - Criação do PA86-11</p>
+                    <b>Setor Kappa</b>
+                    <p>Nível 86-11</p>
                     <p>Data 12-09-08</p>
                 </a>
                 <a class="item" id="O150 N50 SK SO" data-operation="operation101_150" data-sector="Kappa Omega" data-level="level41_50" href="levels/level0.html">
                     <h2>Operação 120</h2>
-                    <p>Setores Kappa e Ômega</p>
-                    <p>Nível 46 - Coleta de recursos massiva e criação do PA46-23</p>
+                    <b>Setores Kappa e Ômega</b>
+                    <p>Nível 46</p>
                     <p>Data 03-05-12</p>
                 </a>
                 <a class="item" id="O150 N20 SA SD SK" data-operation="operation101_150" data-sector="Alpha Delta Kappa" data-level="level11_20" href="levels/level0.html">
                     <h2>Operação 134</h2>
-                    <p>Setores Alpha, Delta e Kappa</p>
-                    <p>Nível 11 - Criação do Centro de Operações Secundário N11</p>
+                    <b>Setores Alpha, Delta e Kappa</b>
+                    <p>Nível 11</p>
                     <p>Data 16-02-10</p>
                 </a>
                 <a class="item" id="O150 N20 SA SD SK" data-operation="operation101_150" data-sector="Alpha Delta Kappa" data-level="level11_20" href="levels/level0.html">
                     <h2>Operação 55</h2>
-                    <p>Setores Alpha, Delta e Kappa</p>
-                    <p>Nível 11 - Criação do Centro de Operações Secundário N11</p>
+                    <b>Setores Alpha, Delta e Kappa</b>
+                    <p>Nível 11</p>
                     <p>Data 16-02-10</p>
                 </a>
                 <a class="item" id="O150 N20 SA SD SK" data-operation="operation101_150" data-sector="Alpha Delta Kappa" data-level="level11_20" href="levels/level0.html">
                     <h2>Operação 134</h2>
-                    <p>Setores Alpha, Delta e Kappa</p>
-                    <p>Nível 11 - Criação do Centro de Operações Secundário N11</p>
+                    <b>Setores Alpha, Delta e Kappa</b>
+                    <p>Nível 11</p>
                     <p>Data 16-02-10</p>
                 </a>
                 <a class="item" id="O150 N20 SA SD SK" data-operation="operation101_150" data-sector="Alpha Delta Kappa" data-level="level11_20" href="levels/level0.html">
                     <h2>Operação 134</h2>
-                    <p>Setores Alpha, Delta e Kappa</p>
-                    <p>Nível 11 - Criação do Centro de Operações Secundário N11</p>
+                    <b>Setores Alpha, Delta e Kappa</b>
+                    <p>Nível 11</p>
                     <p>Data 16-02-10</p>
                 </a>
                 <a class="item" id="O150 N20 SA SD SK" data-operation="operation101_150" data-sector="Alpha Delta Kappa" data-level="level11_20" href="levels/level0.html">
                     <h2>Operação 134</h2>
-                    <p>Setores Alpha, Delta e Kappa</p>
-                    <p>Nível 11 - Criação do Centro de Operações Secundário N11</p>
+                    <b>Setores Alpha, Delta e Kappa</b>
+                    <p>Nível 11</p>
                     <p>Data 16-02-10</p>
                 </a>
                 <li class="no-results items-special" id="no-results">

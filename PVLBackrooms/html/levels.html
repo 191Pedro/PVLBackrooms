@@ -375,30 +375,30 @@
                     </li>
                 </ul>
             </section>
-            <section class="search-bar">
+            <section class="search">
                 <h2><span></span>Níveis<span></span></h2>
-                <section class="input-group">
-                    <span class="input-icons">
-                        <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                    </span>
-                    <input 
-                        id="search" 
-                        type="text" 
-                        class="input-field" 
-                        placeholder="Pesquisar (Ctrl + F)"
-                    >
-                    <span class="input-icons">
-                        <svg class="icon-clear" id="icon-clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                    </span>
-                </section>
-                <section class="filters-section">
-                    <button class="filters" id="filters-btn">
-                        <span>Filtros</span>
-                        <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
-                    </button>
-                    <section class="filters-menu" id="filters-menu">
-                        <p>Filtros</p>
-                        <section class="filters-group">
+                <section class="groups">
+                    <section class="input-group">
+                        <span class="input-icons">
+                            <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        </span>
+                        <input 
+                            id="search" 
+                            type="text" 
+                            class="input-field" 
+                            placeholder="Pesquisar (Ctrl + F)"
+                        >
+                        <span class="input-icons">
+                            <svg class="icon-clear" id="icon-clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                        </span>
+                    </section>
+                    <section class="filters-section">
+                        <button class="filters" id="filters-btn">
+                            <span>Filtros</span>
+                            <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
+                        </button>
+                        <section class="filters-menu" id="filters-menu">
+                            <svg id="filters-menu-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                             <ul class="filters-options">
                                 <span>Numeração do Nível</span>
                                 <li class="filters-options-per-level">
@@ -427,9 +427,9 @@
                                     </select>
                                 </li>
                             </ul>
+                            <span class="filters-action-buttons" id="confirm-filters" onclick="filtersOptionsConfirm()">Filtrar</span>
+                            <span class="filters-action-buttons" id="cancel-filters" onclick="filtersOptionsCancel()">Limpar filtros</span>
                         </section>
-                        <span class="filters-action-buttons" id="confirm-filters" onclick="filtersOptionsConfirm()">Filtrar</span>
-                        <span class="filters-action-buttons" id="cancel-filters" onclick="filtersOptionsCancel()">Limpar filtros</span>
                     </section>
                 </section>
             </section>

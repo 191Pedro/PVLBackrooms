@@ -12,7 +12,12 @@
     --cor-hover: #00000034;
 }
 
-.search-bar{
+.search{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.groups{
     display: flex;
     font-size: 16px;
     gap: 12px;
@@ -63,10 +68,50 @@
     background-color: var(--cor-hover);
 }
 
+.show-details{
+    background: inherit;
+    font: inherit;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: var(--cor-fundo-dois);
+    border: 2px dashed var(--cor-borda);
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+}
+.show-details:hover{
+    background-color: var(--cor-fundo-quatro);
+    border: 2px solid var(--cor-borda);
+}
+.show-details.actived{
+    background-color: var(--cor-fundo-quatro);
+    border: 2px solid var(--cor-destaque);
+}
+.show-details.actived:hover{
+    background-color: var(--cor-fundo-quatro);
+    border: 2px dashed var(--cor-destaque);
+}
+
+.show-details svg:nth-child(2){
+    display: block;
+}
+.show-details svg:nth-child(3){
+    display: none;
+}
+.show-details.actived svg:nth-child(2){
+    display: none;
+}
+.show-details.actived svg:nth-child(3){
+    display: block;
+}
+
 .filters-section{
     position: relative;
 }
-
 .filters{
     background: inherit;
     font: inherit;
@@ -94,17 +139,28 @@
     position: absolute;
     top: -5px;
     right: 0;
+    transform: translate(0%, -100%);
     width: 300px;
-    transform: translate(0, -100%);
     
+    box-shadow: 0px 0px 5px 1px #000000;
     background-color: var(--cor-fundo-dois);
     border: 2px solid var(--cor-destaque);
     border-radius: 12px;
-    padding: 12px;
+    padding: 16px;
     font-weight: bold;
     cursor: default;
     overflow-y: auto;
     display: none;
+    flex-direction: column;
+}
+.filters-menu > svg:nth-child(1){
+    align-self: flex-end;
+    padding: 4px;
+    border-radius: 12px;
+    background-color: var(--cor-fundo-quatro);
+}
+.filters-menu > svg:nth-child(1):hover{
+    background-color: var(--cor-borda);
 }
 
 .filters-menu::-webkit-scrollbar{
@@ -123,7 +179,7 @@
     text-align: center;
 }
 .filters-menu.opened{
-    display: block;
+    display: flex;
 }
 
 .filters-options{
@@ -169,7 +225,7 @@
 }
 .filters-action-buttons:last-of-type{
     background-color: var(--cor-fundo-dois);
-    border: 2px solid var(--cor-fundo-quatro);
+    border: 2px solid var(--cor-borda);
     font-weight: normal;
 }
 .filters-action-buttons:hover{
@@ -299,103 +355,5 @@
     .filters-menu{
         right: 50%;
         transform: translate(50%, -100%);
-    }
-}
-
-/* Conteúdo geral dos níveis */
-
-.level-back{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    word-wrap: break-word;
-    gap: 0 12px;
-}
-.level-title{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 0;
-}
-
-.level-name{
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
-    font-size: 32px;
-    gap: 24px;
-}
-
-.level-img{
-    height: fit-content;
-    img{
-        height: 235px;
-        border-radius: 12px;
-    }
-    img::selection{
-        background-color: var(--cor-texto);
-    }
-}
-
-.level-preview{
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-}
-.level-preview table{
-    border-collapse: collapse;
-    width: 450px;
-}
-.level-preview table tbody tr td:first-of-type{
-    text-align: left;
-}
-.level-preview td{
-    width: 50%;
-    padding: 8px 12px;
-    text-align: center;
-    border: 2px solid var(--cor-borda);
-}
-.level-preview svg, .level-preview span{
-    vertical-align: middle;
-}
-
-@media(max-width: 1300px){
-    .level-title{
-        padding: 0 100px;
-    }
-    .level-img{
-        height: unset;
-        img{
-            height: unset;
-            width: 100%;
-        }
-    }
-    .level-preview{
-        flex-grow: 1;
-        table{
-            width: 100%;
-        }
-    }
-    .level-preview td{
-        svg{
-            display: block;
-            margin: 0 auto;
-        }
-        span{
-            text-align: center;
-        }
-    }
-    .level-preview table tbody tr td:first-of-type{
-        text-align: center;
-    }
-}
-@media(max-width: 900px){
-    .level-title{
-        padding: 0;
-    }
-    .level-preview{
-        font-size: 16px;
     }
 }

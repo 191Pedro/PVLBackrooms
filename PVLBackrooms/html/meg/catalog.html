@@ -331,102 +331,104 @@
                     <li><p><b>Decorativo:</b> Itens simbólicos, culturais ou representativos, que expressam identidade, reconhecimento ou história.</p></li>
                 </ul>
             </section>
-            <section class="search-bar">
+            <section class="search">
                 <h2><span></span>Catálogo<span></span></h2>
-                <section class="input-group">
-                    <span class="input-icons">
-                        <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                    </span>
-                    <input 
-                        id="search" 
-                        type="text" 
-                        class="input-field" 
-                        placeholder="Pesquisar (Ctrl + F)"
-                    >
-                    <span class="input-icons">
-                        <svg class="icon-clear" id="icon-clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                    </span>
-                </section>
-                <section class="filters-section">
-                    <button class="filters" id="filters-btn">
-                        <span>Filtros</span>
-                        <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
-                    </button>
-                    <section class="filters-menu" id="filters-menu">
-                        <p>Filtros</p>
-                        <ul class="filters-options">
-                            <span>Numeração do item</span>
-                            <li class="filters-options-per-item">
-                                <select id="filter-per-item">
-                                    <option value="all">Todos</option>
-                                    <option value="item0_10">0-10</option>
-                                    <option value="item11_20">11-20</option>
-                                    <option value="item21_30">21-30</option>
-                                    <option value="item31_40">31-40</option>
-                                    <option value="item41_50">41-50</option>
-                                    <option value="item51_60">51-60</option>
-                                    <option value="item61_70">61-70</option>
-                                    <option value="item71_80">71-80</option>
-                                    <option value="item81_90">81-90</option>
-                                    <option value="item91_100">91-100</option>
-                                </select>
-                            </li>
-                        </ul>
-                        <ul class="filters-options">
-                            <span>Classificação</span>
-                            <li class="filters-options-per-type">
-                                <select id="filter-per-type">
-                                    <option value="all">Todos os tipos</option>
-                                    <option value="food">Alimento</option>
-                                    <option value="utility">Utilitário</option>
-                                    <option value="defense">Defesa</option>
-                                    <option value="communication">Comunicação</option>
-                                    <option value="exploration">Exploração</option>
-                                    <option value="medicinal">Medicinal</option>
-                                    <option value="technological">Tecnológico</option>
-                                    <option value="construction">Construção</option>
-                                    <option value="storage">Armazenamento</option>
-                                    <option value="documentation">Documentação</option>
-                                    <option value="clothing">Vestimenta</option>
-                                    <option value="decoration">Decoração</option>
-                                </select>
-                            </li>
-                        </ul>
-                        <ul class="filters-options">
-                            <span>Comercializado</span>
-                            <li class="filters-options-per-trade">
-                                <select id="filter-per-trade">
-                                    <option value="all">Mostrar</option>
-                                    <option value="no">Não mostrar</option>
-                                    <option value="yes">Somente comercializado</option>
-                                </select>
-                            </li>
-                        </ul>
-                        <span class="filters-action-buttons" id="confirm-filters" onclick="filtersOptionsConfirm()">Filtrar</span>
-                        <span class="filters-action-buttons" id="cancel-filters" onclick="filtersOptionsCancel()">Limpar filtros</span>
+                <section class="groups">
+                    <section class="input-group">
+                        <span class="input-icons">
+                            <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        </span>
+                        <input 
+                            id="search" 
+                            type="text" 
+                            class="input-field" 
+                            placeholder="Pesquisar (Ctrl + F)"
+                        >
+                        <span class="input-icons">
+                            <svg class="icon-clear" id="icon-clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                        </span>
+                    </section>
+                    <section>
+                        <button class="show-details" id="show-details" onclick="DetailsToggle()">
+                            <span>Detalhes</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg>
+                        </button>
+                    </section>
+                    <section class="filters-section">
+                        <button class="filters" id="filters-btn">
+                            <span>Filtros</span>
+                            <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
+                        </button>
+                        <section class="filters-menu" id="filters-menu">
+                            <svg id="filters-menu-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                            <ul class="filters-options">
+                                <span>Numeração do item</span>
+                                <li class="filters-options-per-item">
+                                    <select id="filter-per-item">
+                                        <option value="all">Todos</option>
+                                        <option value="item0_10">0-10</option>
+                                        <option value="item11_20">11-20</option>
+                                        <option value="item21_30">21-30</option>
+                                        <option value="item31_40">31-40</option>
+                                        <option value="item41_50">41-50</option>
+                                        <option value="item51_60">51-60</option>
+                                        <option value="item61_70">61-70</option>
+                                        <option value="item71_80">71-80</option>
+                                        <option value="item81_90">81-90</option>
+                                        <option value="item91_100">91-100</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul class="filters-options">
+                                <span>Classificação</span>
+                                <li class="filters-options-per-type">
+                                    <select id="filter-per-type">
+                                        <option value="all">Todos os tipos</option>
+                                        <option value="food">Alimento</option>
+                                        <option value="utility">Utilitário</option>
+                                        <option value="defense">Defesa</option>
+                                        <option value="communication">Comunicação</option>
+                                        <option value="exploration">Exploração</option>
+                                        <option value="medicinal">Medicinal</option>
+                                        <option value="technological">Tecnológico</option>
+                                        <option value="construction">Construção</option>
+                                        <option value="storage">Armazenamento</option>
+                                        <option value="documentation">Documentação</option>
+                                        <option value="clothing">Vestimenta</option>
+                                        <option value="decoration">Decoração</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul class="filters-options">
+                                <span>Comercializado</span>
+                                <li class="filters-options-per-trade">
+                                    <select id="filter-per-trade">
+                                        <option value="all">Mostrar</option>
+                                        <option value="no">Não mostrar</option>
+                                        <option value="yes">Somente comercializado</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <span class="filters-action-buttons" id="confirm-filters" onclick="filtersOptionsConfirm()">Filtrar</span>
+                            <span class="filters-action-buttons" id="cancel-filters" onclick="filtersOptionsCancel()">Limpar filtros</span>
+                        </section>
                     </section>
                 </section>
             </section>
             <section class="items">
                 <a class="item" data-item="item0_10" data-type="food" data-trade="yes" id="item-4" href="levels/level0.html">
-                    <h2>Água de Amêndoa</h2>
-                    <p>Item 004</p>
+                    <h2>Item 004</h2>
+                    <b>Água de Amêndoa</b>
                     <p>Alimento</p>
                     <p>Comercializado</p>
                     <img src="../../imgs/meg-items/almond-water.webp" alt="">
                 </a>
                 <a class="item" data-item="item11_20" data-type="food utility" data-trade="yes" id="item-12" href="levels/level0.html">
-                    <h2>Warpberry</h2>
-                    <p>Item 012</p>
+                    <h2>Item 012</h2>
+                    <b>Warpberry</b>
                     <p>Alimento e Utilitário</p>
                     <p>Comercializado</p>
-                    <img src="../../imgs/meg-items/warpberry.webp" alt="">
-                </a>
-                <a class="item" data-item="item21_30" data-type="technological defense exploration" data-trade="no" id="item-22" href="levels/level0.html">
-                    <h2>Teste</h2>
-                    <p>Item 022</p>
-                    <p>Alimento e Utilitário</p>
-                    <p>Não comercializado</p>
                     <img src="../../imgs/meg-items/warpberry.webp" alt="">
                 </a>
                 <li class="no-results items-special" id="no-results">

@@ -264,8 +264,8 @@
             <h1>Entidades das PVLBackrooms</h1>
             <section class="text">
                 <p>As Entidades das PVLBackrooms são criaturas anômalas que habitam a vasta maioria dos Níveis. Suas formas e naturezas são tão variadas quanto incompreensíveis, refletindo a estranheza inata deste universo. Cada uma carrega consigo marcas de uma origem desconhecida e fragmentos de um propósito falho.</p>
-                <p>Desde os primórdios das PVLBackrooms, essas presenças se manifestam de maneiras que desafiam lógica, razão e estrutura física. São vestígios de algo que foi rejeitado na hora da criação — resíduos conscientes de um sistema quebrado, agora relegados a cumprir funções esquecidas nas frestas da realidade.</p>
-                <p>Interações com Entidades são muitas vezes imprevisíveis e perigosas, embora existam exceções. Suas motivações raramente são claras, e lidar com elas exige mais do que simples compreensão — exige cautela, intuição e, às vezes, pura sorte.</p>
+                <p>Desde os primórdios das PVLBackrooms, essas presenças se manifestam de maneiras que desafiam lógica, razão e estrutura física. São vestígios de algo que foi rejeitado na hora da criação, resíduos conscientes de um sistema quebrado, agora relegados a cumprir funções esquecidas nas frestas da realidade.</p>
+                <p>Interações com Entidades são muitas vezes imprevisíveis e perigosas, embora existam exceções. Suas motivações raramente são claras, e lidar com elas exige mais do que simples compreensão, exige cautela, intuição e, às vezes, pura sorte.</p>
                 <p>Todas as Entidades conhecidas foram catalogadas e podem ser consultadas nesta seção.</p>
             </section>
             <section class="text index-section" id="nature-section">
@@ -331,121 +331,130 @@
                     </li>
                 </ul>
             </section>
-            <section class="search-bar">
+            <section class="search">
                 <h2><span></span>Entidades<span></span></h2>
-                <section class="input-group">
-                    <span class="input-icons">
-                        <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                    </span>
-                    <input 
-                        id="search" 
-                        type="text" 
-                        class="input-field" 
-                        placeholder="Pesquisar (Ctrl + F)"
-                    >
-                    <span class="input-icons">
-                        <svg class="icon-clear" id="icon-clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                    </span>
-                </section>
-                <section class="filters-section">
-                    <button class="filters" id="filters-btn">
-                        <span>Filtros</span>
-                        <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
-                    </button>
-                    <section class="filters-menu" id="filters-menu">
-                        <p>Filtros</p>
-                        <section class="filters-group">
-                            <ul class="filters-options">
-                                <span>Numeração do Entidade</span>
-                                <li class="filters-options-per-entity">
-                                    <select id="filter-per-entity">
-                                        <option value="all">Todos</option>
-                                        <option value="entities1_20">1-20</option>
-                                        <option value="entities21_40">21-40</option>
-                                        <option value="entities41_60">41-60</option>
-                                        <option value="entities61_80">61-80</option>
-                                        <option value="entities81_100">81-100</option>
-                                        <option value="entities101_120">101-120</option>
-                                        <option value="entities121_140">121-140</option>
-                                        <option value="entities141_160">141-160</option>
-                                        <option value="entities161_180">161-180</option>
-                                        <option value="entities181_200">181-200</option>
-                                    </select>
-                                </li>
-                            </ul>
-                            <ul class="filters-options">
-                                <span>Natureza</span>
-                                <li class="filters-options-per-nature">
-                                    <select id="filter-per-nature">
-                                        <option value="any">Qualquer</option>
-                                        <option value="harmless">Inofensível</option>
-                                        <option value="neutral">Neutra</option>
-                                        <option value="aggressive">Agressiva</option>
-                                    </select>
-                                </li>
-                            </ul>
-                            <ul class="filters-options">
-                                <span>Intelecto</span>
-                                <li class="filters-options-per-intellect">
-                                    <select id="filter-per-intellect">
-                                        <option value="any">Qualquer</option>
-                                        <option value="conscious">Consciente</option>
-                                        <option value="moderate">Razoável</option>
-                                        <option value="low">Baixo</option>
-                                        <option value="manipulated">Manipulado</option>
-                                    </select>
-                                </li>
-                            </ul>
-                            <ul class="filters-options">
-                                <span>Porte</span>
-                                <li class="filters-options-per-size">
-                                    <select id="filter-per-size">
-                                        <option value="any">Qualquer</option>
-                                        <option value="small">Pequeno</option>
-                                        <option value="medium">Médio</option>
-                                        <option value="big">Grande</option>
-                                        <option value="colossal">Colossal</option>
-                                    </select>
-                                </li>
-                            </ul>
+                <section class="groups">
+                    <section class="input-group">
+                        <span class="input-icons">
+                            <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        </span>
+                        <input 
+                            id="search" 
+                            type="text" 
+                            class="input-field" 
+                            placeholder="Pesquisar (Ctrl + F)"
+                        >
+                        <span class="input-icons">
+                            <svg class="icon-clear" id="icon-clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                        </span>
+                    </section>
+                    <section>
+                        <button class="show-details" id="show-details" onclick="DetailsToggle()">
+                            <span>Detalhes</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg>
+                        </button>
+                    </section>
+                    <section class="filters-section">
+                        <button class="filters" id="filters-btn">
+                            <span>Filtros</span>
+                            <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
+                        </button>
+                        <section class="filters-menu" id="filters-menu">
+                            <svg id="filters-menu-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                            <section class="filters-group">
+                                <ul class="filters-options">
+                                    <span>Numeração do Entidade</span>
+                                    <li class="filters-options-per-entity">
+                                        <select id="filter-per-entity">
+                                            <option value="all">Todos</option>
+                                            <option value="entities1_20">1-20</option>
+                                            <option value="entities21_40">21-40</option>
+                                            <option value="entities41_60">41-60</option>
+                                            <option value="entities61_80">61-80</option>
+                                            <option value="entities81_100">81-100</option>
+                                            <option value="entities101_120">101-120</option>
+                                            <option value="entities121_140">121-140</option>
+                                            <option value="entities141_160">141-160</option>
+                                            <option value="entities161_180">161-180</option>
+                                            <option value="entities181_200">181-200</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <ul class="filters-options">
+                                    <span>Natureza</span>
+                                    <li class="filters-options-per-nature">
+                                        <select id="filter-per-nature">
+                                            <option value="any">Qualquer</option>
+                                            <option value="harmless">Inofensível</option>
+                                            <option value="neutral">Neutra</option>
+                                            <option value="aggressive">Agressiva</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <ul class="filters-options">
+                                    <span>Intelecto</span>
+                                    <li class="filters-options-per-intellect">
+                                        <select id="filter-per-intellect">
+                                            <option value="any">Qualquer</option>
+                                            <option value="conscious">Consciente</option>
+                                            <option value="moderate">Razoável</option>
+                                            <option value="low">Baixo</option>
+                                            <option value="manipulated">Manipulado</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <ul class="filters-options">
+                                    <span>Porte</span>
+                                    <li class="filters-options-per-size">
+                                        <select id="filter-per-size">
+                                            <option value="any">Qualquer</option>
+                                            <option value="small">Pequeno</option>
+                                            <option value="medium">Médio</option>
+                                            <option value="big">Grande</option>
+                                            <option value="colossal">Colossal</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </section>
+                            <span class="filters-action-buttons" id="confirm-filters" onclick="filtersOptionsConfirm()">Filtrar</span>
+                            <span class="filters-action-buttons" id="cancel-filters" onclick="filtersOptionsCancel()">Limpar filtros</span>
                         </section>
-                        <span class="filters-action-buttons" id="confirm-filters" onclick="filtersOptionsConfirm()">Filtrar</span>
-                        <span class="filters-action-buttons" id="cancel-filters" onclick="filtersOptionsCancel()">Limpar filtros</span>
                     </section>
                 </section>
             </section>
             <section class="items">
                 <a class="item" data-entity="entities1_20" data-nature="neutral" data-intellect="moderate manipulated" data-size="medium" href="">
                     <h2>Entidade 1</h2>
-                    <p><b>Faceling</b></p>
+                    <b>Faceling</b>
                     <p>Natureza Neutra</p>
-                    <p>Intelecto Razoável Manipulado</p>
+                    <p>Intelecto Razoável/Manipulado</p>
                     <p>Porte Médio</p>
                 </a>
                 <a class="item" data-entity="entities1_20" data-nature="neutral" data-intellect="conscious" data-size="colossal" href="">
                     <h2>Entidade 2</h2>
-                    <p><b>Long Horse</b></p>
+                    <b>Long Horse</b>
                     <p>Natureza Neutra</p>
                     <p>Intelecto Consciente</p>
                     <p>Porte Colossal</p>
                 </a>
                 <a class="item" data-entity="entities1_20" data-nature="harmless" data-intellect="conscious" data-size="big" href="">
                     <h2>Entidade 3</h2>
-                    <p><b>Angelmins</b></p>
+                    <b>Angelmins</b>
                     <p>Natureza Inofensível</p>
                     <p>Intelecto Consciente</p>
                     <p>Porte Grande</p>
                 </a>
                 <a class="item" data-entity="entities1_20" data-nature="harmless" data-intellect="low" data-size="small" href="">
                     <h2>Entidade 6</h2>
-                    <p><b>Eyes</b></p>
+                    <b>Eyes</b>
                     <p>Natureza Inofensível</p>
                     <p>Intelecto Baixo</p>
                     <p>Porte Pequeno</p>
                 </a>
                 <a class="item" data-entity="entities1_20" data-nature="aggressive" data-intellect="low" data-size="medium" href="">
                     <h2>Entidade 11</h2>
-                    <p><b>Raptores</b></p>
+                    <b>Raptores</b>
                     <p>Natureza Agressiva</p>
                     <p>Intelecto Baixo</p>
                     <p>Porte Médio</p>

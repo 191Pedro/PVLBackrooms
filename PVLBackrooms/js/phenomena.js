@@ -92,13 +92,34 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+const cardsDetails = document.getElementById('show-details');
+let detailsVisible = true;
+
+function DetailsToggle() {
+    cardsDetails.classList.toggle('actived');
+    detailsVisible = !detailsVisible;
+    items.forEach(item =>{ 
+        const description = item.querySelectorAll('p');
+        if (description) {
+            description.forEach(description => {
+                description.style.display = detailsVisible ? 'block' : 'none';
+            })
+        }
+    })
+}
+
 const filtersBtn = document.getElementById('filters-btn');
 const filtersMenu = document.getElementById('filters-menu');
+const filtersMenuClose = document.getElementById('filters-menu-close');
 const optionPhenomenon = document.getElementById("filter-per-phenomenon");
 const optionType = document.getElementById("filter-per-type");
 const optionRisk = document.getElementById("filter-per-risk");
 
 filtersBtn.addEventListener('click', () =>{
+    filtersBtn.classList.toggle('opened');
+    filtersMenu.classList.toggle('opened');
+})
+filtersMenuClose.addEventListener('click', () => {
     filtersBtn.classList.toggle('opened');
     filtersMenu.classList.toggle('opened');
 })

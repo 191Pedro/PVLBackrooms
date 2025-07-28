@@ -93,11 +93,16 @@ document.addEventListener('keydown', function(event) {
 });
 
 const filtersBtn = document.getElementById('filters-btn');
+const filtersMenuClose = document.getElementById('filters-menu-close');
 const filtersMenu = document.getElementById('filters-menu');
 const optionLevel = document.getElementById("filter-per-level");
 const optionSublevel = document.getElementById("filter-per-sublevel");
 
 filtersBtn.addEventListener('click', () =>{
+    filtersBtn.classList.toggle('opened');
+    filtersMenu.classList.toggle('opened');
+})
+filtersMenuClose.addEventListener('click', () => {
     filtersBtn.classList.toggle('opened');
     filtersMenu.classList.toggle('opened');
 })

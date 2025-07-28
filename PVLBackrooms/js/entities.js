@@ -92,14 +92,35 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+const cardsDetails = document.getElementById('show-details');
+let detailsVisible = true;
+
+function DetailsToggle() {
+    cardsDetails.classList.toggle('actived');
+    detailsVisible = !detailsVisible;
+    items.forEach(item =>{ 
+        const description = item.querySelectorAll('p');
+        if (description) {
+            description.forEach(description => {
+                description.style.display = detailsVisible ? 'block' : 'none';
+            })
+        }
+    })
+}
+
 const filtersBtn = document.getElementById('filters-btn');
 const filtersMenu = document.getElementById('filters-menu');
+const filtersMenuClose = document.getElementById('filters-menu-close');
 const optionEntity = document.getElementById("filter-per-entity");
 const optionNature = document.getElementById("filter-per-nature");
 const optionIntellect = document.getElementById("filter-per-intellect");
 const optionSize = document.getElementById("filter-per-size");
 
 filtersBtn.addEventListener('click', () =>{
+    filtersBtn.classList.toggle('opened');
+    filtersMenu.classList.toggle('opened');
+})
+filtersMenuClose.addEventListener('click', () => {
     filtersBtn.classList.toggle('opened');
     filtersMenu.classList.toggle('opened');
 })
