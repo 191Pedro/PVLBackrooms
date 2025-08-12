@@ -8,6 +8,7 @@
   --cor-fundo-dois: #2f313a;
   --cor-fundo-tres: #1d1d28;
   --cor-fundo-quatro: #272733;
+  --cor-fundo-claro: #0000001a;
   --cor-borda: #4d4d5c;
   --cor-destaque: #8800ff;
   --cor-hover: #00000034;
@@ -135,7 +136,7 @@ a{
 }
 .navbar > ul > a > svg{
   transition: 0.3s;
-  width: 140px;
+  width: 200px;
 }
 .navbar > ul > a:hover > svg{
   scale: 1.1;
@@ -577,6 +578,30 @@ a{
   border: 2px solid var(--cor-destaque);
   border-radius: 24px;
   max-width: 84rem;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.container .text{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .text .text-in-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .text .text-in-text ul{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 30px;
+  border-radius: 12px;
+  background-color: var(--cor-fundo-claro);
+}
+.container .extra-content ul:last-of-type{
+  gap: 20px;
 }
 .container > h1{
   font-size: 36px;
@@ -591,46 +616,20 @@ a{
   line-height: normal;
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 .container h2 span{
   height: 2px;
   width: 20px;
-  margin-right: 20px;
+  margin: 0 8px;
   background-color: var(--cor-borda);
   border-radius: 12px;
 }
 .container h2 span:last-of-type{
   flex-grow: 1;
-  margin-left: 20px;
-}
-.container .text p{
-  line-height: normal;
-  margin-top: 8px;
-}
-.container .text{
-  margin: 32px auto;
-}
-.container .text-in-text{
-  margin-top: 16px;
-}
-.container .text-in-text h3{
-  line-height: normal;
-  margin-top: 16px;
-}
-.container .text > ul{
-  padding: 5px 20px 0px 30px;
-}
-.container .text > ul > li{
-  padding: 10px 0px;
-}
-.container .text-in-text > ul{
-  padding: 5px 20px 0px 30px;
-}
-.container .text-in-text > ul > li{
-  padding: 10px 0px;
 }
 
-.index-section > ol:first-of-type, .index-section > ul:first-of-type{
+.index-section > ol:first-of-type, .extra-content ul:first-of-type{
   display: flex;
   align-items: center;
   border-radius: 12px;
@@ -638,36 +637,37 @@ a{
   padding: 4px 8px 4px 8px;
   cursor: pointer;
 }
-.index-section > ol:first-of-type > span:last-of-type, .index-section > ul:first-of-type > span:last-of-type{
+.index-section > ol:first-of-type > span:last-of-type, .extra-content ul:first-of-type > span:last-of-type{
   height: 2px;
   background-color: var(--cor-borda);
   border-radius: 12px;
   flex-grow: 1;
-  margin-right: 20px;
 }
-.index-section > ol:first-of-type:hover, .index-section > ul:first-of-type:hover{
+.index-section > ol:first-of-type, .extra-content ul:first-of-type{
+  background-color: var(--cor-fundo-claro);
+}
+.index-section > ol:first-of-type:hover, .extra-content ul:first-of-type:hover{
   background-color: var(--cor-hover);
 }
-.index-section.opened > ol:first-of-type > svg, .index-section.opened > ul:first-of-type > svg{
+.index-section.opened > ol:first-of-type > svg, .extra-content.opened > ul:first-of-type > svg{
   transform: rotate(180deg);
 }
-.index-section > ol:last-of-type, .index-section > ul:last-of-type{
+.index-section > ol:last-of-type, .extra-content ul:last-of-type{
   display: none;
   gap: 4px;
   flex-direction: column;
   padding: 4px 8px 20px 30px;
   margin-right: 20px;
-  /* border-bottom: 2px solid var(--cor-borda); */
 }
 .index-section > ol:last-of-type{
   font-weight: 600;
 }
-.index-section > ol:last-of-type > li > ul, .index-section > ul:last-of-type > li > ul{
+.index-section > ol:last-of-type > li > ul, .extra-content ul:last-of-type > li > ul{
   list-style: disc;
   font-weight: normal;
   padding-left: 30px;
 }
-.index-section.opened > ol:last-of-type, .index-section.opened > ul:last-of-type{
+.index-section.opened > ol:last-of-type, .extra-content.opened > ul:last-of-type{
   display: flex;
 }
 .index-section > ol:last-of-type a:hover{
@@ -690,8 +690,11 @@ a{
     top: 0;
     left: 0;
   }
+  .navbar ul a svg{
+    width: 120px;
+  }
   .sidebar{
-    height: 400px;
+    height: 375px;
     padding: 8px;
     width: 100%;
     border-right: none;
@@ -822,10 +825,11 @@ a{
   .main h2 span{
     display: none;
   }
-  .main .index-section ol:first-of-type, .main .index-section ul:first-of-type{
-    background-color: var(--cor-hover);
+  .main .index-section > ol:first-of-type, .main .extra-content > ul:first-of-type{
+    background-color: var(--cor-fundo-claro);
+    justify-content: center;
   }
-  .main .index-section span{
+  .main .index-section span, .main .extra-content span{
     display: none;
   }
   .main .container{

@@ -66,13 +66,6 @@ function toggleSubMenu(button){
   }
 }
 
-function closeAllSubMenus(){
-  Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
-    ul.classList.remove('show')
-    ul.previousElementSibling.classList.remove('rotate')
-  })
-}
-
 const customizeButton = document.getElementById('customize-btn');
 const customizeMenu = document.getElementById('customize-menu');
 const languageButton = document.getElementById('language-btn');
@@ -162,10 +155,11 @@ themeSwitch.addEventListener("click", () => {
 
 let setTheme = localStorage.getItem('setTheme');
 
-function changeColor(id){
+function changeColor(id) {
   document.body.style.setProperty('--cor-destaque', document.getElementById(id).value);
   document.body.style.setProperty('--cor-fundo-tres', document.getElementById(id).value + '09');
   localStorage.setItem('setTheme', document.getElementById(id).value);
+  updateOptions();
 }
 
 document.body.style.setProperty('--cor-fundo-tres', setTheme + '09');
@@ -173,9 +167,34 @@ document.body.style.setProperty('--cor-destaque', setTheme);
 
 let setFontSize = localStorage.getItem('setFontSize');
 
-function changeFontSize(id){
+function changeFontSize(id) {
   mainDiv.style.fontSize = document.getElementById(id).value;
   localStorage.setItem('setFontSize', document.getElementById(id).value);
+  updateOptions();
 }
 
 mainDiv.style.fontSize = localStorage.getItem('setFontSize')
+
+const themeOptions = document.querySelectorAll('.themeOptions .themes')
+const fontSizeOptions = document.querySelectorAll('.fontSizeOptions .fontSize')
+
+function updateOptions() {
+  themeOptions.forEach(theme => {
+    if (theme.value == localStorage.getItem('setTheme')) {
+      theme.style.border = '2px solid var(--cor-texto)';
+    }
+    else {
+      theme.style.border = '2px solid var(--cor-borda)';
+    }
+  })
+  fontSizeOptions.forEach(fontSize => {
+    if (fontSize.value == localStorage.getItem('setFontSize')) {
+      fontSize.style.border = '2px solid var(--cor-destaque)';
+    }
+    else {
+      fontSize.style.border = '2px solid var(--cor-borda)';
+    }
+  })
+}
+
+updateOptions()

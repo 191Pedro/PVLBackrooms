@@ -1,8 +1,7 @@
-const ageOptions = document.getElementById('age-selection');
-const items = document.querySelectorAll('.items .item');
-const description = document.querySelectorAll('.age-description');
+const sortOptions = document.getElementById('sort-selection');
+const items = document.querySelectorAll('.histories-table .item');
 
-function ageOptionsFunction() {
+function sortOptionsFunction() {
     description.forEach(description => {
         if (description.dataset.age === ageOptions.value) {
             description.style.display = 'flex';

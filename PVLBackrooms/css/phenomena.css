@@ -334,7 +334,7 @@
     border-radius: 12px;
     border: 2px solid var(--cor-borda);
     height: 32px;
-    width: 274px;
+    width: 400px;
 }
 .show-all:hover{
     cursor: pointer;

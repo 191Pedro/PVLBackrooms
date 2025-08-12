@@ -7,6 +7,7 @@
     --cor-fundo-dois: #2f313a;
     --cor-fundo-tres: #1d1d28;
     --cor-fundo-quatro: #272733;
+    --cor-fundo-claro: #0000001a;
     --cor-borda: #4d4d5c;
     --cor-destaque: #8800ff;
     --cor-hover: #00000034;
@@ -48,4 +49,49 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 0 12px;
+}
+
+.more-links ul:first-of-type{
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  gap: 12px;
+  padding: 4px 8px 4px 8px;
+  cursor: pointer;
+}
+.more-links ul:first-of-type > span:last-of-type{
+  height: 2px;
+  background-color: var(--cor-borda);
+  border-radius: 12px;
+  flex-grow: 1;
+}
+.more-links ul:first-of-type{
+  background-color: var(--cor-fundo-claro);
+}
+.more-links ul:first-of-type:hover{
+  background-color: var(--cor-hover);
+}
+.more-links.opened > ul:first-of-type > svg{
+  transform: rotate(180deg);
+}
+.more-links ul:last-of-type{
+  display: none;
+}
+.more-links.opened > ul:last-of-type{
+  display: flex;
+}
+
+@media(max-width: 900px){
+    .meg-title{
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .meg-title .meg-name{
+        text-align: center;
+    }
+    .main .more-links > ul:first-of-type{
+        background-color: var(--cor-fundo-claro);
+        justify-content: center;
+    }
 }

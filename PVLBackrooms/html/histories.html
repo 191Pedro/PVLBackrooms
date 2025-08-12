@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PVLBackrooms</title>
     <link href="../css/home.css" rel="stylesheet" type="text/css">
+    <link href="../css/histories.css" rel="stylesheet" type="text/css">
 </head>
 <body class="">
     <nav id="navbar" class="navbar" style="grid-area: box-1">
@@ -259,13 +260,103 @@
         </ul>
     </aside>
     <main id="main" class="main" style="grid-area: box-3">
-        <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis nisl ac urna tincidunt consequat. Ut ullamcorper ultrices gravida. Sed nunc lacus, cursus in consequat nec, varius quis libero. Maecenas gravida mauris sit amet urna iaculis, sed imperdiet purus vestibulum. Nam vel euismod ipsum, id dignissim enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus non elementum elit. Praesent sit amet libero eget turpis posuere tempus. Ut suscipit, tortor elementum rhoncus tempus, dolor magna luctus tellus, ut viverra est nibh nec nisi. Phasellus id ipsum neque. Vivamus velit ante, tempor bibendum metus eu, ornare vulputate odio. Sed ut est lectus. Donec vitae nisl sed dolor auctor lobortis.</p>
-        </div>
+        <section class="container">
+            <h1>Histórias das PVLBackrooms</h1>
+            <section class="text">
+                <p>As Histórias registram narrativas, relatos e crônicas que exploram acontecimentos, lugares e personagens relacionados às PVLBackrooms. Podem variar entre registros factuais, documentos de campo, lendas, diários, reconstruições ficcionais ou relatos orais preservados por sobreviventes.</p>
+                <p>Nem todas as Histórias possuem confirmação de veracidade; algumas mesclam fatos e ficção, enquanto outras permanecem como mistério. Ainda assim, cada uma delas contribui para ampliar a compreensão ou a incerteza sobre os eventos e fenômenos que moldam esse universo.</p>
+                <p>Assim como os Níveis, Fenômenos, Entidades e Grupos, as Histórias atuam como peças complementares para a construção do conhecimento coletivo sobre as PVLBackrooms. Ao reunir relatos e criações de diferentes origens, elas permitem compreender não apenas os fatos, mas também como estes são percebidos e reinterpretados pelos exploradores e estudiosos, formando uma rede de informações que conecta todas as áreas documentadas.</p>
+            </section>
+            <section class="search">
+                <h2><span></span>Histórias<span></span></h2>
+                <section class="sort">
+                    <span>Ordernar por</span>
+                    <select id="sort-selection">
+                        <option value="alphabetical">Ordem alfabética crescente</option>
+                        <option value="alphabetical">Ordem alfabética decrescente</option>
+                        <option value="date">Data crescente</option>
+                        <option value="date">Data decrescente</option>
+                    </select>
+                </section>
+            </section>
+            <section class="histories-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>
+                                <span>Nome</span>
+                            </td>
+                            <td>
+                                <span>Data</span>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="item">
+                            <td>
+                                <a href="">História A</a>
+                            </td>
+                            <td>
+                                <span>07.07.0007</span>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td>
+                                <a href="">História B</a>
+                            </td>
+                            <td>
+                                <span>06.06.0006</span>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td>
+                                <a href="">História C</a>
+                            </td>
+                            <td>
+                                <span>05.05.0005</span>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td>
+                                <a href="">História D</a>
+                            </td>
+                            <td>
+                                <span>04.04.0004</span>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td>
+                                <a href="">História E</a>
+                            </td>
+                            <td>
+                                <span>03.03.0003</span>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td>
+                                <a href="">História F</a>
+                            </td>
+                            <td>
+                                <span>02.02.0002</span>
+                            </td>
+                        </tr>
+                        <tr class="item">
+                            <td>
+                                <a href="">História G</a>
+                            </td>
+                            <td>
+                                <span>01.01.0001</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
     </main>
     <footer id="footer" class="footer" style="grid-area: box-4">
 
     </footer>
     <script src="../js/home.js" type="text/javascript" defer></script>
+    <script src="../js/histories.js" type="text/javascript" defer></script>
 </body>
 </html>

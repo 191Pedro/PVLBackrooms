@@ -1,0 +1,42 @@
+@import url(../css/home.css);
+
+:root{
+    /* Tema Escuro Padrão */
+    --cor-texto: #ebebeb;
+    --cor-fundo: #1d1d28;
+    --cor-fundo-dois: #2f313a;
+    --cor-fundo-tres: #1d1d28;
+    --cor-fundo-quatro: #272733;
+    --cor-borda: #4d4d5c;
+    --cor-destaque: #8800ff;
+    --cor-hover: #00000034;
+}
+
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.item{
+    flex: 1 1 350px;
+    max-width: 350px;
+    padding: 24px;
+    font-size: 16px;
+    border-radius: 12px;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo-quatro);
+    border: 2px solid var(--cor-borda);
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.item:hover{
+    background-color: var(--cor-fundo-dois);
+    border: 2px solid var(--cor-destaque);
+}
