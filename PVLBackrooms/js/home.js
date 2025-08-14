@@ -6,16 +6,12 @@ const enableSidebarMode = () =>{
   sidebar.classList.toggle('close');
   toggleButton.classList.toggle('rotate');
   
-  closeAllSubMenus();
-
   localStorage.setItem('sidebar-mode', 'active');
 }
 const disableSidebarMode = () =>{
   sidebar.classList.toggle('close');
   toggleButton.classList.toggle('rotate');
   
-  closeAllSubMenus();
-
   localStorage.setItem('sidebar-mode', null);
 }
 document.addEventListener('keydown', function(event) {
@@ -24,16 +20,12 @@ document.addEventListener('keydown', function(event) {
       sidebar.classList.toggle('close');
       toggleButton.classList.toggle('rotate');
       
-      closeAllSubMenus();
-    
       localStorage.setItem('sidebar-mode', 'active');
     }
     else {
       sidebar.classList.toggle('close');
       toggleButton.classList.toggle('rotate');
-  
-      closeAllSubMenus();
-  
+
       localStorage.setItem('sidebar-mode', null);
     }
   }

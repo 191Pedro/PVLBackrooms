@@ -265,91 +265,104 @@
             <section class="text">
                 <p>As Histórias registram narrativas, relatos e crônicas que exploram acontecimentos, lugares e personagens relacionados às PVLBackrooms. Podem variar entre registros factuais, documentos de campo, lendas, diários, reconstruições ficcionais ou relatos orais preservados por sobreviventes.</p>
                 <p>Nem todas as Histórias possuem confirmação de veracidade; algumas mesclam fatos e ficção, enquanto outras permanecem como mistério. Ainda assim, cada uma delas contribui para ampliar a compreensão ou a incerteza sobre os eventos e fenômenos que moldam esse universo.</p>
-                <p>Assim como os Níveis, Fenômenos, Entidades e Grupos, as Histórias atuam como peças complementares para a construção do conhecimento coletivo sobre as PVLBackrooms. Ao reunir relatos e criações de diferentes origens, elas permitem compreender não apenas os fatos, mas também como estes são percebidos e reinterpretados pelos exploradores e estudiosos, formando uma rede de informações que conecta todas as áreas documentadas.</p>
+                <p>Assim como os Níveis, Entidades, Fenômenos e Grupos, as Histórias atuam como peças complementares para a construção do conhecimento coletivo sobre as PVLBackrooms. Ao reunir relatos e criações de diferentes origens, elas permitem compreender não apenas os fatos, mas também como estes são percebidos e reinterpretados pelos exploradores e estudiosos, formando uma rede de informações que conecta todas as áreas documentadas.</p>
             </section>
             <section class="search">
                 <h2><span></span>Histórias<span></span></h2>
-                <section class="sort">
-                    <span>Ordernar por</span>
-                    <select id="sort-selection">
-                        <option value="alphabetical">Ordem alfabética crescente</option>
-                        <option value="alphabetical">Ordem alfabética decrescente</option>
-                        <option value="date">Data crescente</option>
-                        <option value="date">Data decrescente</option>
-                    </select>
+                <section class="groups">
+                    <section class="input-group">
+                        <span class="input-icons">
+                            <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        </span>
+                        <input 
+                            id="search" 
+                            type="text" 
+                            class="input-field" 
+                            placeholder="Pesquisar (Ctrl + F)"
+                        >
+                        <span class="input-icons">
+                            <svg class="icon-clear" id="icon-clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                        </span>
+                    </section>
+                    <section class="filters-section">
+                        <button class="filters" id="filters-btn">
+                            <span>Filtros</span>
+                            <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
+                        </button>
+                        <section class="filters-menu" id="filters-menu">
+                            <svg id="filters-menu-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                            <ul class="filters-options">
+                                <span>Gênero</span>
+                                <li class="filters-options-per-genre">
+                                    <select id="filter-per-genre">
+                                        <option value="all">Todos</option>
+                                        <option value="drama">Drama</option>
+                                        <option value="thriller">Suspense</option>
+                                        <option value="romance">Romance</option>
+                                        <option value="comedy">Comédia</option>
+                                        <option value="horror">Terror</option>
+                                        <option value="adventure">Aventura</option>
+                                        <option value="historical">Histórico</option>
+                                        <option value="surreal">Surreal</option>
+                                        <option value="enigmatic">Enigmático</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <span class="filters-action-buttons" id="confirm-filters" onclick="filtersOptionsConfirm()">Filtrar</span>
+                            <span class="filters-action-buttons" id="cancel-filters" onclick="filtersOptionsCancel()">Limpar filtros</span>
+                        </section>
+                    </section>
                 </section>
             </section>
-            <section class="histories-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <td>
-                                <span>Nome</span>
-                            </td>
-                            <td>
-                                <span>Data</span>
-                            </td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="item">
-                            <td>
-                                <a href="">História A</a>
-                            </td>
-                            <td>
-                                <span>07.07.0007</span>
-                            </td>
-                        </tr>
-                        <tr class="item">
-                            <td>
-                                <a href="">História B</a>
-                            </td>
-                            <td>
-                                <span>06.06.0006</span>
-                            </td>
-                        </tr>
-                        <tr class="item">
-                            <td>
-                                <a href="">História C</a>
-                            </td>
-                            <td>
-                                <span>05.05.0005</span>
-                            </td>
-                        </tr>
-                        <tr class="item">
-                            <td>
-                                <a href="">História D</a>
-                            </td>
-                            <td>
-                                <span>04.04.0004</span>
-                            </td>
-                        </tr>
-                        <tr class="item">
-                            <td>
-                                <a href="">História E</a>
-                            </td>
-                            <td>
-                                <span>03.03.0003</span>
-                            </td>
-                        </tr>
-                        <tr class="item">
-                            <td>
-                                <a href="">História F</a>
-                            </td>
-                            <td>
-                                <span>02.02.0002</span>
-                            </td>
-                        </tr>
-                        <tr class="item">
-                            <td>
-                                <a href="">História G</a>
-                            </td>
-                            <td>
-                                <span>01.01.0001</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <section class="items">
+                <li class="displaying">
+                    <h2>Exibindo: </h2>
+                    <h2></h2>
+                </li>
+                <a class="item" data-genre="comedy" href="">
+                    <p>História Comédia</p>
+                    <b>07.07.0007</b>
+                </a>
+                <a class="item" data-genre="horror" href="">
+                    <p>História Terror</p>
+                    <b>07.07.0007</b>
+                </a>
+                <a class="item" data-genre="romance" href="">
+                    <p>História Romance</p>
+                    <b>07.07.0007</b>
+                </a>
+                <a class="item" data-genre="drama" href="">
+                    <p>História Drama</p>
+                    <b>07.07.0007</b>
+                </a>
+                <a class="item" data-genre="thriller" href="">
+                    <p>História Suspense</p>
+                    <b>07.07.0007</b>
+                </a>
+                <a class="item" data-genre="historical" href="">
+                    <p>História Histórico</p>
+                    <b>07.07.0007</b>
+                </a>
+                <a class="item" data-genre="surreal" href="">
+                    <p>História Surreal</p>
+                    <b>07.07.0007</b>
+                </a>
+                <a class="item" data-genre="enigmatic" href="">
+                    <p>História Enigmático</p>
+                    <b>07.07.0007</b>
+                </a>
+                <a class="item" data-genre="adventure" href="">
+                    <p>História Aventura</p>
+                    <b>07.07.0007</b>
+                </a>
+                <li class="no-results items-special" id="no-results">
+                    <svg class="no-results-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M4.05 13c-1.7 1.8-2.5 3.5-1.8 4.5 1.1 1.9 6.4 1 11.8-2s8.9-7.1 7.7-9c-.6-1-2.4-1.2-4.7-.7"/></svg>
+                    <span>Nenhum resultado encontrado</span>
+                </li>
+                <li class="show-all items-special" id="show-all" onclick="showAllAction()">
+                    <svg class="show-all-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    <span>Exibir tudo</span>
+                </li>
             </section>
         </section>
     </main>

@@ -60,6 +60,10 @@ searchInput.addEventListener('input', (event) => {
         noResults.style.display = 'none';
 
         clearSearch.style.display = 'none';
+
+        items.forEach(item => {
+            item.style.display = 'flex';
+        })
     }
 
     clearSearch.addEventListener('click', () =>{
@@ -144,6 +148,9 @@ function filtersOptionsConfirm() {
             item.style.display = "none";
         }
     });
+
+    const noResults = document.getElementById('no-results');
+    noResults.style.display = 'none';
 };
 
 function filtersOptionsCancel() {

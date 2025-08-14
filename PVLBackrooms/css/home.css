@@ -827,7 +827,7 @@ a{
   }
   .main .index-section > ol:first-of-type, .main .extra-content > ul:first-of-type{
     background-color: var(--cor-fundo-claro);
-    justify-content: center;
+    justify-content: space-between;
   }
   .main .index-section span, .main .extra-content span{
     display: none;
