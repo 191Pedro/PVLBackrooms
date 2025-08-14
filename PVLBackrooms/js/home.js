@@ -31,7 +31,7 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-if(sidebarMode === "active") enableSidebarMode();
+if (sidebarMode === "active") enableSidebarMode();
 
 function toggleSidebar(){
   sidebarMode = localStorage.getItem('sidebar-mode')
