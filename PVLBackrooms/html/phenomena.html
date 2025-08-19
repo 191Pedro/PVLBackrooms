@@ -332,7 +332,7 @@
                         </span>
                     </section>
                     <section>
-                        <button class="show-details" id="show-details" onclick="DetailsToggle()">
+                        <button class="show-details" id="show-details">
                             <span>Detalhes</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg>
@@ -344,92 +344,177 @@
                             <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
                         </button>
                         <section class="filters-menu" id="filters-menu">
-                            <svg id="filters-menu-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                            <section class="filters-group">
-                                <ul class="filters-options">
-                                    <span>Numeração do Fenômeno</span>
-                                    <li class="filters-options-per-phenomenon">
-                                        <select id="filter-per-phenomenon">
-                                            <option value="all">Todos</option>
-                                            <option value="phenomenon1_5">1-5</option>
-                                            <option value="phenomenon6_10">6-10</option>
-                                            <option value="phenomenon11_15">11-15</option>
-                                            <option value="phenomenon16_20">16-20</option>
-                                            <option value="phenomenon21_25">21-25</option>
-                                            <option value="phenomenon26_30">26-30</option>
-                                        </select>
-                                    </li>
-                                </ul>
-                                <ul class="filters-options">
-                                    <span>Tipo</span>
-                                    <li class="filters-options-per-type">
-                                        <select id="filter-per-type">
-                                            <option value="any">Qualquer</option>
-                                            <option value="spatial">Espacial</option>
-                                            <option value="temporal">Temporal</option>
-                                            <option value="mental">Mental</option>
-                                            <option value="unique">Único</option>
-                                        </select>
-                                    </li>
-                                </ul>
-                                <ul class="filters-options">
-                                    <span>Risco</span>
-                                    <li class="filters-options-per-risk">
-                                        <select id="filter-per-risk">
-                                            <option value="any">Qualquer</option>
-                                            <option value="risk-null">Nulo</option>
-                                            <option value="risk-low">Baixo</option>
-                                            <option value="risk-average">Médio</option>
-                                            <option value="risk-high">Alto</option>
-                                            <option value="risk-highest">Altíssimo</option>
-                                        </select>
-                                    </li>
-                                </ul>
-                            </section>
-                            <span class="filters-action-buttons" id="confirm-filters" onclick="filtersOptionsConfirm()">Filtrar</span>
-                            <span class="filters-action-buttons" id="cancel-filters" onclick="filtersOptionsCancel()">Limpar filtros</span>
+                            <ul class="filters-action-close">
+                                <span>Filtros</span>
+                                <svg id="filters-menu-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                            </ul>
+                            <ul class="filters-options">
+                                <span>Numeração do Fenômeno</span>
+                                <li class="filters-options-per-phenomena">
+                                    <select id="filter-per-phenomena">
+                                        <option value="all">Todos</option>
+                                        <option value="phenomena1_5">1-5</option>
+                                        <option value="phenomena6_10">6-10</option>
+                                        <option value="phenomena11_15">11-15</option>
+                                        <option value="phenomena16_20">16-20</option>
+                                        <option value="phenomena21_25">21-25</option>
+                                        <option value="phenomena26_30">26-30</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul class="filters-options">
+                                <span>Tipo</span>
+                                <li class="filters-options-per-type">
+                                    <select id="filter-per-type">
+                                        <option value="any">Qualquer</option>
+                                        <option value="spatial">Espacial</option>
+                                        <option value="temporal">Temporal</option>
+                                        <option value="mental">Mental</option>
+                                        <option value="unique">Único</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul class="filters-options">
+                                <span>Risco</span>
+                                <li class="filters-options-per-risk">
+                                    <select id="filter-per-risk">
+                                        <option value="any">Qualquer</option>
+                                        <option value="risk-null">Nulo</option>
+                                        <option value="risk-low">Baixo</option>
+                                        <option value="risk-average">Médio</option>
+                                        <option value="risk-high">Alto</option>
+                                        <option value="risk-highest">Altíssimo</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul class="filters-action-clear" onclick="filtersOptionsCancel()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                                <span class="filter-cancel" id="cancel-filters">Limpar filtros</span>
+                            </ul>
                         </section>
                     </section>
                 </section>
+                <section>
+                    <li class="displaying">
+                        <p>Fenômenos exibidos:</p>
+                        <p id="displaying-phenomena">Todos</p>
+                    </li>
+                    <li class="displaying">
+                        <p>Por tipo:</p>
+                        <p id="displaying-type">Qualquer</p>
+                    </li>
+                    <li class="displaying">
+                        <p>Por risco:</p>
+                        <p id="displaying-risk">Qualquer</p>
+                    </li>
+                </section>
+                <section class="pagination" id="pagination">
+                    <section class="controls">
+                        <button class="first">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17-5-5 5-5"/><path d="m18 17-5-5 5-5"/></svg>
+                        </button>
+                        <button class="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                        </button>
+                    </section>
+                    <section class="numbers">
+                    </section>
+                    <section class="controls">
+                        <button class="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+                        <button class="last">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
+                        </button>
+                    </section>
+                </section>
+                <section>
+                    <li class="displaying">
+                        <p>Página</p>
+                        <p id="displaying-page">1</p>
+                    </li>
+                </section>
             </section>
             <section class="items">
-                <a class="item" data-phenomenon="phenomenon1_5" data-type="mental" data-risk="risk-low" href="">
+                <a class="item" data-phenomena="phenomena1_5" data-type="mental" data-risk="risk-low" href="">
                     <h2>Fenômeno 1</h2>
                     <b>Controle Direcionado</b>
                     <p>Fenômeno Tipo Mental</p>
                     <p>Risco Baixo</p>
                 </a>
-                <a class="item" data-phenomenon="phenomenon1_5" data-type="unique" data-risk="risk-average" href="">
+                <a class="item" data-phenomena="phenomena1_5" data-type="unique" data-risk="risk-average" href="">
                     <h2>Fenômeno 2</h2>
                     <b>Lua de Sangue</b>
                     <p>Fenômeno Tipo Único</p>
                     <p>Risco Médio</p>
                 </a>
-                <a class="item" data-phenomenon="phenomenon1_5" data-type="spatial" data-risk="risk-high" href="">
+                <a class="item" data-phenomena="phenomena1_5" data-type="spatial" data-risk="risk-high" href="">
                     <h2>Fenômeno 3</h2>
                     <b>A Música de Deus e a Dança do Diabo</b>
                     <p>Fenômeno Tipo Espacial</p>
                     <p>Risco Alto</p>
                 </a>
-                <a class="item" data-phenomenon="phenomenon6_10" data-type="mental" data-risk="risk-high" href="">
+                <a class="item" data-phenomena="phenomena6_10" data-type="mental" data-risk="risk-high" href="">
                     <h2>Fenômeno 6</h2>
                     <b>Você tá rindo, né? Desfaça essa maldição!</b>
                     <p>Fenômeno Tipo Mental</p>
                     <p>Risco Alto</p>
                 </a>
-                <a class="item" data-phenomenon="phenomenon6_10" data-type="unique" data-risk="risk-highest" href="">
+                <a class="item" data-phenomena="phenomena6_10" data-type="unique" data-risk="risk-highest" href="">
                     <h2>Fenômeno 6.0001</h2>
                     <b>PVLBackrooms Suporte Técnico</b>
                     <p>Fenômeno Tipo Único</p>
                     <p>Risco Altíssmo</p>
                 </a>
-                <a class="item" data-phenomenon="phenomenon11_15" data-type="spatial" data-risk="risk-average" href="">
+                <a class="item" data-phenomena="phenomena11_15" data-type="spatial" data-risk="risk-average" href="">
                     <h2>Fenômeno 11</h2>
                     <b>Zona de Dobra</b>
                     <p>Fenômeno Tipo Espacial</p>
                     <p>Risco Médio</p>
                 </a>
-                <a class="item" data-phenomenon="phenomenon16_20" data-type="unique" data-risk="risk-highest" href="">
+                <a class="item" data-phenomena="phenomena16_20" data-type="unique" data-risk="risk-highest" href="">
+                    <h2>Fenômeno 20</h2>
+                    <b>Cartas</b>
+                    <p>Fenômeno Tipo Único</p>
+                    <p>Risco Altíssimo</p>
+                </a>
+                <a class="item" data-phenomena="phenomena1_5" data-type="mental" data-risk="risk-low" href="">
+                    <h2>Fenômeno 1</h2>
+                    <b>Controle Direcionado</b>
+                    <p>Fenômeno Tipo Mental</p>
+                    <p>Risco Baixo</p>
+                </a>
+                <a class="item" data-phenomena="phenomena1_5" data-type="unique" data-risk="risk-average" href="">
+                    <h2>Fenômeno 2</h2>
+                    <b>Lua de Sangue</b>
+                    <p>Fenômeno Tipo Único</p>
+                    <p>Risco Médio</p>
+                </a>
+                <a class="item" data-phenomena="phenomena1_5" data-type="spatial" data-risk="risk-high" href="">
+                    <h2>Fenômeno 3</h2>
+                    <b>A Música de Deus e a Dança do Diabo</b>
+                    <p>Fenômeno Tipo Espacial</p>
+                    <p>Risco Alto</p>
+                </a>
+                <a class="item" data-phenomena="phenomena6_10" data-type="mental" data-risk="risk-high" href="">
+                    <h2>Fenômeno 6</h2>
+                    <b>Você tá rindo, né? Desfaça essa maldição!</b>
+                    <p>Fenômeno Tipo Mental</p>
+                    <p>Risco Alto</p>
+                </a>
+                <a class="item" data-phenomena="phenomena6_10" data-type="unique" data-risk="risk-highest" href="">
+                    <h2>Fenômeno 6.0001</h2>
+                    <b>PVLBackrooms Suporte Técnico</b>
+                    <p>Fenômeno Tipo Único</p>
+                    <p>Risco Altíssmo</p>
+                </a>
+                <a class="item" data-phenomena="phenomena11_15" data-type="spatial" data-risk="risk-average" href="">
+                    <h2>Fenômeno 11</h2>
+                    <b>Zona de Dobra</b>
+                    <p>Fenômeno Tipo Espacial</p>
+                    <p>Risco Médio</p>
+                </a>
+                <a class="item" data-phenomena="phenomena16_20" data-type="unique" data-risk="risk-highest" href="">
                     <h2>Fenômeno 20</h2>
                     <b>Cartas</b>
                     <p>Fenômeno Tipo Único</p>
@@ -438,10 +523,6 @@
                 <li class="no-results items-special" id="no-results">
                     <svg class="no-results-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M4.05 13c-1.7 1.8-2.5 3.5-1.8 4.5 1.1 1.9 6.4 1 11.8-2s8.9-7.1 7.7-9c-.6-1-2.4-1.2-4.7-.7"/></svg>
                     <span>Nenhum resultado encontrado</span>
-                </li>
-                <li class="show-all items-special" id="show-all" onclick="showAllAction()">
-                    <svg class="show-all-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                    <span>Exibir tudo</span>
                 </li>
             </section>
         </section>

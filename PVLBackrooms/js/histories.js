@@ -1,9 +1,9 @@
 const html = {
     get(element) {
-        return document.querySelector(element)
+        return document.querySelector(element);
     },
     getAll(element) {
-        return document.querySelectorAll(element)
+        return document.querySelectorAll(element);
     }
 }
 
@@ -24,7 +24,7 @@ document.addEventListener('keydown', function(event) {
 
 function filtersOptionsCancel() {
     optionGenre.value = "all";
-    calculateFilters()
+    calculateFilters();
 };
 
 function extraContent(button) {
@@ -35,8 +35,8 @@ const filtersBtn = html.get('#filters-btn');
 const filtersMenuClose = html.get('#filters-menu-close');
 const filtersMenu = html.get('#filters-menu');
 
-filtersBtn.addEventListener('click', () =>{ filtersMenuToggle() })
-filtersMenuClose.addEventListener('click', () => { filtersMenuToggle() })
+filtersBtn.addEventListener('click', () =>{ filtersMenuToggle() });
+filtersMenuClose.addEventListener('click', () => { filtersMenuToggle() });
 
 function filtersMenuToggle() {
     filtersBtn.classList.toggle('opened');
@@ -44,104 +44,102 @@ function filtersMenuToggle() {
 }
 
 const clearSearchIcon = html.get('#icon-clear');
-clearSearchIcon.addEventListener('click', clearSearch)
+clearSearchIcon.addEventListener('click', clearSearch);
 
 function clearSearch() {
-    searchInput.value = ''
-    calculateFilters()
+    searchInput.value = '';
+    calculateFilters();
 }
 
 const optionGenre = html.get('#filter-per-genre');
-optionGenre.addEventListener('change', calculateFilters)
+optionGenre.addEventListener('change', calculateFilters);
 
 const searchInput = html.get('#search');
-searchInput.addEventListener('input', calculateFilters)
+searchInput.addEventListener('input', calculateFilters);
 
-const itemsData = html.getAll('.items .item')
-const data = Array.from(itemsData)
-let dataFiltered = data
-let dataSearched = data
+const itemsData = html.getAll('.items .item');
+const data = Array.from(itemsData);
+let dataFiltered = data;
 
 function calculateFilters() {
-    const displaying = html.get('#displaying-text');
-    displaying.textContent = optionGenre.selectedOptions[0].text;
+    const displayingGenre = html.get('#displaying-genre');
+    displayingGenre.textContent = optionGenre.selectedOptions[0].textContent;
     
-    const selectedGenre = optionGenre.value
+    const selectedGenre = optionGenre.value;
+    const searchValue = formatString(searchInput.value);
 
-    dataFiltered = data.filter(item => (item.dataset.genre == selectedGenre) || (selectedGenre == 'all'));
+    dataFiltered = data
+        .filter(item => (item.dataset.genre == selectedGenre) || (selectedGenre == 'all'))
+        .filter(item => (formatString(item.textContent).includes(searchValue)) || (searchValue == ''));
 
-    const searchValue = formatString(searchInput.value)
+    state.totalPage = Math.ceil(dataFiltered.length / state.perPage);
+    state.page = 1;
 
-    dataSearched = dataFiltered.filter(item => (formatString(item.textContent).includes(searchValue)) || (searchValue == ''))
-
-    state.totalPage = Math.ceil(dataSearched.length / state.perPage);
-    state.page = 1
-
-    const noResults = html.get('#no-results')
-    noResults.style.display = 'none'
-    if (dataSearched.length == 0) {
-        noResults.style.display = 'flex'
+    const noResults = html.get('#no-results');
+    noResults.style.display = 'none';
+    if (dataFiltered.length == 0) {
+        noResults.style.display = 'flex';
     }
-    clearSearchIcon.style.display = 'none'
+    clearSearchIcon.style.display = 'none';
     if (searchInput.value !== '') {
-        clearSearchIcon.style.display = 'flex'
+        clearSearchIcon.style.display = 'flex';
     }
 
-    update()
+    update();
 }
 
-let perPage = 20
+let perPage = 20;
 
 const state = {
     page: 1,
     perPage,
-    totalPage: Math.ceil(dataSearched.length / perPage),
+    totalPage: Math.ceil(dataFiltered.length / perPage),
     maxVisibleButtons: 5
 }
 
 const controls = {
     next() {
-        state.page++
+        state.page++;
 
-        const lastPage = state.page > state.totalPage
+        const lastPage = state.page > state.totalPage;
         if (lastPage) {
-            state.page--
+            state.page--;
         }
     },
     prev() {
-        state.page--
+        state.page--;
 
         if (state.page < 1) {
-            state.page++
+            state.page++;
         }
     },
     goTo(page) {
         if (page < 1) {
-            page = 1
+            page = 1;
         }
 
-        state.page = +page
+        state.page = +page;
         
         if (page > state.totalPage) {
-            state.page = state.totalPage
+            state.page = state.totalPage;
         }
     },
     createListeners() {
         html.get('.first').addEventListener('click', () => {
-            controls.goTo(1)
-            update()
+            controls.goTo(1);
+            update();
         })
         html.get('.last').addEventListener('click', () => {
-            controls.goTo(state.totalPage)
-            update()
+            controls.goTo(state.totalPage);
+            update();
         })
         html.get('.prev').addEventListener('click', () => {
-            controls.prev()
-            update()
+            controls.prev();
+            update();
         })
         html.get('.next').addEventListener('click', () => {
-            controls.next()
-            update()
+            controls.next();
+            update();
         })
     }
 }
@@ -149,66 +147,70 @@ const controls = {
 const list = {
     update() {
         data.forEach(item => {
-            item.style.display = 'none'
+            item.style.display = 'none';
         })
 
-        let page = state.page - 1
-        let start = page * state.perPage
-        let end = start + state.perPage
+        let page = state.page - 1;
+        let start = page * state.perPage;
+        let end = start + state.perPage;
         
-        const paginatedItems = dataSearched.slice(start, end)
+        const paginatedItems = dataFiltered.slice(start, end);
 
         paginatedItems.forEach(item => {
-            item.style.display = 'flex'
+            item.style.display = 'flex';
         })
+
+        const displayingPage = html.get('#displaying-page');
+        if (state.totalPage > 0) displayingPage.textContent = `${state.page} de ${state.totalPage}`;
+        if (state.totalPage == 0) displayingPage.textContent = `0 de 0`;
     }
 }
 
 const buttons = {
     element: html.get('.pagination .numbers'),
     create(number) {
-        const button = document.createElement('button')
+        const button = document.createElement('button');
 
-        button.innerHTML = number
+        button.innerHTML = number;
 
         if(state.page == number) {
-            button.classList.add('active')
+            button.classList.add('active');
         }
 
         button.addEventListener('click', (event) => {
-            const page = event.target.innerText
+            const page = event.target.innerText;
 
-            controls.goTo(page)
-            update()
+            controls.goTo(page);
+            update();
         })
 
-        buttons.element.appendChild(button)
+        buttons.element.appendChild(button);
     },
     update() {
-        buttons.element.innerHTML = ''
-        const { maxLeft, maxRight } = buttons.calculateMaxVisible()
+        buttons.element.innerHTML = '';
+        const { maxLeft, maxRight } = buttons.calculateMaxVisible();
 
         for(let page = maxLeft; page <= maxRight; page++) {
-            buttons.create(page)
+            buttons.create(page);
         }
     },
     calculateMaxVisible() {
-        const { maxVisibleButtons } = state
-        let maxLeft = (state.page - Math.floor(maxVisibleButtons / 2))
-        let maxRight = (state.page + Math.floor(maxVisibleButtons / 2))
+        const { maxVisibleButtons } = state;
+        let maxLeft = (state.page - Math.floor(maxVisibleButtons / 2));
+        let maxRight = (state.page + Math.floor(maxVisibleButtons / 2));
 
         if (maxLeft < 1) {
-            maxLeft = 1
-            maxRight = maxVisibleButtons
+            maxLeft = 1;
+            maxRight = maxVisibleButtons;
         }
         if (maxRight > state.totalPage) {
-            maxLeft = state.totalPage - (maxVisibleButtons - 1)
-            maxRight = state.totalPage
+            maxLeft = state.totalPage - (maxVisibleButtons - 1);
+            maxRight = state.totalPage;
 
-            if (maxLeft < 1) maxLeft = 1
+            if (maxLeft < 1) maxLeft = 1;
         }
 
-        return { maxLeft, maxRight }
+        return { maxLeft, maxRight };
     }
 }
 
@@ -219,8 +221,8 @@ function update() {
 
 function init() {
     update(),
-    controls.createListeners()
+    controls.createListeners(),
     calculateFilters()
 }
 
-init()
+init();

@@ -1,85 +1,11 @@
-const searchInput = document.getElementById('search');
-const clearSearch = document.getElementById('icon-clear');
-const showAll = document.getElementById('show-all');
-const items = document.querySelectorAll('.items .item')
-let homeDisplayTerm = true;
-
-homeDisplay();
-
-function homeDisplay() {
-    if (homeDisplayTerm = true) {
-        let i = 0
-        items.forEach(item => {
-            if (i >= 8) {
-                return;
-            }
-            item.style.display = 'flex';
-            i++;
-        });
+const html = {
+    get(element) {
+        return document.querySelector(element);
+    },
+    getAll(element) {
+        return document.querySelectorAll(element);
     }
 }
-
-function showAllAction() {
-    showAll.style.display = 'none';
-    homeDisplayTerm = false;
-    items.forEach(item =>{ 
-        item.style.display = 'flex';
-    })
-}
-
-searchInput.addEventListener('input', (event) => {
-    const value = formatString(event.target.value);
-
-    const noResults = document.getElementById('no-results');
-    let hasResults = false;
-
-    if (value !== '') {
-        clearSearch.style.display = 'flex';
-        
-        showAllAction();
-        
-        items.forEach(item => {
-            if (formatString(item.textContent).indexOf(value) !== -1) {
-                item.style.display = 'flex';
-
-                hasResults = true;
-            }
-            else {
-                item.style.display = 'none';
-            }
-        });
-        
-        if (hasResults) {
-            noResults.style.display = 'none';
-        }
-        else {
-            noResults.style.display = 'flex';
-        }
-    }
-    else {
-        noResults.style.display = 'none';
-
-        clearSearch.style.display = 'none';
-
-        items.forEach(item => {
-            item.style.display = 'flex';
-        })
-    }
-
-    clearSearch.addEventListener('click', () =>{
-        clearSearch.style.display = 'none';
-        event.target.value = '';
-        items.forEach(item => {
-
-            if (formatString(item.textContent)) {
-                item.style.display = 'flex';
-
-                hasResults = true;
-                noResults.style.display = 'none';
-            }
-        })
-    })
-});
 
 function formatString(value) {
     return value
@@ -91,72 +17,222 @@ function formatString(value) {
 
 document.addEventListener('keydown', function(event) {
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'f') {
-      event.preventDefault();
-      searchInput.focus();
+        event.preventDefault();
+        searchInput.focus();
     }
 });
 
-const filtersBtn = document.getElementById('filters-btn');
-const filtersMenuClose = document.getElementById('filters-menu-close');
-const filtersMenu = document.getElementById('filters-menu');
-const optionLevel = document.getElementById("filter-per-level");
-const optionSublevel = document.getElementById("filter-per-sublevel");
-
-filtersBtn.addEventListener('click', () =>{
-    filtersBtn.classList.toggle('opened');
-    filtersMenu.classList.toggle('opened');
-})
-filtersMenuClose.addEventListener('click', () => {
-    filtersBtn.classList.toggle('opened');
-    filtersMenu.classList.toggle('opened');
-})
-
-optionLevel.addEventListener('change', () => {
-    filtersOptionsConfirm();
-})
-optionSublevel.addEventListener('change', () => {
-    filtersOptionsConfirm();
-})
-
-function filtersOptionsConfirm() {
-    showAllAction();
-
-    const item = document.querySelectorAll('.item');
-
-    item.forEach(item => {
-        item.style.display = "flex";
-        
-        const matchLevel = optionLevel.value === "all" || item.dataset.level == optionLevel.value;
-        const matchSublevel = optionSublevel.value === "all" || item.dataset.sublevel == optionSublevel.value;
-
-        if (matchLevel && matchSublevel) {
-            item.style.display = "flex";
-        }
-        else {
-            item.style.display = "none";
-        }
-    });
-
-    const noResults = document.getElementById('no-results');
-    noResults.style.display = 'none';
-};
-
 function filtersOptionsCancel() {
-    showAllAction();
-
     optionLevel.value = "all";
     optionSublevel.value = "all";
-
-    const item = document.querySelectorAll('.item');
-
-    item.forEach(item => {
-        item.style.display = "flex";
-    });
+    calculateFilters();
 };
 
 function extraContent(button) {
     button.parentElement.classList.toggle('opened');   
 }
+
+const filtersBtn = html.get('#filters-btn');
+const filtersMenuClose = html.get('#filters-menu-close');
+const filtersMenu = html.get('#filters-menu');
+
+filtersBtn.addEventListener('click', () =>{ filtersMenuToggle() });
+filtersMenuClose.addEventListener('click', () => { filtersMenuToggle() });
+
+function filtersMenuToggle() {
+    filtersBtn.classList.toggle('opened');
+    filtersMenu.classList.toggle('opened');
+}
+
+const clearSearchIcon = html.get('#icon-clear');
+clearSearchIcon.addEventListener('click', clearSearch);
+
+function clearSearch() {
+    searchInput.value = '';
+    calculateFilters();
+}
+
+const optionLevel = html.get('#filter-per-level');
+optionLevel.addEventListener('change', calculateFilters);
+const optionSublevel = html.get('#filter-per-sublevel');
+optionSublevel.addEventListener('change', calculateFilters);
+
+const searchInput = html.get('#search');
+searchInput.addEventListener('input', calculateFilters);
+
+const itemsData = html.getAll('.items .item');
+const data = Array.from(itemsData);
+let dataFiltered = data;
+
+function calculateFilters() {
+    const displayingLevel = html.get('#displaying-level');
+    displayingLevel.textContent = optionLevel.selectedOptions[0].textContent;
+    const displayingSublevel = html.get('#displaying-sublevel');
+    displayingSublevel.textContent = optionSublevel.selectedOptions[0].textContent;
+    
+    const selectedLevel = optionLevel.value;
+    const selectedSublevel = optionSublevel.value;
+    const searchValue = formatString(searchInput.value);
+
+    dataFiltered = data
+        .filter(item => (item.dataset.level == selectedLevel) || (selectedLevel == 'all'))
+        .filter(item => (item.dataset.sublevel == selectedSublevel) || (selectedSublevel == 'all'))
+        .filter(item => (formatString(item.textContent).includes(searchValue)) || (searchValue == ''));
+
+    state.totalPage = Math.ceil(dataFiltered.length / state.perPage);
+    state.page = 1;
+
+    const noResults = html.get('#no-results');
+    noResults.style.display = 'none';
+    if (dataFiltered.length == 0) {
+        noResults.style.display = 'flex';
+    }
+    clearSearchIcon.style.display = 'none';
+    if (searchInput.value !== '') {
+        clearSearchIcon.style.display = 'flex';
+    }
+
+    update();
+}
+
+let perPage = 12
+
+const state = {
+    page: 1,
+    perPage,
+    totalPage: Math.ceil(dataFiltered.length / perPage),
+    maxVisibleButtons: 5
+}
+
+const controls = {
+    next() {
+        state.page++;
+
+        const lastPage = state.page > state.totalPage;
+        if (lastPage) {
+            state.page--;
+        }
+    },
+    prev() {
+        state.page--;
+
+        if (state.page < 1) {
+            state.page++;
+        }
+    },
+    goTo(page) {
+        if (page < 1) {
+            page = 1;
+        }
+
+        state.page = +page;
+        
+        if (page > state.totalPage) {
+            state.page = state.totalPage;
+        }
+    },
+    createListeners() {
+        html.get('.first').addEventListener('click', () => {
+            controls.goTo(1);
+            update();
+        })
+        html.get('.last').addEventListener('click', () => {
+            controls.goTo(state.totalPage);
+            update();
+        })
+        html.get('.prev').addEventListener('click', () => {
+            controls.prev();
+            update();
+        })
+        html.get('.next').addEventListener('click', () => {
+            controls.next();
+            update();
+        })
+    }
+}
+
+const list = {
+    update() {
+        data.forEach(item => {
+            item.style.display = 'none';
+        })
+
+        let page = state.page - 1;
+        let start = page * state.perPage;
+        let end = start + state.perPage;
+        
+        const paginatedItems = dataFiltered.slice(start, end);
+
+        paginatedItems.forEach(item => {
+            item.style.display = 'flex';
+        })
+
+        const displayingPage = html.get('#displaying-page');
+        if (state.totalPage > 0) displayingPage.textContent = `${state.page} de ${state.totalPage}`;
+        if (state.totalPage == 0) displayingPage.textContent = `0 de 0`;
+    }
+}
+
+const buttons = {
+    element: html.get('.pagination .numbers'),
+    create(number) {
+        const button = document.createElement('button');
+
+        button.innerHTML = number;
+
+        if(state.page == number) {
+            button.classList.add('active');
+        }
+
+        button.addEventListener('click', (event) => {
+            const page = event.target.innerText;
+
+            controls.goTo(page);
+            update();
+        })
+
+        buttons.element.appendChild(button);
+    },
+    update() {
+        buttons.element.innerHTML = '';
+        const { maxLeft, maxRight } = buttons.calculateMaxVisible();
+
+        for(let page = maxLeft; page <= maxRight; page++) {
+            buttons.create(page);
+        }
+    },
+    calculateMaxVisible() {
+        const { maxVisibleButtons } = state;
+        let maxLeft = (state.page - Math.floor(maxVisibleButtons / 2));
+        let maxRight = (state.page + Math.floor(maxVisibleButtons / 2));
+
+        if (maxLeft < 1) {
+            maxLeft = 1;
+            maxRight = maxVisibleButtons;
+        }
+        if (maxRight > state.totalPage) {
+            maxLeft = state.totalPage - (maxVisibleButtons - 1);
+            maxRight = state.totalPage;
+
+            if (maxLeft < 1) maxLeft = 1;
+        }
+
+        return { maxLeft, maxRight };
+    }
+}
+
+function update() {
+    list.update(),
+    buttons.update()
+}
+
+function init() {
+    update(),
+    controls.createListeners(),
+    calculateFilters()
+}
+
+init();
 
 window.onload = () => {
     const itemImg = document.querySelectorAll('.item img');
