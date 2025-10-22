@@ -1,4 +1,4 @@
-@import url(../css/home.css);
+@import url(../home.css);
 
 :root{
     /* Tema Escuro Padrão */
@@ -50,27 +50,36 @@
     gap: 0 12px;
 }
 
-.age-options select{
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none; 
-    display: block;
-    padding: 8px 40px 8px 12px;
-    margin: 8px 0 8px 12px;
-    font-size: 16px;
-    font-weight: 500;
-    color: inherit;
-    font-family: inherit;
+.age-options{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.age-section{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
     background-color: var(--cor-fundo-quatro);
+    border: 2px solid var(--cor-hover);
+    border-radius: 12px;
+}
+.age-section span{
+    font-weight: 500;
+}
+.age-section select{
+    font-family: inherit;
+    color: inherit;
+    background-color: var(--cor-fundo-dois);
     border: 2px solid var(--cor-borda);
     border-radius: 12px;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    outline: none;
+    padding: 8px;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
 }
-.age-options select:hover{
-    background-color: var(--cor-fundo-dois);
+.age-section select:hover{
+    border: 2px solid var(--cor-texto);
 }
 
 .items{
@@ -78,7 +87,6 @@
     flex-direction: column;
     list-style: none;
     border-left: 2px solid var(--cor-borda);
-    margin: 16px 0;
     padding: 16px 0;
     gap: 24px;
 }

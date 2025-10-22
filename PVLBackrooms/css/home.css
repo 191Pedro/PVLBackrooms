@@ -54,7 +54,7 @@ select{
   -moz-appearance: none;
   background-image: url('../imgs/svgs/chevron-down-dark-mode.svg');
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right 10px center;
   outline: none;
 }
 .lightMode select{
@@ -429,7 +429,7 @@ a{
 
 .sidebar{
   box-sizing: border-box;
-  height: 100vh;
+  height: calc(100dvh - 62px);
   width: 250px;
   padding: 5px 1em;
   background-color: var(--cor-fundo-dois);
